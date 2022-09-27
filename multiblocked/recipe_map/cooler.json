@@ -1,0 +1,41 @@
+{
+  "name": "cooler",
+  "progressTexture": "multiblocked:textures/gui/progress_bar_arrow_cold.png",
+  "recipes": [
+    {
+      "uid": "recipe_1",
+      "duration": 200,
+      "inputs": {
+        "item": [
+          {
+            "chance": 1.0,
+            "content": {
+              "amount": 1,
+              "matches": [
+                {
+                  "item": "minecraft:glistering_melon_slice"
+                },
+                {
+                  "item": "minecraft:melon_slice"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "chance": 1.0,
+            "content": {
+              "amount": 1,
+              "matches": {
+                "item": "thermal:frost_melon_slice"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
