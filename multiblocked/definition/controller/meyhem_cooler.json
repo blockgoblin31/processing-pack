@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "location": "meyhem:cooler",
+  "traits": {
+    "item": [
+      {
+        "cIO": 0,
+        "gIO": 0,
+        "x": 5,
+        "y": 71,
+        "autoIO": false
+      },
+      {
+        "cIO": 1,
+        "gIO": 1,
+        "x": 152,
+        "y": 70,
+        "autoIO": false
+      }
+    ]
+  },
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasDynamicShape": false,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 6.0,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "friction": 0.6,
+    "harvestLevel": 1,
+    "stackSize": 64,
+    "tabGroup": "multiblocked.all"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "state": {
+          "id": "immersiveengineering:conveyor_basic",
+          "meta": 1
+        },
+        "type": "blockstate",
+        "postRenderer": true
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle",
+      "sound": {
+        "sound": "minecraft:block.wart_block.place",
+        "loop": true,
+        "delay": 1,
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    },
+    "suspend": {
+      "parent": "working"
+    },
+    "new_status_1": {},
+    "new_status_2": {},
+    "new_status_3": {},
+    "new_status_4": {}
+  },
+  "recipeMap": "cooler",
+  "basePattern": {
+    "structureDir": [
+      "LEFT",
+      "UP",
+      "BACK"
+    ],
+    "pattern": [
+      [
+        "AAA",
+        "ABA",
+        "AAA"
+      ],
+      [
+        "AAA",
+        "A@A",
+        "AAA"
+      ],
+      [
+        "AAA",
+        "ACA",
+        "AAA"
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "blocks": [
+          {
+            "id": "minecraft:packed_ice"
+          }
+        ],
+        "type": "blocks"
+      },
+      "controller": {
+        "location": "meyhem:cooler",
+        "type": "component"
+      },
+      "B": {
+        "blocks": [
+          {
+            "id": "immersiveengineering:conveyor_basic"
+          }
+        ],
+        "type": "blocks"
+      },
+      "C": {
+        "blocks": [
+          {
+            "id": "immersiveengineering:conveyor_extract"
+          }
+        ],
+        "type": "blocks"
+      },
+      "air": {
+        "type": "air"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "C": [
+        "C"
+      ],
+      "-": [
+        "air"
+      ]
+    }
+  }
+}
