@@ -1,0 +1,17 @@
+#loader contenttweaker
+
+import mods.contenttweaker.block.BlockBuilder;
+import mods.contenttweaker.block.stairs.BlockBuilderStairs;
+import mods.contenttweaker.block.basic.BlockBuilderBasic;
+import mods.contenttweaker.block.pillar.BlockBuilderPillarRotatable;
+import mods.contenttweaker.item.ItemBuilder;
+import mods.contenttweaker.item.tool.ItemBuilderTool;
+
+new ItemBuilder().build("ore_cluster_1");
+new ItemBuilder().build("ore_cluster_2");
+new ItemBuilder().build("ore_cluster_3");
+new ItemBuilder().build("ore_cluster_4");
+new ItemBuilder().build("ore_cluster_5");
+new ItemBuilder().build("ore_cluster_6");
+new ItemBuilder().build("ore_cluster_7");
+new ItemBuilder().build("processing_1_1_1");

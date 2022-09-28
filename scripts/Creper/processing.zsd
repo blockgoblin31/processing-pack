@@ -1,0 +1,5 @@
+import crafttweaker.api.FurnaceManager;
+
+// FurnaceManager.addJSONRecipe(name as string, data as IData) as void
+
+furnace.addJSONRecipe("precessing_1_1_1", {ingredient:{item:<item:contenttweaker:ore_cluster_1>.registryName},result:<item:contenttweaker:precessing_1_1_1>.registryName, experience:0.2 as float, cookingtime:200});

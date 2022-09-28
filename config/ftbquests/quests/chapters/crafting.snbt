@@ -1,0 +1,120 @@
+{
+	id: "1430156E5D303CD6"
+	group: ""
+	order_index: 0
+	filename: "crafting"
+	title: "Crafting"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.0d
+			y: 0.0d
+			id: "086D11A2C9A05386"
+			tasks: [{
+				id: "1630125ED0F44914"
+				type: "checkmark"
+				title: "Read"
+			}]
+		}
+		{
+			title: "Mix in Sawdust"
+			x: 1.5d
+			y: -1.5d
+			dependencies: ["55467438EB58B797"]
+			id: "095DA3B7392A6873"
+			tasks: [
+				{
+					id: "387281CF04D3A56A"
+					type: "item"
+					item: "create:basin"
+				}
+				{
+					id: "305FFB8F320FA80C"
+					type: "item"
+					item: "create:mechanical_mixer"
+				}
+				{
+					id: "10C3E6EDBC895324"
+					type: "item"
+					item: "mekanism:sawdust"
+				}
+			]
+		}
+		{
+			title: "Blast"
+			x: 3.0d
+			y: -1.5d
+			dependencies: ["095DA3B7392A6873"]
+			dependency_requirement: "one_completed"
+			id: "1CF9D0DF057130E3"
+			tasks: [
+				{
+					id: "23A641025A92D54D"
+					type: "item"
+					item: "create:encased_fan"
+				}
+				{
+					id: "5D3DDBC781052B51"
+					type: "item"
+					item: "minecraft:lava_bucket"
+				}
+			]
+		}
+		{
+			title: "Chill in cryro chamber"
+			x: 4.5d
+			y: -1.5d
+			dependencies: ["1CF9D0DF057130E3"]
+			id: "308A80B0A1B25D6D"
+			tasks: [{
+				id: "0F69DCB25052FF9D"
+				type: "item"
+				item: "meyhem:cooler"
+			}]
+		}
+		{
+			title: "Place and add Coal Meal"
+			x: 6.0d
+			y: -1.5d
+			dependencies: ["308A80B0A1B25D6D"]
+			id: "3BF8F71F17A111E0"
+			tasks: [
+				{
+					id: "39574A88733CA654"
+					type: "item"
+					item: "contenttweaker:improved_common"
+				}
+				{
+					id: "6B8DE4D3050895A8"
+					type: "item"
+					item: "contenttweaker:coalmeal1"
+				}
+			]
+		}
+		{
+			title: "Ore Cluster: Common > Uncommon"
+			x: 0.0d
+			y: -1.5d
+			dependencies: ["086D11A2C9A05386"]
+			id: "55467438EB58B797"
+			tasks: [{
+				id: "73DB8C53C98D80E2"
+				type: "item"
+				item: "contenttweaker:common_cluster"
+			}]
+		}
+		{
+			title: "Ore Cluster (Uncommon)"
+			x: 7.5d
+			y: -1.5d
+			dependencies: ["3BF8F71F17A111E0"]
+			id: "3A3DB7C71AF8A111"
+			tasks: [{
+				id: "4AC764965CC6356F"
+				type: "item"
+				item: "contenttweaker:uncommon_cluster"
+			}]
+		}
+	]
+}
