@@ -1,0 +1,23 @@
+{
+    "item.contenttweaker.common_cluster":"Ore Cluster (common)",
+    "item.contenttweaker.uncommon_cluster":"Ore Cluster (uncommon)",
+    "item.contenttweaker.rare_cluster":"Ore Cluster (rare)",
+    "item.contenttweaker.epic_cluster":"Ore Cluster (epic)",
+    "item.contenttweaker.legendary_cluster":"Ore Cluster (ledgendary)",
+    "item.contenttweaker.omega_cluster":"Ore Cluster (OMAGA)",
+    "item.contenttweaker.ultimate_cluster":"Ore Cluster (ultiment)",
+    "item.contenttweaker.infernal_sawdust":"Infernal Sawdust",
+    "item.contenttweaker.coalmeal1":"Coal Meal",
+    "item.contenttweaker.coalmeal2":"Enriched Coal Meal",
+    "item.contenttweaker.coalmeal3":"Double Enriched Coal Meal",
+    "item.contenttweaker.coalmeal4":"Coal Meal 4 (WIP)",
+    "item.contenttweaker.coalmeal5":"Coal Meal 5 (WIP)",
+    "item.contenttweaker.coalmeal6":"Coal Meal 6 (WIP)",
+    "item.contenttweaker.coalmeal7":"Coal Meal 7 (WIP)",
+    "item.contenttweaker.voidic_sawdust":"Voidic Sawdust",
+    "item.contenttweaker.improved_common":"Improved Ore Cluster (common)",
+    "item.contenttweaker.useless_common":"Ore Cluster (common-uncommon)",
+    "item.contenttweaker.fake_sawdust":"Use this item in the Create Mixer with sawdust",
+    "item.contenttweaker.fake_blasting":"Use this item in the Blast Furnace, or Create Blasting.",
+    "item.contenttweaker.fake_cryogenic":"Use this item in the cryro chamber."
+}

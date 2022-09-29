@@ -20,3 +20,4 @@ for i, input in blastFurnaceInputs{
     var name = "customblastfurnacerecipe" + nameOld;
     blastFurnace.addRecipe(name, blastFurnaceOutputs[i], input, 0, 100);
 }
+

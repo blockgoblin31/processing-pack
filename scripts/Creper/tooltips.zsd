@@ -1,0 +1,13 @@
+import crafttweaker.api.item.tooltip.ITooltipFunction;
+import crafttweaker.api.text.TextFormatting;
+import crafttweaker.api.util.text.MCStyle;
+
+
+/*var text = MCStyle.applyFormatting("test") as MCStyle;
+var tip = stdlib.List<MCTextComponent>
+{
+    text
+};*/
+tooltip1 = MCTextComponent.createStringTextComponent("tip") as MCTextComponent;
+
+ITooltipFunction.apply(<item:minecraft:stone>, tooltip1, false);

@@ -25,3 +25,5 @@
 <recipetype:create:splashing>.addRecipe("splashing_uncommon", [<item:contenttweaker:fake_blasting>], <item:contenttweaker:uncommon_cluster>);
 
 <recipetype:create:milling>.addRecipe("milling_uncommon", [<item:thermal:tin_dust>, <item:thermal:copper_dust>, <item:thermal:iron_dust>, <item:minecraft:redstone>, <item:immersiveengineering:dust_aluminum>], <item:minecraft:dirt>);
+
+<recipetype:create:cutting>.addRecipe("nether_sawdust", <item:contenttweaker:infernal_sawdust>, <tag:items:custom:infernal_wood>, 100);
