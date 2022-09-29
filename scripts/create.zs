@@ -21,3 +21,8 @@
 );
 
 <recipetype:create:mixing>.addRecipe("mixing_test_1", "none", <item:contenttweaker:useless_common>.withTag({SequencedAssembly: {Progress: 0.33333334 as float, id: "crafttweaker:sequenced_assembly/uncommon_cluster" as string, Step: 1 as int}}), [<item:contenttweaker:infernal_sawdust>, <item:contenttweaker:common_cluster>]);
+
+
+//<recipetype:create:cutting>.addRecipe(String name, IItemStack output, IIngredient input, @Optional(100) int duration)
+
+<recipetype:create:cutting>.addRecipe("nether_sawdust", <item:contenttweaker:infernal_sawdust>, <tag:items:custom:infernal_wood>, 100);
