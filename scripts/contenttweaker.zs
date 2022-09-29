@@ -8,13 +8,13 @@ import mods.contenttweaker.block.basic.BlockBuilderBasic;
 import mods.contenttweaker.block.pillar.BlockBuilderPillarRotatable;
 import mods.contenttweaker.block.BlockRenderType;
 
-val itemname = ["common_cluster", "uncommon_cluster", "rare_cluster", "epic_cluster", "legendary_cluster", "omega_cluster", "ultimate_cluster", "infernal_sawdust", "coalmeal1", "coalmeal2", "coalmeal3", "coalmeal4", "coalmeal5", "coalmeal6", "coalmeal7", "voidic_sawdust", "useless_common", "fake_sawdust", "fake_blasting", "fake_cryogenic"] as string[];
+val itemname = ["infernal_sawdust", "coalmeal1", "coalmeal2", "coalmeal3", "coalmeal4", "coalmeal5", "coalmeal6", "coalmeal7", "voidic_sawdust", "useless_common", "useless_uncommon", "useless_rare", "useless_epic", "useless_legendary", "useless_omega", "fake_sawdust", "fake_blasting", "fake_cryogenic", "washed_uncommon"] as string[];
 
 for item in itemname{
     new ItemBuilder().build(item);
 }
 
-val blockname = ["improved_common"] as string[];
+val blockname = ["common_cluster", "uncommon_cluster", "rare_cluster", "epic_cluster", "legendary_cluster", "omega_cluster", "ultimate_cluster", "improved_common", "improved_uncommon", "improved_rare", "improved_epic", "improved_legendary", "improved_omega"] as string[];
 
 for block in blockname{
     var current = new BlockBuilder();
