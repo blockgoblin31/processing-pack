@@ -1,0 +1,36 @@
+{
+  "name": "Chill Uncommon",
+  "progressTexture": "multiblocked:textures/gui/progress_bar_arrow.png",
+  "recipes": [
+    {
+      "uid": "27aab441-bad9-4eb9-ba8d-ee82bcb0e73a",
+      "duration": 10,
+      "inputs": {
+        "item": [
+          {
+            "chance": 1.0,
+            "content": {
+              "amount": 1,
+              "matches": {
+                "item": "contenttweaker:useless_common"
+              }
+            }
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "chance": 1.0,
+            "content": {
+              "amount": 1,
+              "matches": {
+                "item": "contenttweaker:improved_common"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
