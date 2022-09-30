@@ -1,0 +1,29 @@
+{
+  "name": "steam_to_stress",
+  "progressTexture": "multiblocked:textures/gui/progress_bar_arrow.png",
+  "recipes": [
+    {
+      "uid": "5abffcee-357f-4b88-a571-38a940be5df7",
+      "duration": 100,
+      "inputs": {
+        "mek_gas": [
+          {
+            "chance": 1.0,
+            "content": {
+              "type": "mekanism:steam",
+              "amount": 1000
+            }
+          }
+        ]
+      },
+      "outputs": {
+        "create_stress": [
+          {
+            "chance": 1.0,
+            "content": 640.0
+          }
+        ]
+      }
+    }
+  ]
+}

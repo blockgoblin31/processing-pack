@@ -1,3 +1,4 @@
+
 import crafttweaker.api.item.IItemStack;
 
 val uncommon_assembley1 = <item:contenttweaker:useless_common>.withTag({SequencedAssembly: {Progress: 0.6666667 as float, id: "crafttweaker:sequenced_assembly/uncommon_cluster" as string, Step: 2 as int}});
@@ -20,4 +21,3 @@ for i, input in blastFurnaceInputs{
     var name = "customblastfurnacerecipe" + nameOld;
     blastFurnace.addRecipe(name, blastFurnaceOutputs[i], input, 0, 100);
 }
-

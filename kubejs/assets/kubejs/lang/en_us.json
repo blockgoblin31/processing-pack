@@ -15,9 +15,10 @@
     "item.contenttweaker.coalmeal6":"Coal Meal 6 (WIP)",
     "item.contenttweaker.coalmeal7":"Coal Meal 7 (WIP)",
     "item.contenttweaker.voidic_sawdust":"Voidic Sawdust",
-    "item.contenttweaker.improved_common":"Improved Ore Cluster (common)",
+    "block.contenttweaker.improved_common":"Improved Ore Cluster (common)",
     "item.contenttweaker.useless_common":"Ore Cluster (common-uncommon)",
     "item.contenttweaker.fake_sawdust":"Use this item in the Create Mixer with sawdust",
     "item.contenttweaker.fake_blasting":"Use this item in the Blast Furnace, or Create Blasting.",
-    "item.contenttweaker.fake_cryogenic":"Use this item in the cryro chamber."
+    "item.contenttweaker.fake_cryogenic":"Use this item in the cryro chamber.",
+    "item.contenttweaker.common_1_1":"Tosty Common Ore Cluster"
 }

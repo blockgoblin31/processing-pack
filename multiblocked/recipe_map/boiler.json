@@ -1,0 +1,29 @@
+{
+  "name": "boiler",
+  "progressTexture": "multiblocked:textures/gui/progress_bar_arrow.png",
+  "recipes": [
+    {
+      "uid": "1eb751d7-aec1-465c-b914-92420506f3e8",
+      "duration": 1,
+      "inputs": {
+        "fluid": [
+          {
+            "chance": 1.0,
+            "content": "{FluidName:\"minecraft:water\",Amount:1000}"
+          }
+        ]
+      },
+      "outputs": {
+        "mek_gas": [
+          {
+            "chance": 1.0,
+            "content": {
+              "type": "mekanism:steam",
+              "amount": 1000
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
