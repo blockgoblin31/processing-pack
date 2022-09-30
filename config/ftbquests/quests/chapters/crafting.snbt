@@ -19,9 +19,10 @@
 		}
 		{
 			title: "Mix in Sawdust"
+			icon: "thermal:sawdust"
 			x: 1.5d
 			y: -1.5d
-			dependencies: ["55467438EB58B797"]
+			dependencies: ["4A73B005E5588369"]
 			id: "095DA3B7392A6873"
 			tasks: [
 				{
@@ -43,6 +44,7 @@
 		}
 		{
 			title: "Blast"
+			icon: "contenttweaker:fake_blasting"
 			x: 3.0d
 			y: -1.5d
 			dependencies: ["095DA3B7392A6873"]
@@ -63,6 +65,7 @@
 		}
 		{
 			title: "Chill in cryro chamber"
+			icon: "thermal:ice_charge"
 			x: 4.5d
 			y: -1.5d
 			dependencies: ["1CF9D0DF057130E3"]
@@ -75,6 +78,7 @@
 		}
 		{
 			title: "Place and add Coal Meal"
+			icon: "contenttweaker:coalmeal1"
 			x: 6.0d
 			y: -1.5d
 			dependencies: ["308A80B0A1B25D6D"]
@@ -93,19 +97,7 @@
 			]
 		}
 		{
-			title: "Ore Cluster: Common > Uncommon"
-			x: 0.0d
-			y: -1.5d
-			dependencies: ["086D11A2C9A05386"]
-			id: "55467438EB58B797"
-			tasks: [{
-				id: "73DB8C53C98D80E2"
-				type: "item"
-				item: "contenttweaker:common_cluster"
-			}]
-		}
-		{
-			title: "Ore Cluster (Uncommon)"
+			title: "Uncommon Ore Cluster"
 			x: 7.5d
 			y: -1.5d
 			dependencies: ["3BF8F71F17A111E0"]
@@ -115,6 +107,257 @@
 				type: "item"
 				item: "contenttweaker:uncommon_cluster"
 			}]
+		}
+		{
+			title: "Common Ore Cluster"
+			x: 0.0d
+			y: -1.5d
+			dependencies: ["086D11A2C9A05386"]
+			id: "4A73B005E5588369"
+			tasks: [{
+				id: "6AA6ECE673E5B9FA"
+				type: "item"
+				item: "contenttweaker:common_cluster"
+			}]
+		}
+		{
+			icon: "minecraft:furnace"
+			x: -2.0d
+			y: -3.0d
+			dependencies: ["4A73B005E5588369"]
+			id: "7A50787000C81AB0"
+			tasks: [{
+				id: "35C362530A398F61"
+				type: "item"
+				item: "minecraft:furnace"
+			}]
+		}
+		{
+			x: -2.0d
+			y: -6.0d
+			subtitle: "Basic resource production"
+			description: [
+				"50% Chance for Iron Nugget,"
+				"50% Chance for Copper Nugget,"
+				"And 50% chance for Redstone."
+			]
+			dependencies: ["2B82944482510279"]
+			id: "3609FBD32863A3A5"
+			tasks: [
+				{
+					id: "7735FD684CDF8F66"
+					type: "item"
+					item: "minecraft:iron_nugget"
+				}
+				{
+					id: "768712DFB10FCD29"
+					type: "item"
+					item: "create:copper_nugget"
+				}
+				{
+					id: "01122F7D6B30F2B0"
+					type: "item"
+					item: "minecraft:redstone"
+				}
+			]
+		}
+		{
+			x: -0.5d
+			y: -3.0d
+			dependencies: ["4A73B005E5588369"]
+			id: "2C5649BCA2D296A6"
+			tasks: [{
+				id: "2D74E0A9A13DBF09"
+				type: "item"
+				item: "create:millstone"
+			}]
+		}
+		{
+			x: 0.5d
+			y: -3.0d
+			dependencies: ["4A73B005E5588369"]
+			id: "757B380B4C3BD8D4"
+			tasks: [{
+				id: "094EEF48B3AACD2A"
+				type: "item"
+				item: "create:crushing_wheel"
+			}]
+		}
+		{
+			x: 1.5d
+			y: -3.0d
+			dependencies: ["4A73B005E5588369"]
+			id: "6A4F7FAC1E885817"
+			tasks: [{
+				id: "02A33D4BA0424873"
+				type: "item"
+				item: "mekanism:crusher"
+			}]
+		}
+		{
+			title: "1x Coal"
+			x: -0.5d
+			y: -4.5d
+			subtitle: "1x Coal processing"
+			dependencies: ["2C5649BCA2D296A6"]
+			id: "0BA59CCDD8445017"
+			tasks: [{
+				id: "360CF25A98D41E03"
+				type: "item"
+				item: "minecraft:coal"
+			}]
+		}
+		{
+			title: "2x Coal"
+			x: 0.5d
+			y: -4.5d
+			subtitle: "2x Coal processing"
+			dependencies: ["757B380B4C3BD8D4"]
+			id: "43C6FCE3C8D770FF"
+			tasks: [{
+				id: "09B78BBB90936C7A"
+				type: "item"
+				item: "minecraft:coal"
+			}]
+		}
+		{
+			title: "4x Coal"
+			x: 1.5d
+			y: -4.5d
+			subtitle: "4x Coal processing"
+			dependencies: ["6A4F7FAC1E885817"]
+			id: "7B39C71B69E2F097"
+			tasks: [{
+				id: "5EF307295403B3EE"
+				type: "item"
+				item: "minecraft:coal"
+			}]
+		}
+		{
+			title: "Water Bucket"
+			x: -2.0d
+			y: -4.5d
+			subtitle: "Drop in Water"
+			dependencies: ["7A50787000C81AB0"]
+			id: "2B82944482510279"
+			tasks: [{
+				id: "03DEE1FDE89695AB"
+				type: "item"
+				item: "minecraft:water_bucket"
+			}]
+		}
+		{
+			title: "Mill Stone 2"
+			x: 7.0d
+			y: -3.0d
+			dependencies: ["3A3DB7C71AF8A111"]
+			id: "7FB476F008EE3CA8"
+			tasks: [{
+				id: "180C0245581ACE73"
+				type: "item"
+				item: "create:millstone"
+			}]
+		}
+		{
+			title: "Crushing Wheel 2"
+			x: 8.0d
+			y: -3.0d
+			dependencies: ["3A3DB7C71AF8A111"]
+			id: "293CD28A7255C191"
+			tasks: [{
+				id: "1D680FDD3DEAEC62"
+				type: "item"
+				item: "create:crushing_wheel"
+			}]
+		}
+		{
+			title: "Crusher 2"
+			x: 9.0d
+			y: -3.0d
+			dependencies: ["3A3DB7C71AF8A111"]
+			id: "7E42ED8A218B03D1"
+			tasks: [{
+				id: "4EF4D623CD413374"
+				type: "item"
+				item: "mekanism:crusher"
+			}]
+		}
+		{
+			x: 5.5d
+			y: -3.0d
+			description: ["The foundery needs corners, unlike the smeltery."]
+			dependencies: ["3A3DB7C71AF8A111"]
+			id: "232B9D4643418AF8"
+			tasks: [{
+				id: "5A5D6AC8FD5E24CB"
+				type: "item"
+				item: "tconstruct:foundry_controller"
+			}]
+		}
+		{
+			title: "4x Coal"
+			x: 7.0d
+			y: -4.5d
+			subtitle: "1x Coal processing"
+			dependencies: ["7FB476F008EE3CA8"]
+			id: "0F69D92E140C824D"
+			tasks: [{
+				id: "4DA7A0271352D68A"
+				type: "item"
+				item: "minecraft:coal"
+			}]
+		}
+		{
+			x: 8.0d
+			y: -4.5d
+			subtitle: "2x Coal processing"
+			dependencies: ["293CD28A7255C191"]
+			id: "1295A6FA88B0C1A1"
+			tasks: [{
+				id: "0E200869877B7A57"
+				type: "item"
+				item: "minecraft:coal"
+			}]
+		}
+		{
+			x: 9.0d
+			y: -4.5d
+			subtitle: "4x Coal processing"
+			dependencies: ["7E42ED8A218B03D1"]
+			id: "7C359A2ABB421D54"
+			tasks: [{
+				id: "7870C72AE51CED6F"
+				type: "item"
+				item: "minecraft:coal"
+			}]
+		}
+		{
+			x: 5.5d
+			y: -4.5d
+			dependencies: ["232B9D4643418AF8"]
+			id: "5A73830954D7F1A2"
+			tasks: [
+				{
+					id: "6E059F23DA6B9E6F"
+					type: "item"
+					item: "thermal:redstone_bucket"
+				}
+				{
+					id: "0696A61CA7AF08FD"
+					type: "item"
+					item: "tconstruct:molten_bronze_bucket"
+				}
+				{
+					id: "36C0E738BD2CF697"
+					type: "item"
+					item: "tconstruct:molten_iron_bucket"
+				}
+				{
+					id: "5BBFF8D77B595D0B"
+					type: "item"
+					item: "tconstruct:molten_aluminum_bucket"
+				}
+			]
 		}
 	]
 }
