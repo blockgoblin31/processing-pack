@@ -29,10 +29,12 @@ val itemname = [
     "fake_sawdust",
     "fake_blasting",
     "fake_cryogenic",
-    "common_cluster_1_1"
+    "common_cluster_1_1",
+    "washed_uncommon"
 ] as string[];
 //the clusters with an _x_x are the processing items, like the common_cluster_1_1.
-//is the first number is process methot, in this case "1", the scrond number is the step.
+//is the first number is process method, in this case "1", the scrond number is the step.
+
 val itemrarity = ["COMMON", "UNCOMMON", "RARE", "EPIC", "LEGENDARY", "UNCOMMON", "EPIC"] as string[];
 
 for item in itemname{
@@ -40,7 +42,7 @@ for item in itemname{
     new ItemBuilder().build(item);//.withRarity(itemrarity[i])
 }
 
-val blockname = ["improved_common"] as string[];
+val blockname = ["common_cluster", "uncommon_cluster", "rare_cluster", "epic_cluster", "legendary_cluster", "omega_cluster", "ultimate_cluster", "improved_common", "improved_uncommon", "improved_rare", "improved_epic", "improved_legendary", "improved_omega"] as string[];
 
 for block in blockname{
     var current = new BlockBuilder();
