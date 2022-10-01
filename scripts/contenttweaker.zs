@@ -52,6 +52,7 @@ for block in blockname{
         .setRequiresTool()
         .withHarvestTool(<tooltype:pickaxe>)
         .withRenderType(BlockRenderType.CUTOUT)
+        .withHardnessAndResistance(2f)
         .build(block);
 }
 
