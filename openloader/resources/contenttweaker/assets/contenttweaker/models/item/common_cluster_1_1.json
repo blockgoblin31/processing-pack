@@ -1,0 +1,6 @@
+{
+  "parent" : "item/generated",
+  "textures" :
+  {"layer0" : "contenttweaker:item/common_cluster_1_1"
+  }
+}

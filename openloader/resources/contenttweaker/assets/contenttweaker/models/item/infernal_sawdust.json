@@ -1,6 +1,7 @@
 {
   "parent" : "item/generated",
   "textures" :
-  {"layer0" : "contenttweaker:item/infernal_sawdust"
+  {
+    "layer0" : "contenttweaker:item/infernal_sawdust"
   }
 }
