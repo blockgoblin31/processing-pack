@@ -55,10 +55,10 @@ for block in blockname{
         .build(block);
 }
 
-val defaultFluidName = [] as string[];
-val defaultFluidColor = [] as int[];
-val defaultFluidMolten = [] as bool[];
-val defaultFluidLuminosity = [] as int[];
+val defaultFluidName = ["liquid_cobblestone", "molten_coal"] as string[];
+val defaultFluidColor = [0xbbbbbb, 0x111111] as int[];
+val defaultFluidMolten = [true, true] as bool[];
+val defaultFluidLuminosity = [0, 5] as int[];
 
 for i, name in defaultFluidName{
     new FluidBuilder(defaultFluidMolten[i], defaultFluidColor[i]).luminosity(defaultFluidLuminosity[i]).build(name);
