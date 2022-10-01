@@ -4,3 +4,5 @@
 
 <recipetype:tconstruct:alloying>.removeRecipe(<fluid:tconstruct:molten_signalum>);
 <recipetype:tconstruct:alloying>.addRecipe("signalum", [<fluid:thermal:redstone>*64, <fluid:tconstruct:molten_silver>*144, <fluid:tconstruct:molten_copper>*432], <fluid:tconstruct:molten_signalum>*576, 50);
+
+<recipetype:tconstruct:casting_basin>.removeRecipe(<item:tconstruct:smeltery_controller>);
