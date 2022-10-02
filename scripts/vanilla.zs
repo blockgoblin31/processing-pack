@@ -1,3 +1,4 @@
+#priority 99
 
 import crafttweaker.api.item.IItemStack;
 
