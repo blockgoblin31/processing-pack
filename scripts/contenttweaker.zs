@@ -32,7 +32,8 @@ val itemname = [
     "fake_blasting",
     "fake_cryogenic",
     "common_cluster_1_1",
-    "washed_uncommon"
+    "washed_uncommon",
+    "phosphate"
 ] as string[];
 //the clusters with an _x_x are the processing items, like the common_cluster_1_1.
 //is the first number is process method, in this case "1", the scrond number is the step.
@@ -56,10 +57,10 @@ for block in blockname{
         .build(block);
 }
 
-val defaultFluidName = ["liquid_cobblestone", "molten_coal"] as string[];
-val defaultFluidColor = [0xbbbbbb, 0x111111] as int[];
-val defaultFluidMolten = [true, true] as bool[];
-val defaultFluidLuminosity = [0, 5] as int[];
+val defaultFluidName = ["liquid_cobblestone", "molten_coal", "molten_andesite"] as string[];
+val defaultFluidColor = [0xcccccc, 0x111111, 0xbbbbbb] as int[];
+val defaultFluidMolten = [true, true, true] as bool[];
+val defaultFluidLuminosity = [0, 5, 0] as int[];
 
 for i, name in defaultFluidName{
     new FluidBuilder(defaultFluidMolten[i], defaultFluidColor[i]).luminosity(defaultFluidLuminosity[i]).build(name);
