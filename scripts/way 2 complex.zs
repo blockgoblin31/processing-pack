@@ -14,9 +14,13 @@ CTEventManager.register<crafttweaker.api.event.entity.player.interact.MCRightCli
     if <item:contenttweaker:coalmeal1>.matches(item) {
         var blockState = world.getBlockState(pos);
         if <block:minecraft:stone> == blockState.block {
-            world.setBlockState(pos, <blockstate:contenttweaker:common_cluster>);
-            var heldItem = player.getHeldItem(hand);
-            heldItem.mutable().shrink(1);
+            pos = pos.up();
+            blockState = world.getBlockState(pos);
+            if <block:minecraft:air> == blockState.block {
+                world.setBlockState(pos, <blockstate:contenttweaker:common_cluster>);
+                var heldItem = player.getHeldItem(hand);
+                heldItem.mutable().shrink(1);
+            }
         }
     }
 });
