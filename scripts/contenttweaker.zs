@@ -33,7 +33,12 @@ val itemname = [
     "fake_cryogenic",
     "common_cluster_1_1",
     "washed_uncommon",
-    "phosphate"
+    "phosphate",
+    "quartz_sand",
+    "fire_stick",
+    "extinguished_stick",
+    "bronze_rod",
+    "graphite_pellet"
 ] as string[];
 //the clusters with an _x_x are the processing items, like the common_cluster_1_1.
 //is the first number is process method, in this case "1", the scrond number is the step.

@@ -1,11 +1,11 @@
 {
-    "item.contenttweaker.common_cluster":"Ore Cluster (common)",
-    "item.contenttweaker.uncommon_cluster":"Ore Cluster (uncommon)",
-    "item.contenttweaker.rare_cluster":"Ore Cluster (rare)",
-    "item.contenttweaker.epic_cluster":"Ore Cluster (epic)",
-    "item.contenttweaker.legendary_cluster":"Ore Cluster (ledgendary)",
-    "item.contenttweaker.omega_cluster":"Ore Cluster (OMAGA)",
-    "item.contenttweaker.ultimate_cluster":"Ore Cluster (ultiment)",
+    "block.contenttweaker.common_cluster":"Ore Cluster (common)",
+    "block.contenttweaker.uncommon_cluster":"Ore Cluster (uncommon)",
+    "block.contenttweaker.rare_cluster":"Ore Cluster (rare)",
+    "block.contenttweaker.epic_cluster":"Ore Cluster (epic)",
+    "block.contenttweaker.legendary_cluster":"Ore Cluster (ledgendary)",
+    "block.contenttweaker.omega_cluster":"Ore Cluster (OMAGA)",
+    "block.contenttweaker.ultimate_cluster":"Ore Cluster (ultimate)",
     "item.contenttweaker.infernal_sawdust":"Infernal Sawdust",
     "item.contenttweaker.coalmeal1":"Coal Meal",
     "item.contenttweaker.coalmeal2":"Enriched Coal Meal",
@@ -20,5 +20,13 @@
     "item.contenttweaker.fake_sawdust":"Use this item in the Create Mixer with sawdust",
     "item.contenttweaker.fake_blasting":"Use this item in the Blast Furnace, or Create Blasting.",
     "item.contenttweaker.fake_cryogenic":"Use this item in the cryro chamber.",
-    "item.contenttweaker.common_1_1":"Tosty Common Ore Cluster"
+    "item.contenttweaker.common_1_1":"Cooked Common Ore Cluster",
+    "item.pneumaticcraft.ingot_iron_compressed":"Compressed Tin Ingot",
+    "item.pneumaticcraft.compressed_iron_block":"Compressed Tin Block",
+    "item.pneumaticcraft.compressed_iron_gear":"Compressed Tin Gear",
+    "item.pneumaticcraft.compressed_iron_helmet":"Compressed Tin Helmet",
+    "item.pneumaticcraft.compressed_iron_chestplate":"Compressed Tin Chestplate",
+    "item.pneumaticcraft.compressed_iron_leggings":"Compressed Tin Leggings",
+    "item.pneumaticcraft.compressed_iron_boots":"Compressed Tin Boots",
+    "item.pneumaticcraft.drill_bit_compressed_iron":"Compressed Tin Drill Bit"
 }

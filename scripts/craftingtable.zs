@@ -19,8 +19,11 @@ craftingTable.removeRecipe(<item:create:spout>);
 craftingTable.removeRecipe(<item:create:item_drain>);
 craftingTable.removeRecipe(<item:create:mechanical_drill>);
 craftingTable.removeRecipe(<item:create:mechanical_saw>);
+craftingTable.removeRecipe(<item:pneumaticcraft:heat_frame>);
+craftingTable.removeRecipe(<item:create:propeller>);
 
 craftingTable.addShapeless("first_coalmeal", <item:contenttweaker:coalmeal1>, [<item:minecraft:bone_meal>, <item:minecraft:coal>]);
+craftingTable.addShapeless("second_coalmeal", <item:contenttweaker:coalmeal2>, [<item:contenttweaker:coalmeal1>, <item:contenttweaker:phosphate>, <item:minecraft:redstone>]);
 
 craftingTable.addShaped("seared1", <item:tconstruct:seared_fuel_tank>, [
     [scorched, scorched, scorched],
@@ -97,6 +100,10 @@ craftingTable.addShapeless("alloy_from_iron", <item:create:andesite_alloy>*2, [
     <tag:items:forge:nuggets/iron>, <tag:items:forge:nuggets/iron>, <item:minecraft:andesite>, <item:minecraft:andesite>,
 ]);
 
+craftingTable.addShapeless("alloy_from_copper", <item:create:andesite_alloy>, [
+    <tag:items:forge:nuggets/copper>, <tag:items:forge:nuggets/copper>, <item:minecraft:andesite>, <item:minecraft:andesite>,
+]);
+
 craftingTable.addShapeless("alloy_from_tin", <item:create:andesite_alloy>*2, [
     <tag:items:forge:nuggets/tin>, nul, <item:minecraft:andesite>, <item:minecraft:andesite>,
 ]);
@@ -123,4 +130,16 @@ craftingTable.addShaped("saw", <item:create:mechanical_saw>, [
     [nul, <tag:items:forge:plates/iron>, nul],
     [<tag:items:forge:plates/iron>, <tag:items:forge:ingots/bronze>, <tag:items:forge:plates/iron>],
     [nul, <item:create:andesite_casing>, nul]
+]);
+
+craftingTable.addShaped("heat_frame", <item:pneumaticcraft:heat_frame>, [
+    [scorched, <item:minecraft:iron_ingot>, scorched],
+    [<item:minecraft:iron_ingot>, <item:minecraft:furnace>, <item:minecraft:iron_ingot>],
+    [scorched, <item:minecraft:iron_ingot>, scorched]
+]);
+
+craftingTable.addShaped("propeller", <item:create:propeller>, [
+    [nul, <tag:items:forge:plates/copper>, nul],
+    [<tag:items:forge:plates/copper>, alloy, <tag:items:forge:plates/copper>],
+    [nul, <tag:items:forge:plates/copper>, nul]
 ]);

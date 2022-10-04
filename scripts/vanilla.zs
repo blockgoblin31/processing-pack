@@ -42,4 +42,4 @@ for i, input in furnaceInputs{
     furnace.addRecipe("customfurnacerecipe" + i as string, furnaceOutputs[i], input, 0, 100);
 }
 
-//recipes.removeRecipeByInput(<item:minecraft:coal_ore>);
+recipes.removeRecipeByInput(<item:minecraft:coal_ore>);
