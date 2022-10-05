@@ -143,3 +143,18 @@ craftingTable.addShaped("propeller", <item:create:propeller>, [
     [<tag:items:forge:plates/copper>, alloy, <tag:items:forge:plates/copper>],
     [nul, <tag:items:forge:plates/copper>, nul]
 ]);
+
+craftingTable.addShaped("enriched", <item:contenttweaker:enriched_common>, [
+    [nul, <item:minecraft:redstone>, nul],
+    [<item:minecraft:redstone>, <item:contenttweaker:common_cluster_1_1>, <item:minecraft:redstone>],
+    [nul, <item:minecraft:redstone>, nul]
+]);
+
+craftingTable.addShaped("saw_saw", <item:contenttweaker:saw>, [
+    [<item:minecraft:stick>, <item:minecraft:stick>, <item:minecraft:stick>],
+    [<item:minecraft:stick>, <tag:items:forge:ingots/copper>, <tag:items:forge:ingots/copper>]
+]);
+
+craftingTable.addShapeless("sawdust", <item:contenttweaker:infernal_sawdust>, [
+    <item:contenttweaker:saw>.anyDamage().transformDamage(), <tag:items:custom:infernal_wood>
+]);

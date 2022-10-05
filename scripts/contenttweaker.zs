@@ -38,7 +38,8 @@ val itemname = [
     "fire_stick",
     "extinguished_stick",
     "bronze_rod",
-    "graphite_pellet"
+    "graphite_pellet",
+    "enriched_common"
 ] as string[];
 //the clusters with an _x_x are the processing items, like the common_cluster_1_1.
 //is the first number is process method, in this case "1", the scrond number is the step.
@@ -81,3 +82,5 @@ val customFluidLuminosity = [] as int[];
 for i, name in customFluidName{
     new FluidBuilder(customFluidMolten[i], customFluidColor[i], customFluidStill[i], customFluidFlowing[i]).luminosity(customFluidLuminosity[i]).build(name);
 }
+
+new ItemBuilder().withMaxDamage(120).build("saw");
