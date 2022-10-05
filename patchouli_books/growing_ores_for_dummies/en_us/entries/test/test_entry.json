@@ -1,0 +1,11 @@
+{
+    "name": "Test Entry",
+    "icon": "minecraft:writable_book",
+    "category": "growing_ores_for_dummies:test_category",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This is a test entry, but it should show up!"
+        }
+    ]
+}
