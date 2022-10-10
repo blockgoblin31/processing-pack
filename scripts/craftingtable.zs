@@ -101,7 +101,7 @@ craftingTable.addShapeless("alloy_from_iron", <item:create:andesite_alloy>*2, [
 ]);
 
 craftingTable.addShapeless("alloy_from_copper", <item:create:andesite_alloy>, [
-    <tag:items:forge:nuggets/copper>, <tag:items:forge:nuggets/copper>, <item:minecraft:andesite>, <item:minecraft:andesite>,
+    <tag:items:forge:nuggets/copper>, <item:minecraft:andesite>, <item:minecraft:andesite>,
 ]);
 
 craftingTable.addShapeless("alloy_from_tin", <item:create:andesite_alloy>*2, [
@@ -157,4 +157,19 @@ craftingTable.addShaped("saw_saw", <item:contenttweaker:saw>, [
 
 craftingTable.addShapeless("sawdust", <item:contenttweaker:infernal_sawdust>, [
     <item:contenttweaker:saw>.anyDamage().transformDamage(), <tag:items:custom:infernal_wood>
+]);
+
+craftingTable.addShaped("rod_bronze", <item:contenttweaker:bronze_rod> * 4, [
+    [<tag:items:forge:ingots/bronze>],
+    [<tag:items:forge:ingots/bronze>]
+]);
+
+craftingTable.addShaped("freezer", <item:custommachinery:custom_machine_item>.withTag({machine: "machinery:freezer" as string}), [
+    [<item:minecraft:ice>, <item:minecraft:ice>, <item:minecraft:ice>],
+    [<item:minecraft:ice>, <item:minecraft:barrel>, <item:minecraft:ice>],
+    [<item:minecraft:ice>, <item:minecraft:ice>, <item:minecraft:ice>]
+]);
+
+craftingTable.addShapeless("silver1", <item:thermal:silver_dust> * 2, [
+    <item:thermal:earth_charge>, <item:contenttweaker:rare_cluster>
 ]);

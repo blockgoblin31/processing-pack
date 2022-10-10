@@ -34,12 +34,23 @@ val itemname = [
     "common_cluster_1_1",
     "washed_uncommon",
     "phosphate",
-    "quartz_sand",
     "fire_stick",
     "extinguished_stick",
     "bronze_rod",
     "graphite_pellet",
-    "enriched_common"
+    "enriched_common",
+    "fake_melting",
+    "fake_ingot_cast",
+    "fake_pressure_chamber_with_plastic",
+    "fake_plate_press",
+    "fake_casting_basin_with_liquid_cobble_",
+    "graphite_lollipop",
+    "useless_uncommon",
+    "uncommon_ingot",
+    "uncommon_plastic",
+    "uncommon_plate",
+    "cactus_pulp",
+    "cactus_shreds"
 ] as string[];
 //the clusters with an _x_x are the processing items, like the common_cluster_1_1.
 //is the first number is process method, in this case "1", the scrond number is the step.
@@ -51,7 +62,7 @@ for item in itemname{
     new ItemBuilder().build(item);//.withRarity(itemrarity[i])
 }
 
-val blockname = ["common_cluster", "uncommon_cluster", "rare_cluster", "epic_cluster", "legendary_cluster", "omega_cluster", "ultimate_cluster", "improved_common", "improved_uncommon", "improved_rare", "improved_epic", "improved_legendary", "improved_omega", "petrified_log"] as string[];
+val blockname = ["common_cluster", "uncommon_cluster", "rare_cluster", "epic_cluster", "legendary_cluster", "omega_cluster", "ultimate_cluster", "mythic_cluster", "celestial_cluster", "supreme_cluster", "improved_common", "improved_uncommon", "improved_rare", "improved_epic", "improved_legendary", "improved_omega", "improved_mythic", "improved_celestial", "petrified_log"] as string[];
 
 for block in blockname{
     new BlockBuilder()
@@ -63,10 +74,10 @@ for block in blockname{
         .build(block);
 }
 
-val defaultFluidName = ["liquid_cobblestone", "molten_coal", "molten_andesite"] as string[];
-val defaultFluidColor = [0xcccccc, 0x111111, 0xbbbbbb] as int[];
-val defaultFluidMolten = [true, true, true] as bool[];
-val defaultFluidLuminosity = [0, 5, 0] as int[];
+val defaultFluidName = ["liquid_cobblestone", "molten_coal", "molten_andesite", "molten_uncommon_cluster", "gelid_cryotheum"] as string[];
+val defaultFluidColor = [0xcccccc, 0x111111, 0xbbbbbb, 0xaa7777, 0x0066ff] as int[];
+val defaultFluidMolten = [true, true, true, true, false] as bool[];
+val defaultFluidLuminosity = [0, 5, 0, 5, 0] as int[];
 
 for i, name in defaultFluidName{
     new FluidBuilder(defaultFluidMolten[i], defaultFluidColor[i]).luminosity(defaultFluidLuminosity[i]).build(name);

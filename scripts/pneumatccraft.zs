@@ -11,3 +11,9 @@
 <recipetype:pneumaticcraft:pressure_chamber>.addRecipe("block", [<tag:items:forge:storage_blocks/tin>], [<item:pneumaticcraft:compressed_iron_block>], 2.0);
 
 <recipetype:pneumaticcraft:heat_frame_cooling>.addRecipe("slimeball_to_snowball", <item:contenttweaker:useless_common>.withTag({SequencedAssembly: {Progress: 0.6666667 as float, id: "crafttweaker:sequenced_assembly/uncommon_cluster" as string, Step: 2 as int}}), <item:contenttweaker:improved_common>, 258);
+
+<recipetype:pneumaticcraft:pressure_chamber>.addRecipe("uncommon_plastic", [<item:contenttweaker:uncommon_ingot>.withTag({SequencedAssembly: {Progress: 0.4 as float, id: "crafttweaker:sequenced_assembly/rare_cluster" as string, Step: 2 as int}}), <item:pneumaticcraft:plastic>], [<item:contenttweaker:uncommon_plastic>.withTag({SequencedAssembly: {Progress: 0.6 as float, id: "crafttweaker:sequenced_assembly/rare_cluster" as string, Step: 3 as int}})], 2.0);
+
+<recipetype:pneumaticcraft:thermo_plant>.addRecipe("melting_uncommon", <fluid:contenttweaker:liquid_cobblestone> * 0, <item:contenttweaker:uncommon_cluster>, <fluid:contenttweaker:molten_uncommon_cluster> * 144, <item:minecraft:air>, 1.0, 0);
+
+<recipetype:pneumaticcraft:pressure_chamber>.addRecipe("blaze", [<item:minecraft:gunpowder>], [<item:thermal:basalz_powder>], 4.0);
