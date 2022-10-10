@@ -18,3 +18,13 @@
 <recipetype:tconstruct:melting>.addOreMeltingRecipe("cobblestone", <item:minecraft:cobblestone>, <fluid:contenttweaker:liquid_cobblestone>*500, 1, 10);
 
 <recipetype:tconstruct:melting>.removeByName("tconstruct:smeltery/melting/metal/gold/gilded_blackstone");
+
+<recipetype:tconstruct:casting_table>.addItemCastingRecipe("item_casting_table_rod_bronze", <item:tconstruct:rod_cast>, <fluid:tconstruct:molten_bronze> * 72, <item:contenttweaker:bronze_rod>, 100, false, true);
+<recipetype:tconstruct:casting_table>.addItemCastingRecipe("item_casting_table_rod_bronze_sand", <tag:items:tconstruct:casts/single_use/rod>, <fluid:tconstruct:molten_bronze> * 72, <item:contenttweaker:bronze_rod>, 100, false, false);
+
+<recipetype:tconstruct:casting_table>.addItemCastingRecipe("item_casting_table_cluster", <item:tconstruct:ingot_cast>, <fluid:contenttweaker:molten_uncommon_cluster> * 144, <item:contenttweaker:uncommon_ingot>.withTag({SequencedAssembly: {Progress: 0.4 as float, id: "crafttweaker:sequenced_assembly/rare_cluster" as string, Step: 2 as int}}), 100, false, true);
+
+<recipetype:tconstruct:casting_basin>.addItemCastingRecipe("item_casting_basin_stone", <item:minecraft:air>, <fluid:minecraft:lava> * 1000, <item:minecraft:stone>, 900, false, false);
+<recipetype:tconstruct:casting_basin>.addItemCastingRecipe("item_casting_basin_cobblestone", <item:minecraft:air>, <fluid:contenttweaker:liquid_cobblestone> * 1000, <item:minecraft:cobblestone>, 900, false, false);
+
+<recipetype:tconstruct:casting_basin>.addItemCastingRecipe("item_casting_basin_uncommon", <item:contenttweaker:uncommon_plate>.withTag({SequencedAssembly: {Progress: 0.8 as float, id: "crafttweaker:sequenced_assembly/rare_cluster" as string, Step: 4 as int}}), <fluid:contenttweaker:liquid_cobblestone> * 1000, <item:contenttweaker:improved_uncommon>, 900, false, false);
