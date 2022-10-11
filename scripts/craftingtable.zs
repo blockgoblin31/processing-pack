@@ -381,4 +381,5 @@ craftingTable.addShaped("mv_connector", <item:immersiveengineering:connector_mv>
     [nul, <item:thermal:lumium_ingot>, nul],
     [<item:minecraft:terracotta>, <item:thermal:lumium_ingot>, <item:minecraft:terracotta>],
     [<item:minecraft:terracotta>, <item:thermal:lumium_ingot>, <item:minecraft:terracotta>]
+
 ]);

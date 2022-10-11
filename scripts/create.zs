@@ -34,6 +34,7 @@
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("petrification").require(<tag:items:minecraft:logs_that_burn>).transitionTo(<item:minecraft:oak_log>).loops(50).addOutput(<item:contenttweaker:petrified_log>, 1).addStep(<recipetype:create:pressing>.factory(), (rb) => rb.duration(10)));
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("hot_stick").require(<item:contenttweaker:extinguished_stick>).transitionTo(<item:contenttweaker:extinguished_stick>).loops(16).addOutput(<item:contenttweaker:graphite_lollipop>, 1).addStep(<recipetype:create:pressing>.factory(), (rb) => rb.require(<item:mekanism:dust_coal>)));
+
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("too_hot_stick")
     .require(<item:contenttweaker:fire_stick>)
     .transitionTo(<item:contenttweaker:fire_stick>)
@@ -75,3 +76,4 @@
 <recipetype:create:compacting>.addRecipe("compacting_rubber", "none", <item:contenttweaker:raw_infernal_rubber>, [<item:create:cinder_flour>], [<fluid:minecraft:water> * 1000], 200);
 
 <recipetype:create:splashing>.addRecipe("extinguish", [<item:contenttweaker:extinguished_stick>], <item:contenttweaker:fire_stick>);
+

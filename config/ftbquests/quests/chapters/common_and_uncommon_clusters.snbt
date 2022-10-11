@@ -1,0 +1,520 @@
+{
+	id: "133390F75152DCFF"
+	group: ""
+	order_index: 1
+	filename: "common_and_uncommon_clusters"
+	title: "Common and Uncommon Clusters"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: -1.0d
+			y: -3.0d
+			description: ["The world is resource poor, with no metals to be found, but I have identified trace amounts of magic in the atmosphere; the magic of life. A simple powder of bone can be used to grow plants, my research indicates that, when mixed with coal, it can also be used to grow stone."]
+			id: "44242FD031EDD486"
+			tasks: [{
+				id: "1BB156C7CFE42B02"
+				type: "checkmark"
+				title: "Genesis"
+			}]
+		}
+		{
+			x: 0.0d
+			y: -1.5d
+			description: ["Some amount of coal will be needed to gove the bone meal the properties of rock"]
+			dependencies: ["44242FD031EDD486"]
+			id: "4DC8AC36071C5027"
+			tasks: [{
+				id: "12AFB044EBE0E045"
+				type: "item"
+				item: "minecraft:coal"
+			}]
+		}
+		{
+			x: -2.0d
+			y: -1.5d
+			description: ["Bone meal, the essence of life, able to make plants grow almost magically, can be mixed with various substances to make metals grow from bare rock"]
+			dependencies: ["44242FD031EDD486"]
+			id: "349187DAC45A847E"
+			tasks: [{
+				id: "6EA479ED368B276F"
+				type: "item"
+				item: "minecraft:bone_meal"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 0.0d
+			description: ["The product of my research, when used on stone this should cause an ore bud to sprout above it."]
+			dependencies: [
+				"349187DAC45A847E"
+				"4DC8AC36071C5027"
+			]
+			id: "487D6DA8E6949DAA"
+			tasks: [{
+				id: "04E5124EE40AED8F"
+				type: "item"
+				item: "contenttweaker:coalmeal1"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 1.5d
+			description: ["This contains trace amounts of simple metals, but they are heavily bonded to the stone. Perhaps heating will allow me to extract them?"]
+			dependencies: ["487D6DA8E6949DAA"]
+			id: "4A7BAF470EFE304D"
+			tasks: [{
+				id: "3216417723EB90C4"
+				type: "item"
+				item: "contenttweaker:common_cluster"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 3.0d
+			description: ["Now to dissolve the stone I should wet it somehow. just tossing it in a pool of water seems to work"]
+			dependencies: ["4A7BAF470EFE304D"]
+			id: "06B8D0343EB53799"
+			tasks: [{
+				id: "4BAE9A1AEE4EE5BC"
+				type: "item"
+				item: "contenttweaker:common_cluster_1_1"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 4.5d
+			description: ["Metals! I have created the first complex materials in this world, and with these I should be able to create more complex metals, by processing the ore bud and applying stronger coal meal. I will need lots of copper and iron, though"]
+			dependencies: ["06B8D0343EB53799"]
+			id: "1D9E31D61BC4F2F9"
+			tasks: [
+				{
+					id: "66D4834AE7139AB5"
+					type: "item"
+					item: "minecraft:iron_nugget"
+				}
+				{
+					id: "1DBE61C1EB24F94E"
+					type: "item"
+					item: "create:copper_nugget"
+				}
+				{
+					id: "06D1758EE37F7835"
+					type: "item"
+					item: "minecraft:redstone"
+				}
+			]
+		}
+		{
+			x: -2.5d
+			y: 4.5d
+			description: ["By mixing the ore cluster with redstone before melting the stone away, it seems that I get more metals, at a loss of the redstone"]
+			dependencies: ["06B8D0343EB53799"]
+			id: "144B39EDAE56E992"
+			tasks: [{
+				id: "5CEC4820B9AD02E3"
+				type: "item"
+				item: "contenttweaker:enriched_common"
+			}]
+		}
+		{
+			x: -4.0d
+			y: 6.0d
+			description: ["This blend of sand, gravel, and clay can be made into bricks with useful heat-resistant properties"]
+			id: "0F5CA791EA7CEADD"
+			tasks: [{
+				id: "6B55092904CC9E12"
+				type: "item"
+				item: "tconstruct:grout"
+			}]
+		}
+		{
+			x: -2.5d
+			y: 6.0d
+			description: ["With these items, it should be possible to mix water and lava to make obsidian blocks. These blocks have heavy magic, and it seems they can be used to break into another dimension."]
+			dependencies: ["0F5CA791EA7CEADD"]
+			id: "1C227DA01A068260"
+			tasks: [
+				{
+					id: "59A1E51C1BFFD94D"
+					type: "item"
+					item: "tconstruct:seared_melter"
+					count: 2L
+				}
+				{
+					id: "42B37B431996DA21"
+					type: "item"
+					item: "tconstruct:scorched_alloyer"
+				}
+				{
+					id: "10C0508C0431918C"
+					type: "item"
+					item: "tconstruct:scorched_basin"
+				}
+				{
+					id: "1679DC62CBB2D45B"
+					type: "item"
+					item: "tconstruct:seared_heater"
+				}
+				{
+					id: "0CCF825C9A793E80"
+					type: "item"
+					item: "tconstruct:scorched_faucet"
+				}
+			]
+		}
+		{
+			title: "The Nether"
+			x: -2.5d
+			y: 7.5d
+			description: ["The wood from this dimension allows a greater absorption of magic into the ore cluster, if mixed in thouroughly."]
+			dependencies: ["1C227DA01A068260"]
+			id: "1D8DDBF14AED3C09"
+			tasks: [
+				{
+					id: "6A60D9BBB68D7410"
+					type: "dimension"
+					dimension: "minecraft:the_nether"
+				}
+				{
+					id: "410E9CE2C4C43CAD"
+					type: "item"
+					item: "minecraft:crimson_stem"
+				}
+			]
+		}
+		{
+			x: -4.0d
+			y: 7.5d
+			description: ["Using this melter, it seems to be possible to turn stone into lava. Sadly, the stone does need to be smelted first. If cobblestone is melted, I only get a waste liquid. Maybe I'll find a use for it someday."]
+			dependencies: ["1C227DA01A068260"]
+			id: "21B096CDF7715CFF"
+			tasks: [{
+				id: "5DBD604939953B78"
+				type: "item"
+				item: "minecraft:lava_bucket"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 7.5d
+			description: ["I'll need sonething stronger than my own hands to mix in sawdust, this setup will be perfect"]
+			dependencies: ["166086AFFA0C29AF"]
+			id: "68CC9FDA190B6505"
+			tasks: [
+				{
+					id: "08DA4A564C0B2CDE"
+					type: "item"
+					item: "create:mechanical_mixer"
+				}
+				{
+					id: "0774A55ADDD13E3C"
+					type: "item"
+					item: "create:basin"
+				}
+			]
+		}
+		{
+			title: "Rotational Source"
+			x: -1.0d
+			y: 6.0d
+			description: ["I'll need some sort of rotation to power my future factory, and my current mixer"]
+			dependencies: ["1D9E31D61BC4F2F9"]
+			id: "166086AFFA0C29AF"
+			tasks: [
+				{
+					id: "74C4731E63D99CA3"
+					type: "item"
+					item: "create:water_wheel"
+				}
+				{
+					id: "122F3B9D52C05680"
+					type: "item"
+					item: "create:windmill_bearing"
+				}
+			]
+		}
+		{
+			title: "\"Improving\" the ore cluster"
+			x: -1.0d
+			y: 9.0d
+			description: ["While you can no longer turn this into raw materials, you'll soon be able to turn it into better metals"]
+			dependencies: [
+				"68CC9FDA190B6505"
+				"0098DFFC86408A25"
+			]
+			id: "408DF11420904722"
+			tasks: [{
+				id: "6A13535721608ACE"
+				type: "item"
+				item: "contenttweaker:useless_common"
+			}]
+		}
+		{
+			x: -2.5d
+			y: 9.0d
+			description: ["The best way to mix in wood from the nether is to reduce it to dust, mix it in, melt the stone slightly, and re-freeze it."]
+			dependencies: ["1D8DDBF14AED3C09"]
+			id: "0098DFFC86408A25"
+			tasks: [{
+				id: "1B7E169FAA669BEE"
+				type: "item"
+				item: "contenttweaker:infernal_sawdust"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 10.5d
+			description: ["Next, I'll need something more powerful than a common furnace to melt it. The fan will require more setup, but uses copper instead of iron, which seems to be needed for almost everything else"]
+			dependencies: ["408DF11420904722"]
+			id: "577FB06CC7C0D03D"
+			tasks: [
+				{
+					id: "33EC6F9627FCBFC2"
+					type: "item"
+					item: "minecraft:blast_furnace"
+				}
+				{
+					id: "4ADBB88D2E1F74C2"
+					type: "item"
+					item: "create:encased_fan"
+				}
+			]
+		}
+		{
+			x: -1.0d
+			y: 12.0d
+			description: ["Finally, I'll re-freeze the stone, with the sawdust thouroughly mixed in now."]
+			dependencies: ["577FB06CC7C0D03D"]
+			id: "566D75DB14B25F72"
+			tasks: [
+				{
+					id: "24D52042A8A0DF0E"
+					type: "item"
+					item: "pneumaticcraft:heat_frame"
+				}
+				{
+					id: "7AB0D462E79A3CA4"
+					type: "item"
+					item: "minecraft:packed_ice"
+				}
+			]
+		}
+		{
+			x: 0.5d
+			y: 10.5d
+			description: ["there is a trace compound, phosphate, found in dirt, but it can only be extracted with a fine mesh. This string one will do, but only gives a fraction of the full potential."]
+			id: "368F9BEB78335A41"
+			tasks: [{
+				id: "4F0DCDE811B978B8"
+				type: "item"
+				item: "exnihilosequentia:mesh_string"
+			}]
+		}
+		{
+			x: 0.5d
+			y: 12.0d
+			description: ["this should be a better coalmeal, able to grow the ore cluster more and hopefully produce new metals."]
+			dependencies: ["368F9BEB78335A41"]
+			id: "38C61C4B760420E0"
+			tasks: [{
+				id: "2685C25DB90E9DE0"
+				type: "item"
+				item: "contenttweaker:coalmeal2"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 13.5d
+			description: [
+				"I should be able to get some new metals from this by melting it down, but this is an imperfect solution, with the tin and copper alloying during the melting process."
+				"Some way to get all the materials seperately would let me get the raw tin."
+			]
+			dependencies: [
+				"38C61C4B760420E0"
+				"566D75DB14B25F72"
+			]
+			id: "57E8E2D8E5C1EC10"
+			tasks: [{
+				id: "767C11A5B8FC68A2"
+				type: "item"
+				item: "contenttweaker:uncommon_cluster"
+			}]
+		}
+		{
+			x: -2.5d
+			y: 13.5d
+			description: ["Exploding the cluster recreates high pressure conditions of the nether, giving a material that might be found there in a world with full materials."]
+			dependencies: ["57E8E2D8E5C1EC10"]
+			id: "44D14B1F45DBFB2D"
+			tasks: [
+				{
+					id: "763D91EF1DC6E07A"
+					type: "item"
+					item: "minecraft:quartz"
+				}
+				{
+					id: "3B663463E9630458"
+					type: "item"
+					item: "minecraft:tnt"
+				}
+			]
+		}
+		{
+			x: -3.5d
+			y: 14.5d
+			dependencies: ["44D14B1F45DBFB2D"]
+			id: "5A57AB464173AB51"
+			tasks: [
+				{
+					id: "4C95354D476EFCD2"
+					type: "item"
+					item: "tconstruct:foundry_controller"
+				}
+				{
+					id: "5F1D83BD0732BE34"
+					type: "item"
+					title: "Any #tconstruct:scorched_tanks"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tconstruct:scorched_tanks"
+						}
+					}
+				}
+				{
+					id: "429F5D8E476C41BB"
+					type: "item"
+					item: "tconstruct:scorched_table"
+				}
+				{
+					id: "1C8D68A008D49E7B"
+					type: "item"
+					item: "tconstruct:scorched_basin"
+				}
+			]
+		}
+		{
+			x: -2.0d
+			y: 14.5d
+			description: ["An alloy of aluminum and copper can make a reasonable cast for extracting materials from my foundry."]
+			dependencies: [
+				"57E8E2D8E5C1EC10"
+				"5A57AB464173AB51"
+			]
+			id: "13AD6EBD0220CEC9"
+			tasks: [{
+				id: "0F4D0A7D576406AF"
+				type: "item"
+				item: "tconstruct:nugget_cast"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 16.0d
+			dependencies: ["13AD6EBD0220CEC9"]
+			id: "2328A435DA3638A8"
+			tasks: [
+				{
+					id: "37FEADCAA1825ECB"
+					type: "item"
+					item: "thermal:bronze_nugget"
+				}
+				{
+					id: "2272C10F98521807"
+					type: "item"
+					item: "immersiveengineering:nugget_aluminum"
+				}
+			]
+		}
+		{
+			title: "Improved Machinery"
+			x: 1.0d
+			y: 16.0d
+			description: ["With this, I can start automating processes I've had to do manually up until now"]
+			dependencies: ["2328A435DA3638A8"]
+			id: "0E8012C2CAB77CA1"
+			tasks: [
+				{
+					id: "0C036F759EE9B653"
+					type: "item"
+					item: "create:mechanical_saw"
+				}
+				{
+					id: "637922FFBC202C27"
+					type: "item"
+					item: "create:mechanical_drill"
+				}
+				{
+					id: "3B4152869A248DD3"
+					type: "item"
+					item: "create:spout"
+				}
+				{
+					id: "018BBF8052449D6F"
+					type: "item"
+					item: "create:item_drain"
+				}
+				{
+					id: "79CA176FD318CF14"
+					type: "item"
+					item: "create:belt_connector"
+				}
+			]
+		}
+		{
+			x: -1.0d
+			y: 17.5d
+			dependencies: ["2328A435DA3638A8"]
+			id: "65E49694234A2312"
+			tasks: [{
+				id: "55757712D001CD0F"
+				type: "item"
+				item: "create:millstone"
+			}]
+		}
+		{
+			x: -2.5d
+			y: 17.5d
+			id: "5253781DB07DCBFA"
+			tasks: [{
+				id: "214ECCDFA01B6D64"
+				type: "item"
+				item: "contenttweaker:washed_uncommon"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 19.0d
+			description: ["Now I finally have access to tin, which has very unique properties when put under extreme pressure. Maybe the blast chamber I've set up for quartz can work for this as well."]
+			dependencies: [
+				"5253781DB07DCBFA"
+				"65E49694234A2312"
+			]
+			id: "3792A381F9EF17B4"
+			tasks: [
+				{
+					id: "15E6AE4D0E25FDFC"
+					type: "item"
+					item: "thermal:tin_dust"
+				}
+				{
+					id: "6E840F1F15381D42"
+					type: "item"
+					item: "thermal:copper_dust"
+				}
+				{
+					id: "2A6DA9C4FE1F6688"
+					type: "item"
+					item: "thermal:iron_dust"
+				}
+				{
+					id: "32C11A18E27B76AC"
+					type: "item"
+					item: "immersiveengineering:dust_aluminum"
+				}
+			]
+		}
+	]
+}

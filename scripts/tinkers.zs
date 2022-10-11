@@ -4,6 +4,8 @@
 
 <recipetype:tconstruct:casting_basin>.addItemCastingRecipe("item_casting_basin_andesite", <item:minecraft:air>, <fluid:contenttweaker:molten_andesite> * 1000, <item:minecraft:andesite>, 90, false, false);
 
+<recipetype:tconstruct:casting_basin>.addItemCastingRecipe("item_casting_basin_andesite", <item:minecraft:air>, <fluid:contenttweaker:molten_andesite> * 500, <item:minecraft:andesite>, 900, false, false);
+
 <recipetype:tconstruct:alloying>.removeRecipe(<fluid:tconstruct:molten_signalum>);
 <recipetype:tconstruct:alloying>.addRecipe("signalum", [<fluid:thermal:redstone>*64, <fluid:tconstruct:molten_silver>*144, <fluid:tconstruct:molten_copper>*432], <fluid:tconstruct:molten_signalum>*576, 50);
 
