@@ -1,0 +1,15 @@
+{
+    "name": "Uncommon Cluster",
+    "icon": "contenttweaker:uncommon_cluster",
+    "category": "patchouli:growing_clusters",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "   The uncommon cluster requires the common cluster to be infused with sawdust. The best way to attempt this is to heat the cluster to a very high temperature, and then mix in the sawdust, before cooling to slightly below the temperature of ice. This can be processed in two ways. The first yeilds bronze, which is slightly more valuable that it's constituent tin and copper, but requires investing in a foundry array." 
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(br)  The second method is to soak it with water for a prolonged period of time, before crushing it. A simple millstone works for this. That method will yield tin and copper, instead of the bronze, so the melting is generally prefered. You should be trying to upgrade to the rare clusters before long, though, so the final choice is up to you."
+        }
+    ]
+}

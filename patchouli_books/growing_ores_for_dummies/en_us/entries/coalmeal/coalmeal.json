@@ -1,0 +1,15 @@
+{
+    "name": "Coal Meal",
+    "icon": "contenttweaker:coalmeal1",
+    "category": "patchouli:coalmeal",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "The first type of coal meal is a simple mixture of coal and bone meal. By clicking it on stone, a common ore cluster grows out of it."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "crafttweaker:first_coalmeal"
+        }
+    ]
+}

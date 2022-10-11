@@ -9,14 +9,14 @@ var furnaceOutputs = [<item:tconstruct:scorched_brick>, <item:contenttweaker:com
 
 var blastFurnaceRemove = [<item:tconstruct:seared_brick>] as IItemStack[];
 
-var blastFurnaceInputsOld = [<item:tconstruct:grout>] as IItemStack[];
-var blastFurnaceOutputsOld = [<item:tconstruct:scorched_brick>] as IItemStack[];
+var blastFurnaceInputsOld = [<item:tconstruct:grout>, <item:contenttweaker:raw_infernal_rubber>] as IItemStack[];
+var blastFurnaceOutputsOld = [<item:tconstruct:scorched_brick>, <item:contenttweaker:infernal_rubber>] as IItemStack[];
 
 var list1 = blastFurnaceInputsOld as stdlib.List<IItemStack>;
 var list2 = blastFurnaceOutputsOld as stdlib.List<IItemStack>;
 
-val uncommon_assembley1 = <item:contenttweaker:useless_common>.withTag({SequencedAssembly: {Progress: 0.6666667 as float, id: "crafttweaker:sequenced_assembly/uncommon_cluster" as string, Step: 2 as int}});
-val uncommon_assembley2 = <item:contenttweaker:useless_common>.withTag({SequencedAssembly: {Progress: 0.33333334 as float, id: "crafttweaker:sequenced_assembly/uncommon_cluster" as string, Step: 1 as int}});
+val uncommon_assembley1 = <item:contenttweaker:useless_common>.withTag({SequencedAssembly: {Progress: 0.33333334 as float, id: "crafttweaker:sequenced_assembly/uncommon_cluster" as string, Step: 1 as int}});
+val uncommon_assembley2 = <item:contenttweaker:common_cluster>;
 
 list1.add(uncommon_assembley2);
 list2.add(uncommon_assembley1);

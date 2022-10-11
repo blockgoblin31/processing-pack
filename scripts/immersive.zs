@@ -6,3 +6,7 @@
 
 <recipetype:immersiveengineering:squeezer>.addRecipe("cactus", <item:minecraft:cactus>, 1000, <item:contenttweaker:cactus_pulp>);
 <recipetype:immersiveengineering:crusher>.addRecipe("cactus", <item:contenttweaker:cactus_pulp>, 1000, <item:contenttweaker:cactus_shreds>, <item:thermal:niter_dust>);
+
+<recipetype:immersiveengineering:crusher>.addRecipe("gunpowder", <item:minecraft:gunpowder>, 1000, <item:immersiveengineering:dust_sulfur>, <item:mekanism:dust_coal>);
+
+<recipetype:immersiveengineering:metal_press>.addRecipe("lumium_plate", <tag:items:forge:ingots/lumium>, <item:immersiveengineering:mold_plate>, 1000, <item:thermal:lumium_plate>);

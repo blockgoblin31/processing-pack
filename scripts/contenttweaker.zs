@@ -50,7 +50,17 @@ val itemname = [
     "uncommon_plastic",
     "uncommon_plate",
     "cactus_pulp",
-    "cactus_shreds"
+    "cactus_shreds",
+    "pyrotheum_dust",
+    "cryotheum_dust",
+    "petrotheum_dust",
+    "aerotheum_dust",
+    "melted_cluster",
+    "pure_cluster",
+    "cluster_rock",
+    "raw_infernal_rubber",
+    "infernal_rubber",
+    "hey_tcat_remember_to_make_a_new_propellor_texture"
 ] as string[];
 //the clusters with an _x_x are the processing items, like the common_cluster_1_1.
 //is the first number is process method, in this case "1", the scrond number is the step.
@@ -62,7 +72,7 @@ for item in itemname{
     new ItemBuilder().build(item);//.withRarity(itemrarity[i])
 }
 
-val blockname = ["common_cluster", "uncommon_cluster", "rare_cluster", "epic_cluster", "legendary_cluster", "omega_cluster", "ultimate_cluster", "mythic_cluster", "celestial_cluster", "supreme_cluster", "improved_common", "improved_uncommon", "improved_rare", "improved_epic", "improved_legendary", "improved_omega", "improved_mythic", "improved_celestial", "petrified_log"] as string[];
+val blockname = ["common_cluster", "uncommon_cluster", "rare_cluster", "epic_cluster", "legendary_cluster", "omega_cluster", "ultimate_cluster", "mythic_cluster", "celestial_cluster", "supreme_cluster", "improved_common", "improved_uncommon", "improved_rare", "improved_epic", "improved_legendary", "improved_omega", "improved_mythic", "improved_celestial", "petrified_log", "freezer", "centrifuge"] as string[];
 
 for block in blockname{
     new BlockBuilder()
@@ -83,12 +93,12 @@ for i, name in defaultFluidName{
     new FluidBuilder(defaultFluidMolten[i], defaultFluidColor[i]).luminosity(defaultFluidLuminosity[i]).build(name);
 }
 
-val customFluidName = [] as string[];
-val customFluidColor = [] as int[];
-val customFluidMolten = [] as bool[];
-val customFluidFlowing = [] as MCResourceLocation[];
-val customFluidStill = [] as MCResourceLocation[];
-val customFluidLuminosity = [] as int[];
+val customFluidName = ["pyrotheum", "cryotheum", "areotheum", "petrotheum"] as string[];
+val customFluidColor = [0xffffff, 0xffffff, 0xffffff, 0xffffff] as int[];
+val customFluidMolten = [false, false, false, false] as bool[];
+val customFluidFlowing = [<resource:contenttweaker:textures/fluid/pyrotheum_flow.png>, <resource:contenttweaker:textures/fluid/cryotheum_flow.png>, <resource:contenttweaker:textures/fluid/aerotheum_flow.png>, <resource:contenttweaker:textures/fluid/petrotheum_flow.png>] as MCResourceLocation[];
+val customFluidStill = [<resource:contenttweaker:textures/fluid/pyrotheum_still.png>, <resource:contenttweaker:textures/fluid/cryotheum_still.png>, <resource:contenttweaker:textures/fluid/aerotheum_still.png>, <resource:contenttweaker:textures/fluid/petrotheum_still.png>] as MCResourceLocation[];
+val customFluidLuminosity = [0, 0, 0, 0] as int[];
 
 for i, name in customFluidName{
     new FluidBuilder(customFluidMolten[i], customFluidColor[i], customFluidStill[i], customFluidFlowing[i]).luminosity(customFluidLuminosity[i]).build(name);
