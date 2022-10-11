@@ -1,0 +1,40 @@
+{
+    "pools": [
+        {
+            "rolls": {
+                "min": 1,
+                "max": 2
+            },
+            "entries": [
+                {
+                "type": "minecraft:item",
+                "name": "create:crushed_iron_ore"
+                },
+                {
+                "type": "minecraft:item",
+                "name": "create:crushed_copper_ore"
+                },
+                {
+                "type": "minecraft:item",
+                "name": "create:crushed_aluminum_ore"
+                },
+                {
+                "type": "minecraft:item",
+                "name": "create:crushed_tin_ore"
+                }
+            ]
+        },
+        {
+            "rolls": {
+                "min": 2,
+                "max": 5
+            },
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:redstone"
+                }
+            ]
+        }
+    ]
+}

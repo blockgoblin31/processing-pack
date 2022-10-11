@@ -34,11 +34,33 @@ val itemname = [
     "common_cluster_1_1",
     "washed_uncommon",
     "phosphate",
-    "quartz_sand",
     "fire_stick",
     "extinguished_stick",
     "bronze_rod",
-    "graphite_pellet"
+    "graphite_pellet",
+    "enriched_common",
+    "fake_melting",
+    "fake_ingot_cast",
+    "fake_pressure_chamber_with_plastic",
+    "fake_plate_press",
+    "fake_casting_basin_with_liquid_cobble_",
+    "graphite_lollipop",
+    "useless_uncommon",
+    "uncommon_ingot",
+    "uncommon_plastic",
+    "uncommon_plate",
+    "cactus_pulp",
+    "cactus_shreds",
+    "pyrotheum_dust",
+    "cryotheum_dust",
+    "petrotheum_dust",
+    "aerotheum_dust",
+    "melted_cluster",
+    "pure_cluster",
+    "cluster_rock",
+    "raw_infernal_rubber",
+    "infernal_rubber",
+    "hey_tcat_remember_to_make_a_new_propellor_texture"
 ] as string[];
 //the clusters with an _x_x are the processing items, like the common_cluster_1_1.
 //is the first number is process method, in this case "1", the scrond number is the step.
@@ -50,7 +72,7 @@ for item in itemname{
     new ItemBuilder().build(item);//.withRarity(itemrarity[i])
 }
 
-val blockname = ["common_cluster", "uncommon_cluster", "rare_cluster", "epic_cluster", "legendary_cluster", "omega_cluster", "ultimate_cluster", "improved_common", "improved_uncommon", "improved_rare", "improved_epic", "improved_legendary", "improved_omega", "petrified_log"] as string[];
+val blockname = ["common_cluster", "uncommon_cluster", "rare_cluster", "epic_cluster", "legendary_cluster", "omega_cluster", "ultimate_cluster", "mythic_cluster", "celestial_cluster", "supreme_cluster", "improved_common", "improved_uncommon", "improved_rare", "improved_epic", "improved_legendary", "improved_omega", "improved_mythic", "improved_celestial", "petrified_log", "freezer", "centrifuge"] as string[];
 
 for block in blockname{
     new BlockBuilder()
@@ -62,22 +84,24 @@ for block in blockname{
         .build(block);
 }
 
-val defaultFluidName = ["liquid_cobblestone", "molten_coal", "molten_andesite"] as string[];
-val defaultFluidColor = [0xcccccc, 0x111111, 0xbbbbbb] as int[];
-val defaultFluidMolten = [true, true, true] as bool[];
-val defaultFluidLuminosity = [0, 5, 0] as int[];
+val defaultFluidName = ["liquid_cobblestone", "molten_coal", "molten_andesite", "molten_uncommon_cluster", "gelid_cryotheum"] as string[];
+val defaultFluidColor = [0xcccccc, 0x111111, 0xbbbbbb, 0xaa7777, 0x0066ff] as int[];
+val defaultFluidMolten = [true, true, true, true, false] as bool[];
+val defaultFluidLuminosity = [0, 5, 0, 5, 0] as int[];
 
 for i, name in defaultFluidName{
     new FluidBuilder(defaultFluidMolten[i], defaultFluidColor[i]).luminosity(defaultFluidLuminosity[i]).build(name);
 }
 
-val customFluidName = [] as string[];
-val customFluidColor = [] as int[];
-val customFluidMolten = [] as bool[];
-val customFluidFlowing = [] as MCResourceLocation[];
-val customFluidStill = [] as MCResourceLocation[];
-val customFluidLuminosity = [] as int[];
+val customFluidName = ["pyrotheum", "cryotheum", "areotheum", "petrotheum"] as string[];
+val customFluidColor = [0xffffff, 0xffffff, 0xffffff, 0xffffff] as int[];
+val customFluidMolten = [false, false, false, false] as bool[];
+val customFluidFlowing = [<resource:contenttweaker:textures/fluid/pyrotheum_flow.png>, <resource:contenttweaker:textures/fluid/cryotheum_flow.png>, <resource:contenttweaker:textures/fluid/aerotheum_flow.png>, <resource:contenttweaker:textures/fluid/petrotheum_flow.png>] as MCResourceLocation[];
+val customFluidStill = [<resource:contenttweaker:textures/fluid/pyrotheum_still.png>, <resource:contenttweaker:textures/fluid/cryotheum_still.png>, <resource:contenttweaker:textures/fluid/aerotheum_still.png>, <resource:contenttweaker:textures/fluid/petrotheum_still.png>] as MCResourceLocation[];
+val customFluidLuminosity = [0, 0, 0, 0] as int[];
 
 for i, name in customFluidName{
     new FluidBuilder(customFluidMolten[i], customFluidColor[i], customFluidStill[i], customFluidFlowing[i]).luminosity(customFluidLuminosity[i]).build(name);
 }
+
+new ItemBuilder().withMaxDamage(120).build("saw");

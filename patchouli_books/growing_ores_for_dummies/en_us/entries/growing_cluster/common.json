@@ -1,0 +1,15 @@
+{
+    "name": "Common Cluster",
+    "icon": "contenttweaker:common_cluster",
+    "category": "patchouli:growing_clusters",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "   The common cluster is the first type of ore cluster you'll make in your farm. It contains so little metals that (on average) you'll loose the money spent on coal and bonemeal if you try to turn it into resources. You can do this by smelting it and dropping it in a pool of water." 
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(br)   This will yeild a 50% chance of an iron nugget, a copper nugget, and a redstone dust. DO NOT DO THIS. It is a complete waste of materials to turn this cluster into metals."
+        }
+    ]
+}

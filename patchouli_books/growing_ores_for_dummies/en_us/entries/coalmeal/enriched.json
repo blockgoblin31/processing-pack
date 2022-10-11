@@ -1,0 +1,15 @@
+{
+    "name": "Enriched Coal Meal",
+    "icon": "contenttweaker:coalmeal2",
+    "category": "patchouli:coalmeal",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "The second coal meal can be made by mixing in phosphate, which is obtained from sifting dirt, and redstone. You can use it on an improved common ore cluster to make an uncommon cluster"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "crafttweaker:second_coalmeal"
+        }
+    ]
+}
