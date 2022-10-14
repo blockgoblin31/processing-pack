@@ -1,3 +1,5 @@
+import crafttweaker.api.item.IItemStack;
+
 val scorched = <item:tconstruct:scorched_brick>;
 val nul = <item:minecraft:air>;
 val glass = <tag:items:forge:glass>;
@@ -29,6 +31,7 @@ craftingTable.removeRecipe(<item:create:belt_connector>);
 craftingTable.removeRecipe(<item:immersiveengineering:wire_electrum>);
 craftingTable.removeRecipe(<item:immersiveengineering:connector_mv>);
 craftingTable.removeRecipe(<item:immersiveengineering:connector_mv_relay>);
+craftingTable.removeRecipe(<item:botania:fertilizer>);
 
 craftingTable.addShapeless("first_coalmeal", <item:contenttweaker:coalmeal1>, [<item:minecraft:bone_meal>, <item:minecraft:coal>]);
 craftingTable.addShapeless("second_coalmeal", <item:contenttweaker:coalmeal2>, [<item:contenttweaker:coalmeal1>, <item:contenttweaker:phosphate>, <item:minecraft:redstone>]);
@@ -381,5 +384,24 @@ craftingTable.addShaped("mv_connector", <item:immersiveengineering:connector_mv>
     [nul, <item:thermal:lumium_ingot>, nul],
     [<item:minecraft:terracotta>, <item:thermal:lumium_ingot>, <item:minecraft:terracotta>],
     [<item:minecraft:terracotta>, <item:thermal:lumium_ingot>, <item:minecraft:terracotta>]
+]);
 
+craftingTable.addShapeless("floral_fertilizer", <item:botania:fertilizer>, [
+    <item:minecraft:bone_meal>, <item:contenttweaker:pure_powder>
+]);
+
+for color in constants.colors {
+    var dye = <item:minecraft:${color}_dye>;
+    var flower = <item:botania:${color}_mystical_flower>;
+    craftingTable.addShapeless(color+"flower", flower, [
+        dye, <item:contenttweaker:blank_flower>
+    ]);
+}
+
+craftingTable.addShapeless("bronze_dust", <item:thermal:bronze_dust>, [<item:contenttweaker:bronze_half_dust>, <item:contenttweaker:bronze_half_dust>]);
+
+craftingTable.addShaped("silver_coil", <item:contenttweaker:silver_coil>, [
+    [nul, nul, redstone],
+    [nul, <tag:items:forge:ingots/silver>, nul],
+    [redstone, nul, nul]
 ]);

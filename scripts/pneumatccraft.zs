@@ -14,6 +14,7 @@
 
 <recipetype:pneumaticcraft:pressure_chamber>.addRecipe("uncommon_plastic", [<item:contenttweaker:uncommon_ingot>.withTag({SequencedAssembly: {Progress: 0.4 as float, id: "crafttweaker:sequenced_assembly/rare_cluster" as string, Step: 2 as int}}), <item:pneumaticcraft:plastic>], [<item:contenttweaker:uncommon_plastic>.withTag({SequencedAssembly: {Progress: 0.6 as float, id: "crafttweaker:sequenced_assembly/rare_cluster" as string, Step: 3 as int}})], 2.0);
 
-<recipetype:pneumaticcraft:thermo_plant>.addRecipe("melting_uncommon", <fluid:contenttweaker:liquid_cobblestone> * 0, <item:contenttweaker:uncommon_cluster>, <fluid:contenttweaker:molten_uncommon_cluster> * 144, <item:minecraft:air>, 1.0, 0);
+<recipetype:pneumaticcraft:thermo_plant>.addRecipe("melting_uncommon", <fluid:contenttweaker:liquid_cobblestone> * 0, <item:contenttweaker:uncommon_cluster>, <fluid:contenttweaker:molten_uncommon_cluster> * 144, <item:minecraft:air>, 1.0, 100);
+<recipetype:pneumaticcraft:thermo_plant>.addRecipe("graphite_pellet", <fluid:contenttweaker:liquid_cobblestone> * 0, <item:contenttweaker:graphite_dust>, <fluid:contenttweaker:molten_uncommon_cluster> * 0, <item:contenttweaker:graphite_pellet>, 1.0, 500);
 
 <recipetype:pneumaticcraft:pressure_chamber>.addRecipe("blaze", [<item:minecraft:gunpowder>], [<item:thermal:basalz_powder>], 4.0);
