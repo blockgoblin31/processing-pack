@@ -5,7 +5,7 @@ import crafttweaker.api.item.IItemStack;
 var furnaceRemove = [<item:tconstruct:seared_brick>] as IItemStack[];
 
 var furnaceInputs = [<item:tconstruct:grout>, <item:contenttweaker:common_cluster>] as IItemStack[];
-var furnaceOutputs = [<item:tconstruct:scorched_brick>, <item:contenttweaker:common_cluster_1_1>] as IItemStack[];
+var furnaceOutputs = [<item:tconstruct:scorched_brick>, <item:contenttweaker:common_cluster_1_1> * 2] as IItemStack[];
 
 var blastFurnaceRemove = [<item:tconstruct:seared_brick>] as IItemStack[];
 
@@ -42,6 +42,5 @@ for i, input in furnaceInputs{
     furnace.addRecipe("customfurnacerecipe" + i as string, furnaceOutputs[i], input, 0, 100);
 }
 
-recipes.removeRecipeByInput(<item:minecraft:coal_ore>);
 composter.setValue(<item:contenttweaker:cactus_shreds>, 0.1);
 composter.setValue(<item:contenttweaker:cactus_pulp>, 0.3);

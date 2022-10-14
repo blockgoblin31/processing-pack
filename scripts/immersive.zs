@@ -1,4 +1,4 @@
-<recipetype:immersiveengineering:crusher>.addRecipe("lollipellet", <item:contenttweaker:graphite_lollipop>, 500, <item:contenttweaker:graphite_pellet>, <item:thermal:bronze_dust> % 50);
+<recipetype:immersiveengineering:crusher>.addRecipe("lollipellet", <item:contenttweaker:graphite_lollipop>, 500, <item:contenttweaker:graphite_dust>, <item:contenttweaker:bronze_half_dust>);
 
 <recipetype:immersiveengineering:metal_press>.addRecipe("rod_bronze", <tag:items:forge:ingots/bronze>, <item:immersiveengineering:mold_rod>, 1000, <item:contenttweaker:bronze_rod> * 2);
 
