@@ -1,0 +1,381 @@
+{
+	id: "1B92462B94E59135"
+	group: ""
+	order_index: 1
+	filename: "rare_cluster"
+	title: "Rare Cluster"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.5d
+			y: -3.0d
+			description: ["The first step to making the rare ore cluster will, of course, to make the uncommon cluster"]
+			dependencies: ["3792A381F9EF17B4"]
+			id: "0EFF7E807CCC711B"
+			tasks: [{
+				id: "762816AB7E77F463"
+				type: "item"
+				item: "contenttweaker:uncommon_cluster"
+			}]
+		}
+		{
+			x: 0.5d
+			y: -1.5d
+			description: ["If I melt down the uncommon cluster, I can then cast it back out in a less stabe form. My existing foundry will do the job."]
+			dependencies: ["0EFF7E807CCC711B"]
+			id: "7539BEDC461A6376"
+			tasks: [{
+				id: "3162E2C07281E78A"
+				type: "item"
+				item: {
+					id: "tconstruct:copper_can"
+					Count: 1b
+					tag: {
+						fluid: "contenttweaker:molten_uncommon_cluster"
+					}
+				}
+			}]
+		}
+		{
+			x: 0.5d
+			y: 0.0d
+			description: ["Now I have my uncommon clister compressed into a bar, a much less stable form. It should now be possible to add plastic."]
+			dependencies: ["7539BEDC461A6376"]
+			id: "73EA7120C826DED7"
+			tasks: [{
+				id: "75218ACAC0434F85"
+				type: "item"
+				item: "contenttweaker:uncommon_ingot"
+			}]
+		}
+		{
+			x: 0.5d
+			y: 1.5d
+			description: ["Now that it's mixed with plastic, I should be able to add the cobblestone to make this into a full ore cluster. I'll need to make it into a slab-like form first, though"]
+			dependencies: ["73EA7120C826DED7"]
+			id: "162517A5FA958279"
+			tasks: [{
+				id: "70A01D87D6C24073"
+				type: "item"
+				item: "contenttweaker:uncommon_plastic"
+			}]
+		}
+		{
+			x: 0.5d
+			y: 3.0d
+			description: ["Now that my mixture is in plate form, I can fill it with cobblestone in the casting basin"]
+			dependencies: ["162517A5FA958279"]
+			id: "27726C4074E45C19"
+			tasks: [{
+				id: "42ADE935B3991AF2"
+				type: "item"
+				item: "contenttweaker:uncommon_plate"
+			}]
+		}
+		{
+			x: 0.5d
+			y: 4.5d
+			description: ["Now by filling my slab with a block's worth of liquid cobblestone, I can get the final form of the uncommon cluster, ready to be coalmealed."]
+			dependencies: ["27726C4074E45C19"]
+			id: "3CC3118E954DF8CC"
+			tasks: [{
+				id: "471E0FE414A5F4EB"
+				type: "item"
+				item: "contenttweaker:improved_uncommon"
+			}]
+		}
+		{
+			x: 0.5d
+			y: 6.0d
+			description: ["I now have access to the next tier of ore cluster, which contains silver, nickel, and zinc. Now I just need to purify it."]
+			dependencies: [
+				"3CC3118E954DF8CC"
+				"360AFA1F35441DDF"
+			]
+			id: "0170A240908FB58C"
+			tasks: [{
+				id: "14902BD3489C18BC"
+				type: "item"
+				item: "contenttweaker:rare_cluster"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 4.5d
+			description: ["By mixing my niter and graphite pellet into the previous coalmeal, I get an even more enriched version, able to be used to make rare clusters"]
+			dependencies: [
+				"5CA5F3550E5F81E2"
+				"6CC89815DCB13034"
+			]
+			id: "360AFA1F35441DDF"
+			tasks: [{
+				id: "6A2C51B5D5CA6B5C"
+				type: "item"
+				item: "contenttweaker:coalmeal3"
+			}]
+		}
+		{
+			x: 3.5d
+			y: 3.0d
+			description: ["This pellet is the most pure form of carbon imaginable, perfect to add to coalmeal!"]
+			dependencies: ["362660F2FA48ECB8"]
+			id: "5CA5F3550E5F81E2"
+			tasks: [{
+				id: "5C92541B8A336379"
+				type: "item"
+				item: "contenttweaker:graphite_pellet"
+			}]
+		}
+		{
+			x: 3.5d
+			y: 1.5d
+			description: ["Now I've got my graphite pellet, but it's firmly attached to my rod. The best way to get the rod out seems to be by crushing it."]
+			dependencies: [
+				"1477E01EC4C4FB97"
+				"6E8669E34ED4886A"
+			]
+			id: "362660F2FA48ECB8"
+			tasks: [{
+				id: "38206DF3D468845D"
+				type: "item"
+				item: "contenttweaker:graphite_lollipop"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 3.0d
+			description: ["Now by crushing the cactus pulp, I get cactus shreds and niter. The cactus shreda, a pure waste product, can be composted, but at a rather bad value."]
+			dependencies: ["5D286F18614B8D18"]
+			id: "6CC89815DCB13034"
+			tasks: [{
+				id: "792455A2699C72E3"
+				type: "item"
+				item: "thermal:niter_dust"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 1.5d
+			description: ["By squeezing cactus, I get a pulp with a much higher niter content than the original. It should now be possible to extract the niter. Also makes great compost!"]
+			dependencies: ["56BEC21B2FB4773E"]
+			id: "5D286F18614B8D18"
+			tasks: [{
+				id: "17A945E7ECD2D402"
+				type: "item"
+				item: "contenttweaker:cactus_pulp"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 0.0d
+			description: ["I need a more powerful fertilizer, which it seems I can get through niter. The only way I know of to obtain niter is from cactus, which means I'll need to find some."]
+			id: "56BEC21B2FB4773E"
+			tasks: [{
+				id: "4A45057BC3886CC1"
+				type: "item"
+				item: "minecraft:cactus"
+			}]
+		}
+		{
+			x: 3.5d
+			y: 0.0d
+			description: ["By crushing down coal, I get a light powder, which seems easy to compact into something very concentrated"]
+			id: "1477E01EC4C4FB97"
+			tasks: [{
+				id: "5746FA786F1F0E83"
+				type: "item"
+				item: "mekanism:dust_coal"
+			}]
+		}
+		{
+			x: 6.5d
+			y: 0.0d
+			description: ["Bronze contains many useful bonding properties, and by making it into a rod, I shoud be able to use it as a medium for making my compact coal, though I'll need to ignite and extinguish it first"]
+			id: "62240D1C1E1A60BD"
+			tasks: [{
+				id: "7EF6C7FDF620D244"
+				type: "item"
+				item: "contenttweaker:bronze_rod"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 6.0d
+			description: ["This should let me easily convert the rare cluster into a small amount of silver"]
+			dependencies: ["495CC276557E7F7A"]
+			id: "7EBB50A7C6747E83"
+			tasks: [{
+				id: "6C96A8C7B3C3EB10"
+				type: "item"
+				item: "thermal:earth_charge"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 4.5d
+			description: ["I can get a powder infused with the earth element, in the same way blaze powder is infused with fire, by putting gunpowder under extreme pressure"]
+			id: "495CC276557E7F7A"
+			tasks: [{
+				id: "3E92F168851B48FE"
+				type: "item"
+				item: "thermal:basalz_powder"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 7.5d
+			description: ["Silver! The fist truly complex metal in my grasp! Now I should be able to make a device to entrap a blaze to heat my mixing recipes."]
+			dependencies: [
+				"7EBB50A7C6747E83"
+				"0170A240908FB58C"
+			]
+			id: "79310902FBC5BC61"
+			tasks: [{
+				id: "6DF0289263A2ACAC"
+				type: "item"
+				item: "thermal:silver_dust"
+			}]
+		}
+		{
+			title: "New machines"
+			x: -2.5d
+			y: 7.5d
+			description: ["You should probably make these, they'll all be very helpful with automation coming foreward. Only the blaze burner is required, however."]
+			dependencies: ["79310902FBC5BC61"]
+			id: "659ECD2C94961796"
+			tasks: [
+				{
+					id: "0991F73E81139115"
+					type: "item"
+					item: "create:blaze_burner"
+				}
+				{
+					id: "27F54EE4D3136C5E"
+					type: "item"
+					item: "refinedpipes:basic_energy_pipe"
+				}
+				{
+					id: "38F428BECB62D432"
+					type: "item"
+					item: "prettypipes:pipe"
+				}
+				{
+					id: "43AB630AACAF0C7F"
+					type: "item"
+					item: "prettypipes:blank_module"
+				}
+			]
+		}
+		{
+			x: 0.5d
+			y: 7.5d
+			description: ["By using the heat of the blaze to melt the cluster slightly, I should be able to seperate the stone from the metals inside."]
+			dependencies: ["0170A240908FB58C"]
+			id: "61D94D5474F28E5D"
+			tasks: [{
+				id: "02A3576AF93226F6"
+				type: "item"
+				item: "contenttweaker:melted_cluster"
+			}]
+		}
+		{
+			x: 0.5d
+			y: 9.0d
+			description: ["With this purified cluster, I should be able to quench it in a liquid to get the metals inside. The only problem is I have yet to find a liquid that gives me all the metals at once."]
+			dependencies: ["61D94D5474F28E5D"]
+			id: "712D4990EF7DD070"
+			tasks: [{
+				id: "40010C70764F18D6"
+				type: "item"
+				item: "contenttweaker:pure_cluster"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 10.5d
+			description: ["*Nickel doesn't really have a use in the current version of the pack, it will be needed for making the t4 cluster, but nothing I can do with it rn*"]
+			dependencies: [
+				"712D4990EF7DD070"
+				"3A583911F794BD2C"
+			]
+			id: "65A7E72322568A4E"
+			tasks: [{
+				id: "7B426690E6518B44"
+				type: "item"
+				item: "create:crushed_nickel_ore"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 10.5d
+			description: ["With this zinc, I can make the much needed alloy of brass, giving me access to much more advanced machines"]
+			dependencies: [
+				"712D4990EF7DD070"
+				"41868DF58DA99542"
+			]
+			id: "3F5981CBC064D832"
+			tasks: [{
+				id: "495724045D75B2D5"
+				type: "item"
+				item: "create:crushed_zinc_ore"
+			}]
+		}
+		{
+			x: 0.5d
+			y: 10.5d
+			description: ["The best way to get the old resources, and the only way to get redstone from this cluster, is to quench in water"]
+			dependencies: ["712D4990EF7DD070"]
+			id: "5EBC26BA74E0187E"
+			tasks: [{
+				id: "011A5E23AA01B695"
+				type: "item"
+				item: "create:crushed_iron_ore"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 9.0d
+			description: ["A simple mixture of salt and water will give me a softer quench than just water, leaving more rare metals behind at the cost of common ones."]
+			id: "3A583911F794BD2C"
+			tasks: [{
+				id: "1FBC7A75BCEEACA2"
+				type: "item"
+				item: "exnihilosequentia:bucket_sea_water"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 9.0d
+			description: ["Oil gives the softest quench of all, allowing me to get the delicate zinc instead of silver and nickel"]
+			id: "41868DF58DA99542"
+			tasks: [{
+				id: "1690FAA64F7F83F8"
+				type: "item"
+				item: "immersiveengineering:plantoil_bucket"
+			}]
+		}
+		{
+			x: 5.0d
+			y: 0.0d
+			description: [
+				"I can cover the stick with lava to ignite it, letting it stick to the coal perfectly, though having a chance to burn the coal off."
+				"I can then extinguish the ignited rod by soaking it for a long period of time. This retains the stickiness properties, while loosing the chance to burn off all the coal"
+			]
+			dependencies: ["62240D1C1E1A60BD"]
+			id: "6E8669E34ED4886A"
+			tasks: [
+				{
+					id: "33DC7710C8C70AD9"
+					type: "item"
+					item: "contenttweaker:extinguished_stick"
+				}
+				{
+					id: "2C2B705B58E6F7C1"
+					type: "item"
+					item: "contenttweaker:fire_stick"
+				}
+			]
+		}
+	]
+}
