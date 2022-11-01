@@ -16,5 +16,8 @@
 
 <recipetype:pneumaticcraft:thermo_plant>.addRecipe("melting_uncommon", <fluid:contenttweaker:liquid_cobblestone> * 0, <item:contenttweaker:uncommon_cluster>, <fluid:contenttweaker:molten_uncommon_cluster> * 144, <item:minecraft:air>, 1.0, 100);
 <recipetype:pneumaticcraft:thermo_plant>.addRecipe("graphite_pellet", <fluid:contenttweaker:liquid_cobblestone> * 0, <item:contenttweaker:graphite_dust>, <fluid:contenttweaker:molten_uncommon_cluster> * 0, <item:contenttweaker:graphite_pellet>, 1.0, 500);
+<recipetype:pneumaticcraft:thermo_plant>.addRecipe("core_shard", <fluid:contenttweaker:core_water> * 100, <item:contenttweaker:nickel_wire>, <fluid:tconstruct:molten_nickel> * 72, <item:contenttweaker:core_shards>, 4.0, 500);
 
-<recipetype:pneumaticcraft:pressure_chamber>.addRecipe("blaze", [<item:minecraft:gunpowder>], [<item:thermal:basalz_powder>], 4.0);
+<recipetype:pneumaticcraft:pressure_chamber>.addRecipe("basalz", [<item:minecraft:gunpowder>], [<item:thermal:basalz_powder>], 4.0);
+
+<recipetype:pneumaticcraft:thermo_plant>.addRecipe("oil", <fluid:contenttweaker:liquid_cobblestone> * 0, <item:minecraft:coal>, <fluid:pneumaticcraft:oil> * 100, <item:minecraft:air>, 4.0, 500);
