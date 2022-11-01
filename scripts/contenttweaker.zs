@@ -65,7 +65,52 @@ val itemname = [
     "blank_flower",
     "bronze_half_dust",
     "graphite_dust",
-    "silver_coil"
+    "silver_coil",
+    "verdentium_nugget",
+    "verdentium_ingot",
+    "purer_powder",
+    "brass_gear",
+    "core_shards",
+    "core_gem",
+    "core_dust",
+    "impure_powder",
+    "core_t3_cluster",
+    "cluster_stone_mixture",
+    "allgomerated_t3",
+    "nickel_wire",
+    "fake_mechanical_crafting_with_core_shards",
+    "fake_crushing",
+    "fake_deploying_on_stone",
+    "fake_terra_plate_with_core_gem_and_voidic_sawdust",
+    "useless_rare",
+    "useless_epic",
+    "useless_legendary",
+    "useless_mythic",
+    "useless_omega",
+    "useless_celestial",
+    "fake_sandpaper_polishing",
+    "megemerald",
+    "empty_megemerald",
+    "epic_powder",
+    "lighter_epic",
+    "light_epic",
+    "heavy_epic",
+    "heavier_epic",
+    "pure_terrestrial_sawdust",
+    "pure_infernal_sawdust",
+    "pure_voidic_sawdust",
+    "light_terrestrial",
+    "light_infernal",
+    "light_voidic",
+    "heavy_terrestrial",
+    "heavy_infernal",
+    "heavy_voidic",
+    "light_terrestrial_block",
+    "light_infernal_block",
+    "light_voidic_block",
+    "heavy_terrestrial_block",
+    "heavy_infernal_block",
+    "heavy_voidic_block"
 ] as string[];
 //the clusters with an _x_x are the processing items, like the common_cluster_1_1.
 //is the first number is process method, in this case "1", the scrond number is the step.
@@ -77,9 +122,9 @@ for item in itemname{
     new ItemBuilder().build(item);//.withRarity(itemrarity[i])
 }
 
-val blockname = ["common_cluster", "uncommon_cluster", "rare_cluster", "epic_cluster", "legendary_cluster", "omega_cluster", "ultimate_cluster", "mythic_cluster", "celestial_cluster", "supreme_cluster", "improved_common", "improved_uncommon", "improved_rare", "improved_epic", "improved_legendary", "improved_omega", "improved_mythic", "improved_celestial", "petrified_log", "freezer", "centrifuge"] as string[];
+val clustername = ["common_cluster", "uncommon_cluster", "rare_cluster", "epic_cluster", "legendary_cluster", "omega_cluster", "ultimate_cluster", "mythic_cluster", "celestial_cluster", "supreme_cluster", "improved_common", "improved_uncommon", "improved_rare", "improved_epic", "improved_legendary", "improved_omega", "improved_mythic", "improved_celestial", "blank_cluster", "terrestrial_cluster", "infernal_cluster", "voidic_cluster"] as string[];
 
-for block in blockname{
+for block in clustername{
     new BlockBuilder()
         .notSolid()
         .setRequiresTool()
@@ -89,10 +134,20 @@ for block in blockname{
         .build(block);
 }
 
-val defaultFluidName = ["liquid_cobblestone", "molten_coal", "molten_andesite", "molten_uncommon_cluster", "gelid_cryotheum", "chromatic_mixture"] as string[];
-val defaultFluidColor = [0xcccccc, 0x111111, 0xbbbbbb, 0xaa7777, 0x0066ff, 0x0f1b00] as int[];
-val defaultFluidMolten = [true, true, true, true, false, false] as bool[];
-val defaultFluidLuminosity = [0, 5, 0, 5, 0, 0] as int[];
+val blockname = ["verdentium_block", "petrified_log", "freezer", "centrifuge"] as string[];
+
+for block in blockname {
+    new BlockBuilder()
+        .setRequiresTool()
+        .withHarvestTool(<tooltype:pickaxe>)
+        .withHardnessAndResistance(2f)
+        .build(block);
+}
+
+val defaultFluidName = ["liquid_cobblestone", "molten_coal", "molten_andesite", "molten_uncommon_cluster", "gelid_cryotheum", "chromatic_mixture", "core_water", "saturated_water", "lightly_saturated_water", "mostly_unsaturated_water", "saturated_core_water", "lightly_saturated_core_water", "mostly_unsaturated_core_water", "light_terrestrial", "light_infernal", "light_voidic", "heavy_terrestrial", "heavy_infernal", "heavy_voidic"] as string[];
+val defaultFluidColor = [0xcccccc, 0x111111, 0xbbbbbb, 0xaa7777, 0x0066ff, 0x0f1b00, 0x333333, 0x3F76E4, 0x3F76E4, 0x3F76E4, 0x333333, 0x333333, 0x333333, 0x9abcde, 0xedcba9, 0x13579a, 0xa97531, 0xffdd11, 0xcc55aa] as int[];
+val defaultFluidMolten = [true, true, true, true, false, false, false, false, false, false, false, false, false, true, true, true, true, true, true] as bool[];
+val defaultFluidLuminosity = [0, 5, 0, 5, 0, 0, 10, 0, 0, 0, 5, 7, 9, 0, 0, 0, 0, 0, 0] as int[];
 
 for i, name in defaultFluidName{
     new FluidBuilder(defaultFluidMolten[i], defaultFluidColor[i]).luminosity(defaultFluidLuminosity[i]).build(name);
@@ -109,4 +164,10 @@ for i, name in customFluidName{
     new FluidBuilder(customFluidMolten[i], customFluidColor[i], customFluidStill[i], customFluidFlowing[i]).luminosity(customFluidLuminosity[i]).build(name);
 }
 
-new ItemBuilder().withMaxDamage(120).build("saw");
+val durabilityItems = ["saw", "coarse_filter", "medium_filter", "fine_filter"] as string[];
+
+for name in durabilityItems {
+    new ItemBuilder()
+        .withMaxDamage(120)
+       .build(name);
+}

@@ -1,11 +1,15 @@
 #priority 99
 
 import crafttweaker.api.item.IItemStack;
+import crafttweaker.api.tag.MCTag;
+import crafttweaker.api.item.MCItemDefinition;
 
 var furnaceRemove = [<item:tconstruct:seared_brick>] as IItemStack[];
 
 var furnaceInputs = [<item:tconstruct:grout>, <item:contenttweaker:common_cluster>] as IItemStack[];
 var furnaceOutputs = [<item:tconstruct:scorched_brick>, <item:contenttweaker:common_cluster_1_1> * 2] as IItemStack[];
+var furnaceTagInputs = [<tag:items:forge:dusts/emerald>] as MCTag<MCItemDefinition>[];
+var furnaceTagOutputs = [<item:minecraft:emerald>] as IItemStack[];
 
 var blastFurnaceRemove = [<item:tconstruct:seared_brick>] as IItemStack[];
 
@@ -40,6 +44,9 @@ for item in furnaceRemove{
 
 for i, input in furnaceInputs{
     furnace.addRecipe("customfurnacerecipe" + i as string, furnaceOutputs[i], input, 0, 100);
+}
+for i, input in furnaceTagInputs{
+    furnace.addRecipe("custom_furnace_recipe_"+i as string, furnaceTagOutputs[i], input, 0, 100);
 }
 
 composter.setValue(<item:contenttweaker:cactus_shreds>, 0.1);
