@@ -9,6 +9,7 @@ import mods.contenttweaker.block.pillar.BlockBuilderPillarRotatable;
 import mods.contenttweaker.block.BlockRenderType;
 import mods.contenttweaker.fluid.FluidBuilder;
 import crafttweaker.api.util.MCResourceLocation;
+import crafttweaker.api.food.MCFood;
 
 val itemname = [
     "common_cluster",
@@ -110,7 +111,13 @@ val itemname = [
     "light_voidic_block",
     "heavy_terrestrial_block",
     "heavy_infernal_block",
-    "heavy_voidic_block"
+    "heavy_voidic_block",
+    "verdentium_grit",
+    "verdent_slice",
+    "zinc_dust",
+    "purest_powder",
+    "natura_dust",
+    "natura_ingot"
 ] as string[];
 //the clusters with an _x_x are the processing items, like the common_cluster_1_1.
 //is the first number is process method, in this case "1", the scrond number is the step.
@@ -144,10 +151,10 @@ for block in blockname {
         .build(block);
 }
 
-val defaultFluidName = ["liquid_cobblestone", "molten_coal", "molten_andesite", "molten_uncommon_cluster", "gelid_cryotheum", "chromatic_mixture", "core_water", "saturated_water", "lightly_saturated_water", "mostly_unsaturated_water", "saturated_core_water", "lightly_saturated_core_water", "mostly_unsaturated_core_water", "light_terrestrial", "light_infernal", "light_voidic", "heavy_terrestrial", "heavy_infernal", "heavy_voidic"] as string[];
-val defaultFluidColor = [0xcccccc, 0x111111, 0xbbbbbb, 0xaa7777, 0x0066ff, 0x0f1b00, 0x333333, 0x3F76E4, 0x3F76E4, 0x3F76E4, 0x333333, 0x333333, 0x333333, 0x9abcde, 0xedcba9, 0x13579a, 0xa97531, 0xffdd11, 0xcc55aa] as int[];
-val defaultFluidMolten = [true, true, true, true, false, false, false, false, false, false, false, false, false, true, true, true, true, true, true] as bool[];
-val defaultFluidLuminosity = [0, 5, 0, 5, 0, 0, 10, 0, 0, 0, 5, 7, 9, 0, 0, 0, 0, 0, 0] as int[];
+val defaultFluidName = ["liquid_cobblestone", "molten_coal", "molten_andesite", "molten_uncommon_cluster", "gelid_cryotheum", "chromatic_mixture", "core_water", "saturated_water", "saturated_core_water"] as string[];
+val defaultFluidColor = [0xcccccc, 0x111111, 0xbbbbbb, 0xaa7777, 0x0066ff, 0x0f1b00, 0x333333, 0x3F76E4, 0x333333] as int[];
+val defaultFluidMolten = [true, true, true, true, false, false, false, false, false] as bool[];
+val defaultFluidLuminosity = [0, 5, 0, 5, 0, 0, 10, 0, 5] as int[];
 
 for i, name in defaultFluidName{
     new FluidBuilder(defaultFluidMolten[i], defaultFluidColor[i]).luminosity(defaultFluidLuminosity[i]).build(name);
@@ -164,10 +171,14 @@ for i, name in customFluidName{
     new FluidBuilder(customFluidMolten[i], customFluidColor[i], customFluidStill[i], customFluidFlowing[i]).luminosity(customFluidLuminosity[i]).build(name);
 }
 
-val durabilityItems = ["saw", "coarse_filter", "medium_filter", "fine_filter"] as string[];
+val durabilityItems = ["saw", "large_resonator", "middling_resonator", "small_resonator"] as string[];
 
 for name in durabilityItems {
     new ItemBuilder()
         .withMaxDamage(120)
-       .build(name);
+        .build(name);
 }
+
+new ItemBuilder().withMaxStackSize(1).withFood(new MCFood(0, 1).setCanEatWhenFull(true)).build("wandering_trader_bucket");
+
+new BlockBuilder().notSolid().withRenderType(BlockRenderType.CUTOUT).build("verdent_fruit");

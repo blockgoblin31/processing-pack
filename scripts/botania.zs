@@ -1,3 +1,5 @@
+import crafttweaker.api.item.IItemStack;
+
 var seed = <item:agricraft:agri_seed>.withTag({agri_genome: [{agri_gene: "agri_species" as string, agri_dominant: {agri_plant: "agricraft:verdentium_plant" as string}, agri_recessive: {agri_plant: "agricraft:verdentium_plant" as string}}, {agri_gene: "chicken" as string, agri_dominant: {agri_key: 0 as byte}, agri_recessive: {agri_key: 0 as byte}}, {agri_gene: "cow" as string, agri_dominant: {agri_key: 0 as byte}, agri_recessive: {agri_key: 0 as byte}}, {agri_gene: "fertility" as string, agri_dominant: {fertility: 1 as int}, agri_recessive: {fertility: 1 as int}}, {agri_gene: "gain" as string, agri_dominant: {gain: 1 as int}, agri_recessive: {gain: 1 as int}}, {agri_gene: "growth" as string, agri_dominant: {growth: 1 as int}, agri_recessive: {growth: 1 as int}}, {agri_gene: "mutativity" as string, agri_dominant: {mutativity: 1 as int}, agri_recessive: {mutativity: 1 as int}}, {agri_gene: "panda" as string, agri_dominant: {agri_key: 0 as byte}, agri_recessive: {agri_key: 0 as byte}}, {agri_gene: "pig" as string, agri_dominant: {agri_key: 0 as byte}, agri_recessive: {agri_key: 0 as byte}}, {agri_gene: "rabbit" as string, agri_dominant: {agri_key: 0 as byte}, agri_recessive: {agri_key: 0 as byte}}, {agri_gene: "resistance" as string, agri_dominant: {resistance: 1 as int}, agri_recessive: {resistance: 1 as int}}, {agri_gene: "sheep" as string, agri_dominant: {agri_key: 0 as byte}, agri_recessive: {agri_key: 0 as byte}}, {agri_gene: "strength" as string, agri_dominant: {strength: 1 as int}, agri_recessive: {strength: 1 as int}}, {agri_gene: "turtle" as string, agri_dominant: {agri_key: 0 as byte}, agri_recessive: {agri_key: 0 as byte}}]});
 
 <recipetype:botania:runic_altar>.removeAll();
@@ -17,3 +19,9 @@ var seed = <item:agricraft:agri_seed>.withTag({agri_genome: [{agri_gene: "agri_s
 
 <recipetype:botania:terra_plate>.addRecipe("terra_plate_test", <item:contenttweaker:allgomerated_t3>.withTag({SequencedAssembly: {Progress: 0.8 as float, id: "crafttweaker:sequenced_assembly/epic_cluster" as string, Step: 4 as int}}), 1000, <item:contenttweaker:cluster_stone_mixture>, <item:minecraft:emerald>, <item:contenttweaker:core_gem>);
 
+var inputs = [<item:contenttweaker:light_terrestrial>, <item:contenttweaker:light_infernal>, <item:contenttweaker:light_voidic>, <item:contenttweaker:heavy_terrestrial>, <item:contenttweaker:heavy_infernal>, <item:contenttweaker:heavy_voidic>] as IItemStack[];
+var outputs = [<item:contenttweaker:natura_dust> * 3, <item:thermal:nickel_dust> * 3, <item:immersiveengineering:dust_aluminum> * 3, <item:thermal:tin_dust> * 3, <item:thermal:gold_dust> * 3, <item:contenttweaker:zinc_dust> * 3] as IItemStack[];
+
+for i, item in inputs {
+    <recipetype:botania:mana_infusion>.addRecipe("metal_from_mana_"+(i as int +1) as string, outputs[i], item, 500*((i as int % 3)+1));
+}

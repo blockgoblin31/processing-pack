@@ -1,0 +1,1 @@
+<recipetype:farmersdelight:cutting>.addRecipe("cutting_verdent_fruit", <item:contenttweaker:verdent_fruit>, [<item:contenttweaker:verdent_slice> * 6], <tag:items:forge:tools/knives>.asIIngredient().anyDamage().transformDamage());
