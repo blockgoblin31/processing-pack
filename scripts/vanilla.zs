@@ -6,8 +6,8 @@ import crafttweaker.api.item.MCItemDefinition;
 
 var furnaceRemove = [<item:tconstruct:seared_brick>] as IItemStack[];
 
-var furnaceInputs = [<item:tconstruct:grout>, <item:contenttweaker:common_cluster>] as IItemStack[];
-var furnaceOutputs = [<item:tconstruct:scorched_brick>, <item:contenttweaker:common_cluster_1_1> * 2] as IItemStack[];
+var furnaceInputs = [<item:tconstruct:grout>, <item:contenttweaker:common_cluster>,<item:contenttweaker:natura_dust>] as IItemStack[];
+var furnaceOutputs = [<item:tconstruct:scorched_brick>, <item:contenttweaker:common_cluster_1_1> * 2, <item:contenttweaker:natura_ingot>] as IItemStack[];
 var furnaceTagInputs = [<tag:items:forge:dusts/emerald>] as MCTag<MCItemDefinition>[];
 var furnaceTagOutputs = [<item:minecraft:emerald>] as IItemStack[];
 

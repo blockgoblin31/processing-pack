@@ -1,4 +1,5 @@
 val air = <item:minecraft:air>;
+import crafttweaker.api.item.IItemStack;
 
 /* default recipe
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("cluster")
@@ -117,3 +118,13 @@ for color in constants.colors {
 
 <recipetype:create:deploying>.addRecipe("megemerald", <item:contenttweaker:empty_megemerald>, <item:minecraft:emerald>, [<item:contenttweaker:megemerald>]);
 <recipetype:create:crushing>.addRecipe("megemerald_emptying", [<item:contenttweaker:empty_megemerald>, <item:thermal:emerald_dust>, <item:thermal:emerald_dust> % 50], <item:contenttweaker:megemerald>);
+
+var dusts = [<item:contenttweaker:light_epic>, <item:contenttweaker:heavy_epic>] as IItemStack[];
+var woodusts = [<item:mekanism:sawdust>, <item:contenttweaker:infernal_sawdust>, <item:contenttweaker:voidic_sawdust>] as IItemStack[];
+var mixed = [<item:contenttweaker:light_terrestrial>, <item:contenttweaker:light_infernal>, <item:contenttweaker:light_voidic>, <item:contenttweaker:heavy_terrestrial>, <item:contenttweaker:heavy_infernal>, <item:contenttweaker:heavy_voidic>] as IItemStack[];
+
+for i, dust in dusts {
+    for j, sawdust in woodusts {
+        <recipetype:create:compacting>.addRecipe("epic_dust_"+i as string+"_"+j as string, "heated", mixed[((3*i)+j)], [dust, sawdust], [], 100);
+    }
+}

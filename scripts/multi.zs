@@ -9,15 +9,15 @@ import crafttweaker.api.recipes.WrapperRecipe;
 import crafttweaker.api.fluid.IFluidStack;
 
 //item inputs. Does not accept tags.
-val crush = [<item:contenttweaker:core_gem>, <item:contenttweaker:pure_cluster>, <item:contenttweaker:epic_cluster>] as IItemStack[];
+val crush = [<item:contenttweaker:terrestrial_cluster>, <item:contenttweaker:infernal_cluster>, <item:contenttweaker:voidic_cluster>, <item:create:zinc_ingot>, <item:contenttweaker:core_gem>, <item:contenttweaker:pure_cluster>, <item:contenttweaker:epic_cluster>] as IItemStack[];
 //item outputs.
-val crushed = [<item:contenttweaker:core_dust>, <item:contenttweaker:pure_powder>, <item:contenttweaker:epic_powder>] as IItemStack[];
+val crushed = [<item:contenttweaker:pure_terrestrial_sawdust>, <item:contenttweaker:pure_infernal_sawdust>, <item:contenttweaker:pure_voidic_sawdust>, <item:contenttweaker:zinc_dust>, <item:contenttweaker:core_dust>, <item:contenttweaker:pure_powder>, <item:contenttweaker:epic_powder>] as IItemStack[];
 //machines
 val crushers = [<recipetype:create:milling>, <recipetype:immersiveengineering:crusher>, <recipetype:create:crushing>, <recipetype:thermal:pulverizer>, <recipetype:mekanism:crushing>] as IRecipeManager[];
 //minimum tier of the machine that is enabled
-var enabled = [5, 5, 3] as int[];
+var enabled = [5, 5, 5, 5, 5, 5, 3] as int[];
 //the power used by machines that take a power param
-var power = [500, 500, 1000] as int[];
+var power = [500, 500, 500, 500, 500, 500, 1000] as int[];
 
 //loops through each defined machine
 for i, crusher in crushers{
@@ -53,17 +53,4 @@ for i, crusher in crushers{
             }
         }
     } 
-}
-
-var num = 0;
-
-for item in game.items {
-    <tag:items:umm:items>.add(item);
-    var state = recipes.getRecipesByOutput(item);
-    if state == <> {
-        <tag:items:umm:items>.remove(item);
-    } else if num < 1 {
-        println("first item is"+ item as string);
-        num++;
-    }
 }

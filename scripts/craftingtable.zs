@@ -1,3 +1,5 @@
+import crafttweaker.api.item.IItemStack;
+
 //copper
 val copper = <tag:items:forge:ingots/copper>;
 val copper_plate = <tag:items:forge:plates/copper>;
@@ -103,6 +105,12 @@ craftingTable.removeRecipe(<item:immersiveengineering:wire_electrum>);
 craftingTable.removeRecipe(<item:immersiveengineering:connector_mv>);
 craftingTable.removeRecipe(<item:immersiveengineering:connector_mv_relay>);
 craftingTable.removeRecipe(<item:botania:fertilizer>);
+
+var removeArray = [<item:thermal:machine_frame>, <item:thermal:redstone_servo>] as IItemStack[];
+
+for remove in removeArray {
+    craftingTable.removeRecipe(remove);
+}
 
 craftingTable.addShapeless("first_coalmeal", <item:contenttweaker:coalmeal1>, [<item:minecraft:bone_meal>, <item:minecraft:coal>]);
 craftingTable.addShapeless("second_coalmeal", <item:contenttweaker:coalmeal2>, [<item:contenttweaker:coalmeal1>, <item:contenttweaker:phosphate>, <item:minecraft:redstone>]);
@@ -529,4 +537,16 @@ craftingTable.addShaped("megemerald_empty", <item:contenttweaker:empty_megemeral
     [<item:minecraft:emerald>, <item:minecraft:emerald>, <item:minecraft:emerald>],
     [<item:minecraft:emerald>, <item:thermal:jar>, <item:minecraft:emerald>],
     [<item:minecraft:emerald>, <item:minecraft:emerald>, <item:minecraft:emerald>]
+]);
+
+craftingTable.addShaped("machine_frame", <item:thermal:machine_frame>, [
+    [silver, glass, silver],
+    [glass, lead_gear, glass],
+    [silver, glass, silver]
+]);
+
+craftingTable.addShaped("redstone_servo", <item:thermal:redstone_servo>, [
+    [redstone],
+    [silver],
+    [redstone]
 ]);
