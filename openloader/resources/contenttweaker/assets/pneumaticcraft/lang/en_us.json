@@ -1,0 +1,10 @@
+{
+    "item.pneumaticcraft.ingot_iron_compressed":"Compressed Tin Ingot",
+    "block.pneumaticcraft.compressed_iron_block":"Block of Compressed Tin",
+    "item.pneumaticcraft.compressed_iron_boots" : "Compressed Tin Boots",
+    "item.pneumaticcraft.compressed_iron_chestplate" : "Compressed Tin Chestplate",
+    "item.pneumaticcraft.compressed_iron_helmet" : "Compressed Tin Helmet",
+    "item.pneumaticcraft.compressed_iron_gear" : "Compressed Tin Gear",
+    "item.pneumaticcraft.compressed_iron_leggings" : "Compressed Tin Leggings",
+    "item.pneumaticcraft.drill_bit_compressed_iron":"Compressed Tin Drill Bit"
+}
