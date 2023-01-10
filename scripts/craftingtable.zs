@@ -70,13 +70,13 @@ val verdentium = <tag:items:forge:ingots/verdentium>;
 val verdentium_nugget = <tag:items:forge:nuggets/verdentium>;
 val verdentium_block = <tag:items:forge:storage_blocks/verdentium>;
 
+
 //invar
 val invar = <tag:items:forge:ingots/invar>;
 val invar_plate = <tag:items:forge:plates/invar>;
 val invar_gear = <tag:items:forge:gears/invar>;
 val invar_nugget = <tag:items:forge:nuggets/invar>;
 val invar_block = <tag:items:forge:storage_blocks/invar>;
-
 import crafttweaker.api.item.IItemStack;
 
 val scorched = <item:tconstruct:scorched_brick>;
@@ -86,6 +86,7 @@ val alloy = <item:create:andesite_alloy>;
 val redstone = <item:minecraft:redstone>;
 val modules = ["low_priority", "high_priority", "extraction", "retrieval", "filter", "speed"] as string[];
 val metals = ["copper", "aluminum", "tin", "silver", "bronze", "brass", "iron", "gold", "lead", "verdentium", "invar"] as string[];
+
 
 craftingTable.removeRecipe(<item:tconstruct:seared_melter>);
 craftingTable.removeRecipe(<item:tconstruct:seared_heater>);
@@ -114,6 +115,7 @@ craftingTable.removeRecipe(<item:immersiveengineering:connector_mv_relay>);
 craftingTable.removeRecipe(<item:botania:fertilizer>);
 
 var removeArray = [<item:thermal:invar_dust>, <item:thermal:signalum_dust>, <item:thermal:enderium_dust>, <item:thermal:upgrade_augment_1>, <item:thermal:machine_frame>, <item:thermal:redstone_servo>] as IItemStack[];
+
 
 for remove in removeArray {
     craftingTable.removeRecipe(remove);
@@ -561,4 +563,5 @@ craftingTable.addShaped("weak_resonator", <item:contenttweaker:weak_resonator>, 
     [nul, iron_plate, nul],
     [iron_plate, <item:create:rose_quartz>, iron_plate],
     [nul, iron_plate, nul]
+
 ]);

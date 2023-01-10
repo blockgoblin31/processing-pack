@@ -127,6 +127,7 @@ val itemname = [
     "celestial_base",
     "mythic_base",
     "upgrade_augment_0"
+
 ] as string[];
 //the clusters with an _x_x are the processing items, like the common_cluster_1_1.
 //is the first number is process method, in this case "1", the scrond number is the step.
@@ -162,6 +163,7 @@ val defaultFluidColor = [0xcccccc, 0x111111, 0xbbbbbb, 0xaa7777, 0x0f1b00, 0x333
 val defaultFluidMolten = [true, true, true, true, false, false, false, false, false, true, true] as bool[];
 val defaultFluidLuminosity = [0, 5, 0, 5, 0, 10, 0, 5, 0, 0, 4] as int[];
 
+
 for i, name in defaultFluidName{
     new FluidBuilder(defaultFluidMolten[i], defaultFluidColor[i]).luminosity(defaultFluidLuminosity[i]).build(name);
 }
@@ -178,6 +180,7 @@ for i, name in customFluidName{
 }
 
 val durabilityItems = ["saw", "strong_resonator", "middling_resonator", "weak_resonator"] as string[];
+
 
 for name in durabilityItems {
     new ItemBuilder()
