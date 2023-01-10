@@ -7,5 +7,53 @@ mods.custommachinery.CMRecipeBuilder.create("machinery:centrifuge", 60)
     .requireItem(<item:contenttweaker:melted_cluster>, "input")
     .produceItem(<item:contenttweaker:pure_cluster>, "output")
     .produceItem(<item:minecraft:cobblestone>)
-    .requireEnergy(10000)
+    .requireEnergy(1000)
+    .build();
+
+mods.custommachinery.CMRecipeBuilder.create("machinery:filter", 60)
+    .damageItem(<item:contenttweaker:strong_resonator>, 1, "filter")
+    .requireFluid(<fluid:contenttweaker:saturated_water>*500, "fluid_input")
+    .produceItem(<item:minecraft:redstone> * 3, "filtered")
+    .produceFluid(<fluid:minecraft:water>*500, "fluid_output")
+    .requireEnergy(250)
+    .build();
+
+mods.custommachinery.CMRecipeBuilder.create("machinery:filter", 60)
+    .damageItem(<item:contenttweaker:middling_resonator>, 1, "filter")
+    .requireFluid(<fluid:contenttweaker:saturated_water>*500, "fluid_input")
+    .produceItem(<item:thermal:copper_dust> * 3, "filtered")
+    .produceFluid(<fluid:minecraft:water>*500, "fluid_output")
+    .requireEnergy(250)
+    .build();
+
+mods.custommachinery.CMRecipeBuilder.create("machinery:filter", 60)
+    .damageItem(<item:contenttweaker:weak_resonator>, 1, "filter")
+    .requireFluid(<fluid:contenttweaker:saturated_water>*500, "fluid_input")
+    .produceItem(<item:thermal:quartz_dust> * 3, "filtered")
+    .produceFluid(<fluid:minecraft:water>*500, "fluid_output")
+    .requireEnergy(250)
+    .build();
+
+mods.custommachinery.CMRecipeBuilder.create("machinery:filter", 60)
+    .damageItem(<item:contenttweaker:strong_resonator>, 1, "filter")
+    .requireFluid(<fluid:contenttweaker:saturated_core_water>*500, "fluid_input")
+    .produceItem(<item:thermal:lead_dust> * 3, "filtered")
+    .produceFluid(<fluid:contenttweaker:core_water>*500, "fluid_output")
+    .requireEnergy(250)
+    .build();
+
+mods.custommachinery.CMRecipeBuilder.create("machinery:filter", 60)
+    .damageItem(<item:contenttweaker:middling_resonator>, 1, "filter")
+    .requireFluid(<fluid:contenttweaker:saturated_core_water>*500, "fluid_input")
+    .produceItem(<item:thermal:iron_dust> * 3, "filtered")
+    .produceFluid(<fluid:contenttweaker:core_water>*500, "fluid_output")
+    .requireEnergy(250)
+    .build();
+
+mods.custommachinery.CMRecipeBuilder.create("machinery:filter", 60)
+    .damageItem(<item:contenttweaker:weak_resonator>, 1, "filter")
+    .requireFluid(<fluid:contenttweaker:saturated_core_water>*500, "fluid_input")
+    .produceItem(<item:thermal:silver_dust> * 3, "filtered")
+    .produceFluid(<fluid:contenttweaker:core_water>*500, "fluid_output")
+    .requireEnergy(250)
     .build();
