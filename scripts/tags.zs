@@ -76,11 +76,16 @@ for log in <tag:items:minecraft:logs>.elements {
 <tag:items:forge:nuggets/verdentium>.add(<item:contenttweaker:verdentium_nugget>);
 <tag:items:forge:storage_blocks/verdentium>.add(<item:contenttweaker:verdentium_block>);
 <tag:items:forge:gears/brass>.add(<item:contenttweaker:brass_gear>);
+for item in loadedMods.getMod("thermal_expansion").items {
+    if !(item in <tag:items:custom:dynamos>.elements || item in <tag:items:thermal:crafting> || <item:thermal:slot_seal>.matches(item)) {
+        <tag:items:thermal:machines>.add(item);
+    }
+}
 mods.jei.JEI.addInfo(<item:contenttweaker:common_cluster_1_1>, ["Drop this in water to get between 0 and 1 nuggets of iron and copper,", "and between 0 and 1 redstone dust"]);
 mods.jei.JEI.addInfo(<item:contenttweaker:enriched_common>, ["Drop this in water to get between 1 and 3 nuggets of iron and copper,", "and between 0 and 4 redstone dust"]);
 mods.jei.JEI.addInfo(<item:contenttweaker:pure_cluster>, ["Drop this in water to get between 1 and 2 crushed iron, copper, tin, and aluminum,", "and 2 to 5 redstone dust.", " ", "Drop this in sea water to get between 0 and 2 crushed iron and tin, 1 crushed silver,", "and 1 to 2 crushed nickel.", "Drop this in plant oil to get between 0 and 2 crushed copper and aluminum,", "and 1 crushed zinc"]);
 Replacer.forOutput(<tag:items:custom:dynamos>).replace(<item:thermal:rf_coil>, <item:contenttweaker:silver_coil>).execute();
 Replacer.forMods("naturesaura").excluding(<recipetype:naturesaura:animal_spawner>, <recipetype:naturesaura:offering>, <recipetype:naturesaura:altar>, <recipetype:naturesaura:tree_ritual>).replace(<item:minecraft:iron_ingot>, <item:contenttweaker:natura_ingot>).execute();
-
+Replacer.forMods("storagenetwork").replace(<item:minecraft:iron_nugget>, <item:naturesaura:infused_iron>).replace(<item:minecraft:gold_ingot>, <item:thermal:signalum_ingot>).replace(<item:minecraft:gold_block>, <item:thermal:enderium_ingot>).replace(<item:minecraft:iron_ingot>, <item:thermal:invar_ingot>).execute();
 <tag:blocks:minecraft:mushroom_grow_block>.add(<block:contenttweaker:blank_cluster>);
 <block:minecraft:obsidian>.setHarvestLevel(2);

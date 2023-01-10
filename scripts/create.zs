@@ -15,7 +15,7 @@ import crafttweaker.api.item.IItemStack;
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("uncommon_cluster")
     .transitionTo(<item:contenttweaker:useless_common>)
-    .require(<item:contenttweaker:common_cluster>)
+    .require(<item:contenttweaker:uncommon_base>)
     .loops(1)
     .addOutput(<item:contenttweaker:improved_common>, 1)
     .addStep(<recipetype:create:deploying>.factory(), (rb) => rb.require(<item:contenttweaker:fake_blasting>))
@@ -25,10 +25,11 @@ import crafttweaker.api.item.IItemStack;
 
 <recipetype:create:mixing>.addRecipe("mixing_uncommon", "none", <item:contenttweaker:useless_common>.withTag({SequencedAssembly: {Progress: 0.66666667 as float, id: "crafttweaker:sequenced_assembly/uncommon_cluster" as string, Step: 2 as int}}), [<item:contenttweaker:infernal_sawdust>, <item:contenttweaker:useless_common>.withTag({SequencedAssembly: {Progress: 0.33333334 as float, id: "crafttweaker:sequenced_assembly/uncommon_cluster" as string, Step: 1 as int}})]);
 <recipetype:create:mixing>.addRecipe("mixing_coal", "none", <item:minecraft:coal_ore>, [<item:contenttweaker:petrified_log>], [<fluid:contenttweaker:liquid_cobblestone>*1000]);
+<recipetype:create:mixing>.addRecipe("mixing_base_uncommon", "none", <item:contenttweaker:uncommon_base>, [<item:minecraft:redstone> * 5, <item:minecraft:iron_nugget>, <item:create:copper_nugget>], [<fluid:contenttweaker:liquid_cobblestone> * 1000]);
 
 <recipetype:create:splashing>.addRecipe("splashing_uncommon", [<item:contenttweaker:washed_uncommon>], <item:contenttweaker:uncommon_cluster>);
 
-<recipetype:create:milling>.addRecipe("milling_uncommon", [<item:thermal:tin_dust>, <item:thermal:copper_dust>, <item:thermal:iron_dust>, <item:minecraft:redstone>, <item:immersiveengineering:dust_aluminum>], <item:contenttweaker:washed_uncommon>);
+<recipetype:create:milling>.addRecipe("milling_uncommon", [<item:thermal:tin_dust>, <item:thermal:copper_dust>, <item:thermal:iron_dust>, <item:minecraft:redstone> * 9, <item:immersiveengineering:dust_aluminum>], <item:contenttweaker:washed_uncommon>);
 
 <recipetype:create:milling>.addRecipe("milling_coal", [<item:mekanism:dust_coal>], <item:minecraft:coal>);
 
@@ -40,13 +41,13 @@ for log in <tag:items:minecraft:logs>.elements {
 <recipetype:create:cutting>.addRecipe("overworld_sawdust", <item:mekanism:sawdust>, <tag:items:custom:overworld_wood>, 100);
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("petrification").require(<tag:items:minecraft:logs_that_burn>).transitionTo(<item:minecraft:oak_log>).loops(20).addOutput(<item:contenttweaker:petrified_log>, 1).addStep(<recipetype:create:pressing>.factory(), (rb) => rb.duration(10)));
-<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("hot_stick").require(<item:contenttweaker:extinguished_stick>).transitionTo(<item:contenttweaker:extinguished_stick>).loops(16).addOutput(<item:contenttweaker:graphite_lollipop>, 1).addStep(<recipetype:create:pressing>.factory(), (rb) => rb.require(<item:mekanism:dust_coal>)));
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("hot_stick").require(<item:contenttweaker:extinguished_stick>).transitionTo(<item:contenttweaker:extinguished_stick>).loops(16).addOutput(<item:contenttweaker:graphite_lollipop>, 1).addStep(<recipetype:create:deploying>.factory(), (rb) => rb.require(<item:mekanism:dust_coal>)));
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("too_hot_stick")
     .require(<item:contenttweaker:fire_stick>)
     .transitionTo(<item:contenttweaker:fire_stick>)
     .loops(16)
     .addOutput(<item:contenttweaker:graphite_lollipop>, 1)
-    .addStep(<recipetype:create:pressing>.factory(), (rb) => rb.require(<item:mekanism:dust_coal>))
+    .addStep(<recipetype:create:deploying>.factory(), (rb) => rb.require(<item:mekanism:dust_coal>))
     .addOutput(<item:contenttweaker:extinguished_stick>, 1)
 );
 
@@ -54,7 +55,7 @@ for log in <tag:items:minecraft:logs>.elements {
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("rare_cluster")
     .transitionTo(<item:contenttweaker:useless_uncommon>)
-    .require(<item:contenttweaker:uncommon_cluster>)
+    .require(<item:contenttweaker:rare_base>)
     .loops(1)
     .addOutput(<item:contenttweaker:rare_cluster>, 1)
     .addStep(<recipetype:create:deploying>.factory(), (rb) => rb.require(<item:contenttweaker:fake_melting>))
@@ -66,7 +67,7 @@ for log in <tag:items:minecraft:logs>.elements {
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("epic_cluster")
     .transitionTo(<item:contenttweaker:useless_rare>)
-    .require(<item:contenttweaker:rare_cluster>)
+    .require(<item:contenttweaker:epic_base>)
     .loops(1)
     .addOutput(<item:contenttweaker:epic_cluster>, 1)
     .addStep(<recipetype:create:deploying>.factory(), (rb) => rb.require(<item:contenttweaker:fake_mechanical_crafting_with_core_shards>))
@@ -106,7 +107,7 @@ for color in constants.colors {
 <recipetype:create:compacting>.addRecipe("core_stuff", "heated", <item:contenttweaker:core_gem>, [<item:contenttweaker:core_shards> * 9], [], 200);
 <recipetype:create:mechanical_crafting>.addRecipe("core_cluster", <item:contenttweaker:core_t3_cluster>.withTag({SequencedAssembly: {Progress: 0.2 as float, id: "crafttweaker:sequenced_assembly/epic_cluster" as string, Step: 1 as int}}), [
     [air, air, <item:contenttweaker:core_shards>, air, air],
-    [<item:contenttweaker:core_shards>, <item:contenttweaker:voidic_sawdust>, <item:contenttweaker:rare_cluster>, <item:contenttweaker:voidic_sawdust>, <item:contenttweaker:core_shards>],
+    [<item:contenttweaker:core_shards>, <item:contenttweaker:voidic_sawdust>, <item:contenttweaker:epic_base>, <item:contenttweaker:voidic_sawdust>, <item:contenttweaker:core_shards>],
     [air, air, <item:contenttweaker:core_shards>, air, air]
 ]);
 
@@ -128,3 +129,5 @@ for i, dust in dusts {
         <recipetype:create:compacting>.addRecipe("epic_dust_"+i as string+"_"+j as string, "heated", mixed[((3*i)+j)], [dust, sawdust], [], 100);
     }
 }
+
+<recipetype:create:mixing>.addRecipe("epic_base", "heated", <item:contenttweaker:epic_base>, [<item:minecraft:redstone> * 10, <item:thermal:tin_ingot>, <item:create:copper_ingot> * 2, <item:create:brass_ingot>, <item:botania:light_gray_petal>], [<fluid:contenttweaker:liquid_cobble> * 1000]);

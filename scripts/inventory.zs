@@ -1,2 +1,3 @@
 mods.initialinventory.InvHandler.addStartingItem("book", <item:patchouli:guide_book>.withTag({"patchouli:book": "patchouli:growing_ores_for_dummies" as string}));
 mods.initialinventory.InvHandler.addStartingItem("calculator", <item:jecalculation:item_calculator_craft>.withTag({jecalculation: {craft: {mode: "input" as string, overlayPositionX: 0 as int, amount: "" as string, overlayDepth: 0 as int, overlayOpen: 0 as byte, recents: [], inventory: 0 as byte, overlayPositionY: 0 as int}}}));
+mods.initialinventory.InvHandler.addStartingItem("cast", <item:tconstruct:nugget_cast>);

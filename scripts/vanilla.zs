@@ -20,7 +20,7 @@ var list1 = blastFurnaceInputsOld as stdlib.List<IItemStack>;
 var list2 = blastFurnaceOutputsOld as stdlib.List<IItemStack>;
 
 val uncommon_assembley1 = <item:contenttweaker:useless_common>.withTag({SequencedAssembly: {Progress: 0.33333334 as float, id: "crafttweaker:sequenced_assembly/uncommon_cluster" as string, Step: 1 as int}});
-val uncommon_assembley2 = <item:contenttweaker:common_cluster>;
+val uncommon_assembley2 = <item:contenttweaker:uncommon_base>;
 
 list1.add(uncommon_assembley2);
 list2.add(uncommon_assembley1);

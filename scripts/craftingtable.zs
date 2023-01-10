@@ -70,6 +70,13 @@ val verdentium = <tag:items:forge:ingots/verdentium>;
 val verdentium_nugget = <tag:items:forge:nuggets/verdentium>;
 val verdentium_block = <tag:items:forge:storage_blocks/verdentium>;
 
+
+//invar
+val invar = <tag:items:forge:ingots/invar>;
+val invar_plate = <tag:items:forge:plates/invar>;
+val invar_gear = <tag:items:forge:gears/invar>;
+val invar_nugget = <tag:items:forge:nuggets/invar>;
+val invar_block = <tag:items:forge:storage_blocks/invar>;
 import crafttweaker.api.item.IItemStack;
 
 val scorched = <item:tconstruct:scorched_brick>;
@@ -78,7 +85,8 @@ val glass = <tag:items:forge:glass>;
 val alloy = <item:create:andesite_alloy>;
 val redstone = <item:minecraft:redstone>;
 val modules = ["low_priority", "high_priority", "extraction", "retrieval", "filter", "speed"] as string[];
-val metals = ["copper", "aluminum", "tin", "silver", "bronze", "brass", "iron", "gold", "lead"] as string[];
+val metals = ["copper", "aluminum", "tin", "silver", "bronze", "brass", "iron", "gold", "lead", "verdentium", "invar"] as string[];
+
 
 craftingTable.removeRecipe(<item:tconstruct:seared_melter>);
 craftingTable.removeRecipe(<item:tconstruct:seared_heater>);
@@ -106,7 +114,8 @@ craftingTable.removeRecipe(<item:immersiveengineering:connector_mv>);
 craftingTable.removeRecipe(<item:immersiveengineering:connector_mv_relay>);
 craftingTable.removeRecipe(<item:botania:fertilizer>);
 
-var removeArray = [<item:thermal:machine_frame>, <item:thermal:redstone_servo>] as IItemStack[];
+var removeArray = [<item:thermal:invar_dust>, <item:thermal:signalum_dust>, <item:thermal:enderium_dust>, <item:thermal:upgrade_augment_1>, <item:thermal:machine_frame>, <item:thermal:redstone_servo>] as IItemStack[];
+
 
 for remove in removeArray {
     craftingTable.removeRecipe(remove);
@@ -374,37 +383,7 @@ craftingTable.addShaped("retrieval_1", <item:prettypipes:low_retrieval_module>, 
     [redstone, <item:prettypipes:blank_module>, redstone],
     [nul, <item:create:smart_chute>, nul]
 ]);
-/*
-craftingTable.addShaped("extraction_2", <item:prettypipes:medium_extraction_module>, [
-    [nul, iron, nul],
-    [<tag:items:forge:ingots/brass>, <item:prettypipes:low_extraction_module>, <tag:items:forge:ingots/brass>],
-    [nul, <item:minecraft:slime_ball>, nul]
-]);
 
-craftingTable.addShaped("filter_2", <item:prettypipes:medium_filter_module>, [
-    [nul, iron, nul],
-    [<tag:items:forge:ingots/brass>, <item:prettypipes:low_filter_module>, <tag:items:forge:ingots/brass>],
-    [nul, <item:minecraft:slime_ball>, nul]
-]);
-
-craftingTable.addShaped("speed_2", <item:prettypipes:medium_speed_module>, [
-    [nul, iron, nul],
-    [<tag:items:forge:ingots/brass>, <item:prettypipes:low_speed_module>, <tag:items:forge:ingots/brass>],
-    [nul, <item:minecraft:slime_ball>, nul]
-]);
-
-craftingTable.addShaped("high_priority_2", <item:prettypipes:medium_high_priority_module>, [
-    [nul, iron, nul],
-    [<tag:items:forge:ingots/tin>, <item:prettypipes:low_high_priority_module>, <tag:items:forge:ingots/tin>],
-    [nul, <item:minecraft:slime_ball>, nul]
-]);
-
-craftingTable.addShaped("low_priority_2", <item:prettypipes:medium_low_priority_module>, [
-    [nul, iron, nul],
-    [<tag:items:forge:ingots/tin>, <item:prettypipes:low_low_priority_module>, <tag:items:forge:ingots/tin>],
-    [nul, <item:minecraft:slime_ball>, nul]
-]);
-*/
 for i, module in modules {
     if i == 3 {
         craftingTable.addShaped(module+"_2", <item:prettypipes:medium_${module}_module>, [
@@ -540,13 +519,49 @@ craftingTable.addShaped("megemerald_empty", <item:contenttweaker:empty_megemeral
 ]);
 
 craftingTable.addShaped("machine_frame", <item:thermal:machine_frame>, [
-    [silver, glass, silver],
-    [glass, lead_gear, glass],
-    [silver, glass, silver]
+    [lead, glass, lead],
+    [glass, <item:contenttweaker:upgrade_augment_0>, glass],
+    [lead, glass, lead]
 ]);
 
 craftingTable.addShaped("redstone_servo", <item:thermal:redstone_servo>, [
     [redstone],
     [silver],
     [redstone]
+]);
+
+craftingTable.addShaped("botania_pebbles", <item:minecraft:cobblestone>, [
+    [<item:botania:pebble>, <item:botania:pebble>],
+    [<item:botania:pebble>, <item:botania:pebble>]
+]);
+
+craftingTable.addShaped("network_root", <item:storagenetwork:master>, [
+    [<tag:items:forge:storage_blocks/quartz>, <item:storagenetwork:kabel>, <tag:items:forge:storage_blocks/quartz>],
+    [<item:storagenetwork:kabel>, invar_block, <item:storagenetwork:kabel>],
+    [<tag:items:forge:storage_blocks/quartz>, <item:storagenetwork:kabel>, <tag:items:forge:storage_blocks/quartz>]
+]);
+
+craftingTable.addShaped("hardened_components", <item:thermal:upgrade_augment_1>, [
+    [invar, glass, invar],
+    [glass, <item:contenttweaker:upgrade_augment_0>, glass],
+    [invar, glass, invar]
+]);
+
+craftingTable.addShaped("strong_resonator", <item:contenttweaker:strong_resonator>, [
+    [nul, silver_plate, nul],
+    [silver_plate, <item:create:rose_quartz>, silver_plate],
+    [nul, silver_plate, nul]
+]);
+
+craftingTable.addShaped("middling_resonator", <item:contenttweaker:middling_resonator>, [
+    [nul, brass_plate, nul],
+    [brass_plate, <item:create:rose_quartz>, brass_plate],
+    [nul, brass_plate, nul]
+]);
+
+craftingTable.addShaped("weak_resonator", <item:contenttweaker:weak_resonator>, [
+    [nul, iron_plate, nul],
+    [iron_plate, <item:create:rose_quartz>, iron_plate],
+    [nul, iron_plate, nul]
+
 ]);

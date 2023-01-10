@@ -24,7 +24,7 @@ import crafttweaker.api.item.IItemStack;
 <recipetype:tconstruct:casting_table>.addItemCastingRecipe("item_casting_table_rod_bronze", <item:tconstruct:rod_cast>, <fluid:tconstruct:molten_bronze> * 72, <item:contenttweaker:bronze_rod>, 100, false, false);
 <recipetype:tconstruct:casting_table>.addItemCastingRecipe("item_casting_table_rod_bronze_sand", <tag:items:tconstruct:casts/single_use/rod>, <fluid:tconstruct:molten_bronze> * 72, <item:contenttweaker:bronze_rod>, 100, true, false);
 
-<recipetype:tconstruct:casting_table>.addItemCastingRecipe("item_casting_table_cluster", <item:tconstruct:ingot_cast>, <fluid:contenttweaker:molten_uncommon_cluster> * 144, <item:contenttweaker:uncommon_ingot>.withTag({SequencedAssembly: {Progress: 0.4 as float, id: "crafttweaker:sequenced_assembly/rare_cluster" as string, Step: 2 as int}}), 100, false, false);
+<recipetype:tconstruct:casting_table>.addItemCastingRecipe("item_casting_table_cluster", <item:tconstruct:ingot_cast>, <fluid:contenttweaker:molten_base_cluster> * 144, <item:contenttweaker:uncommon_ingot>.withTag({SequencedAssembly: {Progress: 0.4 as float, id: "crafttweaker:sequenced_assembly/rare_cluster" as string, Step: 2 as int}}), 100, false, false);
 
 <recipetype:tconstruct:casting_basin>.addItemCastingRecipe("item_casting_basin_stone", <item:minecraft:air>, <fluid:minecraft:lava> * 1000, <item:minecraft:stone>, 900, false, false);
 <recipetype:tconstruct:casting_basin>.addItemCastingRecipe("item_casting_basin_cobblestone", <item:minecraft:air>, <fluid:contenttweaker:liquid_cobblestone> * 1000, <item:minecraft:cobblestone>, 900, false, false);
@@ -51,3 +51,5 @@ for item in remove {
 
 <recipetype:tconstruct:casting_table>.addItemCastingRecipe("item_casting_table_nickel_wire", <item:tconstruct:wire_cast>, <fluid:tconstruct:molten_nickel> * 72, <item:contenttweaker:nickel_wire>, 100, false, false);
 <recipetype:tconstruct:casting_table>.addItemCastingRecipe("item_casting_table_nickel_wire_sand", <tag:items:tconstruct:casts/single_use/wire>, <fluid:tconstruct:molten_nickel> * 72, <item:contenttweaker:nickel_wire>, 100, true, false);
+
+<recipetype:tconstruct:alloying>.addRecipe("rare_base", [<fluid:contenttweaker:liquid_stone> * 125, <fluid:tconstruct:molten_tin> * 6, <fluid:thermal:redstone> * 10, <fluid:tconstruct:molten_iron> * 2, <fluid:tconstruct:molten_aluminum> * 4], <fluid:contenttweaker:molten_base_cluster> * 18, 50);

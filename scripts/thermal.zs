@@ -9,7 +9,7 @@ import crafttweaker.api.item.MCItemDefinition;
 <recipetype:thermal:chiller>.removeRecipe(<item:minecraft:redstone_block>);
 <recipetype:thermal:chiller>.addRecipe("chiller_redstone", <item:minecraft:redstone_block>, <item:minecraft:air>, <fluid:thermal:redstone>*144, 72000);
 
-<recipetype:thermal:sawmill>.removeRecipe([<item:thermal:sawdust>]);
+<recipetype:thermal:sawmill>.removeByRegex(".*(_logs|_stems)$");
 <recipetype:thermal:pulverizer>.removeRecipe(<item:thermal:sawdust>);
 <recipetype:thermal:pulverizer>.addRecipe("standard_sawdust", [<item:mekanism:sawdust> * 8] , <tag:items:custom:overworld_wood>, 0, 1000);
 <recipetype:thermal:pulverizer>.addRecipe("infernal_sawdust", [<item:contenttweaker:infernal_sawdust> * 8] , <tag:items:custom:infernal_wood>, 0, 1000);
