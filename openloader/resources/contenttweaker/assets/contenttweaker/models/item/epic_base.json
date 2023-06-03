@@ -4,6 +4,8 @@
   {
     "layer0" : "contenttweaker:item/ore_cluster_base",
     "layer1" : "contenttweaker:item/common_cluster",
-    "layer2" : "contenttweaker:item/common_cluster_1_1"
+    "layer2" : "contenttweaker:item/uncommon_cluster",
+    "layer3" : "contenttweaker:item/rare_cluster",
+    "layer4" : "contenttweaker:item/cluster_base"
   }
 }

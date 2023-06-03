@@ -1,6 +1,12 @@
 {
+  "loader": "forge:item-layers",
   "parent" : "item/generated",
   "textures" :
-  {"layer0" : "contenttweaker:item/coalmeal4"
+  {
+    "layer0" : "item/bone_meal",
+    "layer1" : "contenttweaker:item/coalmeal1",
+    "layer2" : "contenttweaker:item/coalmeal2",
+    "layer3" : "contenttweaker:item/coalmeal3",
+    "layer4" : "contenttweaker:item/coalmeal4"
   }
 }

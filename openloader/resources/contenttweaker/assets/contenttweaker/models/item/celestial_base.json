@@ -1,6 +1,6 @@
 {
   "parent" : "item/generated",
   "textures" :
-  {"layer0" : "contenttweaker:item/fake_blasting"
+  {"layer0" : "contenttweaker:item/celestial_base"
   }
 }
