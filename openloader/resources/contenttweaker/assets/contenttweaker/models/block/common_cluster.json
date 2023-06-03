@@ -4,7 +4,7 @@
 		"1": "minecraft:block/stone",
 		"3": "minecraft:block/redstone_block",
 		"4": "minecraft:block/raw_copper_block",
-		"particle": "minecraft:block/raw_iron_block"
+		"particle": "Documents:block/raw_iron_block"
 	},
 	"elements": [
 		{
@@ -102,8 +102,8 @@
 			"scale": [0.5, 0.5, 0.5]
 		},
 		"gui": {
-			"rotation": [30, 225, 0],
-			"scale": [0.625, 0.625, 0.625]
+			"rotation": [45, -135, 0],
+			"translation": [0, 1.5, 0]
 		},
 		"head": {
 			"rotation": [0, 90, 0],
