@@ -1,0 +1,67 @@
+{
+    "name": "Freezer",
+    "appearance": {
+        "idle": {
+            "block": "contenttweaker:freezer",
+            "item": "contenttweaker:freezer"
+        }
+    },
+    "components":[
+        {
+            "type": "custommachinery:item",
+            "id": "warm",
+            "mode": "input"
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "cold",
+            "mode": "output"
+        }
+    ],
+    "gui": [
+        {
+            "type": "custommachinery:player_inventory",
+            "x": 50,
+            "y": 80
+        },
+        {
+            "type": "custommachinery:progress",
+            "x": 116,
+            "y": 50
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 90,
+            "y": 50,
+            "id": "warm"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 152,
+            "y": 50,
+            "id": "cold"
+        },
+        {
+            "type": "custommachinery:status",
+            "x": 169,
+            "y": 60,
+            "width": 10,
+            "height": 10
+        },
+        {
+            "type": "custommachinery:text",
+            "x": 110,
+            "y": 30,
+            "text": "Freezer"
+        },
+        {
+            "type": "custommachinery:texture",
+            "x": 40,
+            "y": 20,
+            "width": 182,
+            "texture": "custommachinery:textures/gui/base_background.png",
+            "height": 142,
+            "priority": 1
+        }
+    ]
+}

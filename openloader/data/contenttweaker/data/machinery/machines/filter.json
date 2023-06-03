@@ -1,0 +1,107 @@
+{
+    "name": "Filterer",
+    "appearance": {
+        "idle": {
+            "block": "contenttweaker:freezer",
+            "item": "contenttweaker:freezer"
+        }
+    },
+    "components":[
+        {
+            "type": "custommachinery:item",
+            "id": "filter",
+            "mode": "input",
+            "filter": ["contenttweaker:strong_resonator", "contenttweaker:middling_resonator", "contenttweaker:weak_resonator"],
+            "whitelist": true
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "filtered",
+            "mode": "output"
+        },
+        {
+            "type": "custommachinery:fluid",
+            "id": "fluid_input",
+            "mode": "input",
+            "capacity": 10000
+        },
+        {
+            "type": "custommachinery:fluid",
+            "id": "fluid_output",
+            "mode": "output",
+            "capacity": 10000
+        },
+        {
+            "type": "custommachinery:energy",
+            "capacity": 10000
+        }
+    ],
+    "gui": [
+        {
+            "type": "custommachinery:player_inventory",
+            "x": 50,
+            "y": 80
+        },
+        {
+            "type": "custommachinery:progress",
+            "x": 116,
+            "y": 50
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 90,
+            "y": 30,
+            "id": "fluid_input",
+            "height": 40
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 148,
+            "y": 52,
+            "id": "filtered"
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 169,
+            "y": 30,
+            "id": "fluid_output",
+            "height": 40
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 120,
+            "y": 30,
+            "id": "filter",
+            "item": ["contenttweaker:strong_resonator", "contenttweaker:middling_resonator", "contenttweaker:weak_resonator"]
+        },
+        {
+            "type": "custommachinery:status",
+            "x": 186,
+            "y": 60,
+            "width": 10,
+            "height": 10
+        },
+        {
+            "type": "custommachinery:text",
+            "x": 110,
+            "y": 10,
+            "text": "Filterer"
+        },
+        {
+            "type": "custommachinery:texture",
+            "x": 40,
+            "y": 0,
+            "width": 182,
+            "texture": "custommachinery:textures/gui/base_background.png",
+            "height": 162,
+            "priority": 1
+        },
+        {
+            "type": "custommachinery:energy",
+            "x": 68,
+            "y": 30,
+            "width": 20,
+            "height": 40
+        }
+    ]
+}
