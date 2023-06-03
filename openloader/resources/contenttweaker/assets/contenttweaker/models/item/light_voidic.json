@@ -1,6 +1,6 @@
 {
   "parent" : "item/generated",
   "textures" :
-  {"layer0" : "contenttweaker:item/common_cluster"
+  {"layer0" : "contenttweaker:item/light_voidic"
   }
 }
