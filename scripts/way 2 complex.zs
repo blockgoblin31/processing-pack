@@ -1,6 +1,8 @@
 import crafttweaker.api.events.CTEventManager;
 import crafttweaker.api.event.entity.player.interact.MCPlayerInteractEvent;
 import crafttweaker.api.event.entity.player.interact.MCRightClickBlockEvent;
+import crafttweaker.api.item.IItemStack;
+import crafttweaker.api.blocks.MCBlock;
 
 CTEventManager.register<crafttweaker.api.event.entity.player.interact.MCRightClickBlockEvent>((event) => {
     var pos = event.blockPos;
@@ -37,120 +39,17 @@ CTEventManager.register<crafttweaker.api.event.entity.player.interact.MCRightCli
     var world = player.world;
     var item = event.getItemStack();
     var hand = event.hand;
-    if <item:contenttweaker:coalmeal2>.matches(item) {
+    for use, blocks in constants.transform {
+    if use.matches(item) {
         var blockState = world.getBlockState(pos);
-        if <block:contenttweaker:improved_common> == blockState.block {
-            world.setBlockState(pos, <blockstate:contenttweaker:uncommon_cluster>);
+        if blocks[0] == blockState.block {
+            world.setBlockState(pos, blocks[1].defaultState);
             if !(player.isCreative()) == false {
                 var heldItem = player.getHeldItem(hand);
                 heldItem.mutable().shrink(1);
             }
         }
     }
-});
-
-CTEventManager.register<crafttweaker.api.event.entity.player.interact.MCRightClickBlockEvent>((event) => {
-    var pos = event.blockPos;
-    var player = event.player;
-    if player == null || player.world.isRemote() {
-        return;
-    }
-    var world = player.world;
-    var item = event.getItemStack();
-    var hand = event.hand;
-    if <item:contenttweaker:coalmeal3>.matches(item) {
-        var blockState = world.getBlockState(pos);
-        if <block:contenttweaker:improved_uncommon> == blockState.block {
-            world.setBlockState(pos, <blockstate:contenttweaker:rare_cluster>);
-            if !(player.isCreative()) == false {
-                var heldItem = player.getHeldItem(hand);
-                heldItem.mutable().shrink(1);
-            }
-        }
-    }
-});
-
-CTEventManager.register<crafttweaker.api.event.entity.player.interact.MCRightClickBlockEvent>((event) => {
-    var pos = event.blockPos;
-    var player = event.player;
-    if player == null || player.world.isRemote() {
-        return;
-    }
-    var world = player.world;
-    var item = event.getItemStack();
-    var hand = event.hand;
-    if <item:contenttweaker:coalmeal4>.matches(item) {
-        var blockState = world.getBlockState(pos);
-        if <block:contenttweaker:improved_rare> == blockState.block {
-            world.setBlockState(pos, <blockstate:contenttweaker:epic_cluster>);
-            if !(player.isCreative()) == false {
-                var heldItem = player.getHeldItem(hand);
-                heldItem.mutable().shrink(1);
-            }
-        }
-    }
-});
-
-CTEventManager.register<crafttweaker.api.event.entity.player.interact.MCRightClickBlockEvent>((event) => {
-    var pos = event.blockPos;
-    var player = event.player;
-    if player == null || player.world.isRemote() {
-        return;
-    }
-    var world = player.world;
-    var item = event.getItemStack();
-    var hand = event.hand;
-    if <item:contenttweaker:coalmeal5>.matches(item) {
-        var blockState = world.getBlockState(pos);
-        if <block:contenttweaker:improved_epic> == blockState.block {
-            world.setBlockState(pos, <blockstate:contenttweaker:legendary_cluster>);
-            if !(player.isCreative()) == false {
-                var heldItem = player.getHeldItem(hand);
-                heldItem.mutable().shrink(1);
-            }
-        }
-    }
-});
-
-CTEventManager.register<crafttweaker.api.event.entity.player.interact.MCRightClickBlockEvent>((event) => {
-    var pos = event.blockPos;
-    var player = event.player;
-    if player == null || player.world.isRemote() {
-        return;
-    }
-    var world = player.world;
-    var item = event.getItemStack();
-    var hand = event.hand;
-    if <item:contenttweaker:coalmeal6>.matches(item) {
-        var blockState = world.getBlockState(pos);
-        if <block:contenttweaker:improved_legendary> == blockState.block {
-            world.setBlockState(pos, <blockstate:contenttweaker:omega_cluster>);
-            if !(player.isCreative()) == false {
-                var heldItem = player.getHeldItem(hand);
-                heldItem.mutable().shrink(1);
-            }
-        }
-    }
-});
-
-CTEventManager.register<crafttweaker.api.event.entity.player.interact.MCRightClickBlockEvent>((event) => {
-    var pos = event.blockPos;
-    var player = event.player;
-    if player == null || player.world.isRemote() {
-        return;
-    }
-    var world = player.world;
-    var item = event.getItemStack();
-    var hand = event.hand;
-    if <item:contenttweaker:coalmeal7>.matches(item) {
-        var blockState = world.getBlockState(pos);
-        if <block:contenttweaker:improved_omega> == blockState.block {
-            world.setBlockState(pos, <blockstate:contenttweaker:ultimate_cluster>);
-            if !(player.isCreative()) == false {
-                var heldItem = player.getHeldItem(hand);
-                heldItem.mutable().shrink(1);
-            }
-        }
     }
 });
 
@@ -158,8 +57,10 @@ import crafttweaker.api.event.tick.MCWorldTickEvent;
 import crafttweaker.api.world.MCServerWorld;
 import crafttweaker.api.entity.MCEntity;
 import crafttweaker.api.entity.MCItemEntity;
+import crafttweaker.api.fluid.MCFluid;
 
 CTEventManager.register<crafttweaker.api.event.tick.MCWorldTickEvent>((event) => {
+    var transform = [["contenttweaker:common_cluster_1_1", "mayhem:tier_1"], ["contenttweaker:enriched_common", "mayhem:tier_1_1"], ["contenttweaker:pure_cluster", "mayhem:quench_water"]] as string[][];
     var world = event.getWorld();
     if event.end {
         return;
@@ -168,64 +69,19 @@ CTEventManager.register<crafttweaker.api.event.tick.MCWorldTickEvent>((event) =>
         return;
     }
     if world is MCServerWorld{
-    var items = (world as MCServerWorld).getEntities((entity as MCEntity) => entity is MCItemEntity && <item:contenttweaker:common_cluster_1_1>.matches((entity as MCItemEntity).getItem()), <entitytype:minecraft:item>) as MCEntity[];
+    for name in transform {  
+    var items = (world as MCServerWorld).getEntities((entity as MCEntity) => entity is MCItemEntity && <item:${name[0]}>.matches((entity as MCItemEntity).getItem()), <entitytype:minecraft:item>) as MCEntity[];
     for item in items {
         println(item as string);
         var pos = item.getPosition();
         println(pos as string);
         var block = world.getBlockState(pos);
         println(block as string);
-        if <block:minecraft:water> == block.block {
-            (world as MCServerWorld).server.executeCommand("loot spawn " + pos.x as string + " " + pos.y as string + " " + pos.z as string + " loot mayhem:tier_1", true);
+        if (<block:minecraft:water> == block.block || block.getPropertyValue("waterlogged") == "true") {
+            (world as MCServerWorld).server.executeCommand("loot spawn " + pos.x as string + " " + pos.y as string + " " + pos.z as string + " loot "+name[1], true);
             (item as MCItemEntity).item.mutable().shrink(1);
         }
-    }}
-});
-
-CTEventManager.register<crafttweaker.api.event.tick.MCWorldTickEvent>((event) => {
-    var world = event.getWorld();
-    if event.end {
-        return;
-    }
-    if world.isRemote() {
-        return;
-    }
-    if world is MCServerWorld{
-    var items = (world as MCServerWorld).getEntities((entity as MCEntity) => entity is MCItemEntity && <item:contenttweaker:enriched_common>.matches((entity as MCItemEntity).getItem()), <entitytype:minecraft:item>) as MCEntity[];
-    for item in items {
-        println(item as string);
-        var pos = item.getPosition();
-        println(pos as string);
-        var block = world.getBlockState(pos);
-        println(block as string);
-        if <block:minecraft:water> == block.block {
-            (world as MCServerWorld).server.executeCommand("loot spawn " + pos.x as string + " " + pos.y as string + " " + pos.z as string + " loot mayhem:tier_1_1", true);
-            (item as MCItemEntity).item.mutable().shrink(1);
-        }
-    }}
-});
-
-CTEventManager.register<crafttweaker.api.event.tick.MCWorldTickEvent>((event) => {
-    var world = event.getWorld();
-    if event.end {
-        return;
-    }   
-    if world.isRemote() {
-        return;
-    }
-    if world is MCServerWorld{
-    var items = (world as MCServerWorld).getEntities((entity as MCEntity) => entity is MCItemEntity && <item:contenttweaker:pure_cluster>.matches((entity as MCItemEntity).getItem()), <entitytype:minecraft:item>) as MCEntity[];
-    for item in items {
-        println(item as string);
-        var pos = item.getPosition();
-        println(pos as string);
-        var block = world.getBlockState(pos);
-        println(block as string);
-        if <block:minecraft:water> == block.block {
-            (world as MCServerWorld).server.executeCommand("loot spawn " + pos.x as string + " " + pos.y as string + " " + pos.z as string + " loot mayhem:quench_water", true);
-            (item as MCItemEntity).item.mutable().shrink(1);
-        }
-    }}
+    }}}
 });
 
 CTEventManager.register<crafttweaker.api.event.tick.MCWorldTickEvent>((event) => {
@@ -328,21 +184,21 @@ CTEventManager.register<crafttweaker.api.event.tick.MCPlayerTickEvent>((event) =
         var held_main_hand = false;
         if <item:contenttweaker:wandering_trader_bucket>.withTag({Time: time as string}).matches(player.inventory.currentItem) {
             if world.random.nextInt(0, 2) == 1 {
-                (world as MCServerWorld).server.executeCommand("/playsound minecraft:entity.wandering_trader.no neutral "+player.getName() as string+" "+player.position.x as string+" "+player.position.y as string+" "+player.position.z as string+" 20", true);
+                (world as MCServerWorld).server.executeCommand("/playsound minecraft:entity.wandering_trader.ambient neutral "+player.getName() as string+" "+player.position.x as string+" "+player.position.y as string+" "+player.position.z as string+" 20", true);
                 held_main_hand = true;
             }
         }
         if <item:contenttweaker:wandering_trader_bucket>.withTag({Time: time as string}).matches(player.inventory.getStackInSlot(40)) && world.random.nextInt(0, 2) == 1 {
-                (world as MCServerWorld).server.executeCommand("/playsound minecraft:entity.wandering_trader.no neutral "+player.getName() as string+" "+player.position.x as string+" "+player.position.y as string+" "+player.position.z as string+" 20", true);
+                (world as MCServerWorld).server.executeCommand("/playsound minecraft:entity.wandering_trader.ambient neutral "+player.getName() as string+" "+player.position.x as string+" "+player.position.y as string+" "+player.position.z as string+" 20", true);
         }
         for i in 0 .. 36 {
             if <item:contenttweaker:wandering_trader_bucket>.withTag({Time: time as string}).matches(player.inventory.getStackInSlot(i)) && world.random.nextInt(0, 3) == 1 {
                 if held_main_hand {
                     held_main_hand = false;
                 } else if i < 9 {
-                    (world as MCServerWorld).server.executeCommand("/playsound minecraft:entity.wandering_trader.no neutral "+player.getName() as string+" "+player.position.x as string+" "+player.position.y as string+" "+player.position.z as string+" 15", true);
+                    (world as MCServerWorld).server.executeCommand("/playsound minecraft:entity.wandering_trader.ambient neutral "+player.getName() as string+" "+player.position.x as string+" "+player.position.y as string+" "+player.position.z as string+" 15", true);
                 } else {
-                    (world as MCServerWorld).server.executeCommand("/playsound minecraft:entity.wandering_trader.no neutral "+player.getName() as string+" "+player.position.x as string+" "+player.position.y as string+" "+player.position.z as string+" 10", true);
+                    (world as MCServerWorld).server.executeCommand("/playsound minecraft:entity.wandering_trader.ambient neutral "+player.getName() as string+" "+player.position.x as string+" "+player.position.y as string+" "+player.position.z as string+" 10", true);
                 }
             }
         }
@@ -395,77 +251,13 @@ CTEventManager.register<crafttweaker.api.event.entity.player.interact.MCRightCli
     }
 });
 
-CTEventManager.register<crafttweaker.api.event.entity.player.interact.MCRightClickBlockEvent>((event) => {
-    var pos = event.blockPos;
-    var player = event.player;
-    if player == null || player.world.isRemote() {
-        return;
-    }
-    var world = player.world;
-    var item = event.getItemStack();
-    var hand = event.hand;
-    if <item:mekanism:sawdust>.matches(item) {
-        var blockState = world.getBlockState(pos);
-        if <block:contenttweaker:blank_cluster> == blockState.block {
-            world.setBlockState(pos, <blockstate:contenttweaker:terrestrial_cluster>);
-            if !(player.isCreative()) == false {
-                var heldItem = player.getHeldItem(hand);
-                heldItem.mutable().shrink(1);
-            }
-        }
-    }
-});
-
-CTEventManager.register<crafttweaker.api.event.entity.player.interact.MCRightClickBlockEvent>((event) => {
-    var pos = event.blockPos;
-    var player = event.player;
-    if player == null || player.world.isRemote() {
-        return;
-    }
-    var world = player.world;
-    var item = event.getItemStack();
-    var hand = event.hand;
-    if <item:contenttweaker:infernal_sawdust>.matches(item) {
-        var blockState = world.getBlockState(pos);
-        if <block:contenttweaker:blank_cluster> == blockState.block {
-            world.setBlockState(pos, <blockstate:contenttweaker:infernal_cluster>);
-            if !(player.isCreative()) == false {
-                var heldItem = player.getHeldItem(hand);
-                heldItem.mutable().shrink(1);
-            }
-        }
-    }
-});
-
-CTEventManager.register<crafttweaker.api.event.entity.player.interact.MCRightClickBlockEvent>((event) => {
-    var pos = event.blockPos;
-    var player = event.player;
-    if player == null || player.world.isRemote() {
-        return;
-    }
-    var world = player.world;
-    var item = event.getItemStack();
-    var hand = event.hand;
-    if <item:contenttweaker:voidic_sawdust>.matches(item) {
-        var blockState = world.getBlockState(pos);
-        if <block:contenttweaker:blank_cluster> == blockState.block {
-            world.setBlockState(pos, <blockstate:contenttweaker:voidic_cluster>);
-            if !(player.isCreative()) == false {
-                var heldItem = player.getHeldItem(hand);
-                heldItem.mutable().shrink(1);
-            }
-        }
-    }
-});
-
 import crafttweaker.api.util.BlockPos;
 
 CTEventManager.register<crafttweaker.api.event.tick.MCWorldTickEvent>((event) => {
   if event.world is MCServerWorld && event.world.asServerWorld().server.getWorld(<resource:minecraft:the_end>) == event.world {
     var gateway = false;
-    var coords = [new BlockPos(96, 75, 0), new BlockPos(91, 75, 29), new BlockPos(77, 75, 56), new BlockPos(56, 75, 77), new BlockPos(29, 75, 91), new BlockPos(-1, 75, 96), new BlockPos(-30, 75, 91), new BlockPos(-57, 75, 77), new BlockPos(-78, 75, 56), new BlockPos(-92, 75, 29), new BlockPos(-96, 75, -1), new BlockPos(-92, 75, -30), new BlockPos(-78, 75, -57), new BlockPos(-57, 75, -78), new BlockPos(-30, 75, -92), new BlockPos(0, 75, -96), new BlockPos(29, 75, -92), new BlockPos(56, 75, -78), new BlockPos(77, 75, -57), new BlockPos(91, 75, -30)] as BlockPos[];
     for num in 0 .. 20 {
-      if !(event.world.isAir(coords[num])) {
+      if !(event.world.isAir(constants.coords[num])) {
         gateway = true;
       } else {
       }

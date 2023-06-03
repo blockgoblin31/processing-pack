@@ -8,10 +8,15 @@ import crafttweaker.api.item.IIngredient;
 import crafttweaker.api.entity.AttributeModifier;
 import crafttweaker.api.entity.AttributeOperation;
 import crafttweaker.api.recipes.WrapperRecipe;
+import crafttweaker.api.util.BlockPos;
+import crafttweaker.api.blocks.MCBlock;
 
 public class constants {
     public static var colors = ["white", "brown", "gray", "light_gray", "red", "orange", "yellow", "lime", "green", "blue", "light_blue", "cyan", "purple", "magenta", "pink", "black"] as string[];
     public static var addtribute = AttributeModifier.create("Add 1", 1, AttributeOperation.ADDITION);
+    public static var seed_type as IItemStack;
+    public static var coords = [new BlockPos(96, 75, 0), new BlockPos(91, 75, 29), new BlockPos(77, 75, 56), new BlockPos(56, 75, 77), new BlockPos(29, 75, 91), new BlockPos(-1, 75, 96), new BlockPos(-30, 75, 91), new BlockPos(-57, 75, 77), new BlockPos(-78, 75, 56), new BlockPos(-92, 75, 29), new BlockPos(-96, 75, -1), new BlockPos(-92, 75, -30), new BlockPos(-78, 75, -57), new BlockPos(-57, 75, -78), new BlockPos(-30, 75, -92), new BlockPos(0, 75, -96), new BlockPos(29, 75, -92), new BlockPos(56, 75, -78), new BlockPos(77, 75, -57), new BlockPos(91, 75, -30)] as BlockPos[];
+    public static var transform = {<item:mekanism:sawdust> : [<block:contenttweaker:blank_cluster>, <block:contenttweaker:terrestrial_cluster>], <item:contenttweaker:infernal_sawdust> : [<block:contenttweaker:blank_cluster>, <block:contenttweaker:infernal_cluster>], <item:contenttweaker:voidic_sawdust> : [<block:contenttweaker:blank_cluster>, <block:contenttweaker:voidic_cluster>], <item:contenttweaker:coalmeal7> : [<block:contenttweaker:improved_omega>, <block:contenttweaker:ultimate_cluster>], <item:contenttweaker:coalmeal6> : [<block:contenttweaker:improved_legendary>, <block:contenttweaker:omega_cluster>], <item:contenttweaker:coalmeal5> : [<block:contenttweaker:improved_epic>, <block:contenttweaker:legendary_cluster>], <item:contenttweaker:coalmeal4> : [<block:contenttweaker:improved_rare>, <block:contenttweaker:epic_cluster>], <item:contenttweaker:coalmeal3> : [<block:contenttweaker:improved_uncommon>, <block:contenttweaker:rare_cluster>], <item:contenttweaker:coalmeal2> : [<block:contenttweaker:improved_common>, <block:contenttweaker:uncommon_cluster>]} as MCBlock[][IItemStack];
 }
 public expand string {
   public substr(start as int, end as int) as string {
@@ -38,16 +43,16 @@ public expand string {
     }
     return this;
   }
-  public revsubstr(tail as string) as string {
+  public unspl(tail as string) as string {
     if this.indexOf(tail) != null {
         var num as usize = this.indexOf(tail);
-        return this[0 .. num];
+        return this[0 .. num-1];
     }
     return this;
   }
   public spl(head as string) as string {
     if this.indexOf(head) != null {
-        return this[(this.indexOf(head) + 1 as usize) .. this.length];
+        return this[(this.indexOf(head) + head.length as usize) .. this.length];
     }
     return this;
   }
@@ -76,9 +81,9 @@ for log in <tag:items:minecraft:logs>.elements {
 <tag:items:forge:nuggets/verdentium>.add(<item:contenttweaker:verdentium_nugget>);
 <tag:items:forge:storage_blocks/verdentium>.add(<item:contenttweaker:verdentium_block>);
 <tag:items:forge:gears/brass>.add(<item:contenttweaker:brass_gear>);
-for item in loadedMods.getMod("thermal_expansion").items {
-    if !(item in <tag:items:custom:dynamos>.elements || item in <tag:items:thermal:crafting> || <item:thermal:slot_seal>.matches(item)) {
-        <tag:items:thermal:machines>.add(item);
+for item in loadedMods.getMod("thermal").items {
+    if "machine" in item.translationKey {
+        <tag:items:custom:machines>.add(item);
     }
 }
 mods.jei.JEI.addInfo(<item:contenttweaker:common_cluster_1_1>, ["Drop this in water to get between 0 and 1 nuggets of iron and copper,", "and between 0 and 1 redstone dust"]);
@@ -87,5 +92,8 @@ mods.jei.JEI.addInfo(<item:contenttweaker:pure_cluster>, ["Drop this in water to
 Replacer.forOutput(<tag:items:custom:dynamos>).replace(<item:thermal:rf_coil>, <item:contenttweaker:silver_coil>).execute();
 Replacer.forMods("naturesaura").excluding(<recipetype:naturesaura:animal_spawner>, <recipetype:naturesaura:offering>, <recipetype:naturesaura:altar>, <recipetype:naturesaura:tree_ritual>).replace(<item:minecraft:iron_ingot>, <item:contenttweaker:natura_ingot>).execute();
 Replacer.forMods("storagenetwork").replace(<item:minecraft:iron_nugget>, <item:naturesaura:infused_iron>).replace(<item:minecraft:gold_ingot>, <item:thermal:signalum_ingot>).replace(<item:minecraft:gold_block>, <item:thermal:enderium_ingot>).replace(<item:minecraft:iron_ingot>, <item:thermal:invar_ingot>).execute();
+//Replacer.forTypes(villagerTrades).replace(<item:minecraft:diamond_axe>, <item:mekanismtools:steel_axe>).execute();
 <tag:blocks:minecraft:mushroom_grow_block>.add(<block:contenttweaker:blank_cluster>);
 <block:minecraft:obsidian>.setHarvestLevel(2);
+<tag:items:naturesaura:ancient_logs>.add(<item:naturesaura:ancient_log>);
+<tag:items:naturesaura:ancient_logs>.add(<item:naturesaura:ancient_bark>);

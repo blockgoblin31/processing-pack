@@ -3,3 +3,5 @@
 //<recipetype:naturesaura:tree_ritual>.addRecipe("name", sapling, output, time, north, south, east, west, southeast, northwest, northeast, southwest);
 <recipetype:naturesaura:altar>.removeRecipe(<item:naturesaura:infused_iron>);
 <recipetype:naturesaura:altar>.addRecipe("infused_iron", <item:contenttweaker:natura_ingot>, <item:naturesaura:infused_iron>, "naturesaura:overworld", 15000, 80);
+<recipetype:naturesaura:altar>.removeRecipe(<item:naturesaura:tainted_gold>);
+<recipetype:naturesaura:altar>.addRecipe("tainted_gold", <item:contenttweaker:natura_ingot>, <item:naturesaura:tainted_gold>, "naturesaura:nether", 15000, 80);

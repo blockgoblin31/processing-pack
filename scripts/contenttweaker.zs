@@ -61,7 +61,6 @@ val itemname = [
     "cluster_rock",
     "raw_infernal_rubber",
     "infernal_rubber",
-    "hey_tcat_remember_to_make_a_new_propellor_texture",
     "pure_powder",
     "blank_flower",
     "bronze_half_dust",
@@ -126,8 +125,13 @@ val itemname = [
     "ultimate_base",
     "celestial_base",
     "mythic_base",
-    "upgrade_augment_0"
-
+    "upgrade_augment_0",
+    "slag_dust",
+    "air_catalyst",
+    "earth_catalyst",
+    "fire_catalyst",
+    "water_catalyst",
+    "core_ingot"
 ] as string[];
 //the clusters with an _x_x are the processing items, like the common_cluster_1_1.
 //is the first number is process method, in this case "1", the scrond number is the step.
@@ -136,7 +140,7 @@ for item in itemname{
     new ItemBuilder().build(item);//.withRarity(itemrarity[i])
 }
 
-val clustername = ["common_cluster", "uncommon_cluster", "rare_cluster", "epic_cluster", "legendary_cluster", "omega_cluster", "ultimate_cluster", "mythic_cluster", "celestial_cluster", "supreme_cluster", "improved_common", "improved_uncommon", "improved_rare", "improved_epic", "improved_legendary", "improved_omega", "improved_mythic", "improved_celestial", "blank_cluster", "terrestrial_cluster", "infernal_cluster", "voidic_cluster"] as string[];
+val clustername = ["common_cluster", "uncommon_cluster", "rare_cluster", "epic_cluster", "legendary_cluster", "omega_cluster", "ultimate_cluster", "mythic_cluster", "celestial_cluster", "supreme_cluster", "improved_common", "improved_uncommon", "improved_rare", "improved_epic", "improved_legendary", "improved_omega", "improved_mythic", "improved_celestial", "blank_cluster", "terrestrial_cluster", "infernal_cluster", "voidic_cluster", "core_ore"] as string[];
 
 for block in clustername{
     new BlockBuilder()
@@ -163,7 +167,6 @@ val defaultFluidColor = [0xcccccc, 0x111111, 0xbbbbbb, 0xaa7777, 0x0f1b00, 0x333
 val defaultFluidMolten = [true, true, true, true, false, false, false, false, false, true, true] as bool[];
 val defaultFluidLuminosity = [0, 5, 0, 5, 0, 10, 0, 5, 0, 0, 4] as int[];
 
-
 for i, name in defaultFluidName{
     new FluidBuilder(defaultFluidMolten[i], defaultFluidColor[i]).luminosity(defaultFluidLuminosity[i]).build(name);
 }
@@ -179,8 +182,7 @@ for i, name in customFluidName{
     new FluidBuilder(customFluidMolten[i], customFluidColor[i], customFluidStill[i], customFluidFlowing[i]).luminosity(customFluidLuminosity[i]).build(name);
 }
 
-val durabilityItems = ["saw", "strong_resonator", "middling_resonator", "weak_resonator"] as string[];
-
+val durabilityItems = ["strong_resonator", "middling_resonator", "weak_resonator"] as string[];
 
 for name in durabilityItems {
     new ItemBuilder()

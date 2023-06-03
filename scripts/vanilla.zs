@@ -4,17 +4,17 @@ import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.tag.MCTag;
 import crafttweaker.api.item.MCItemDefinition;
 
-var furnaceRemove = [<item:tconstruct:seared_brick>] as IItemStack[];
+var furnaceRemove = [<item:immersiveengineering:nugget_aluminum>, <item:thermal:invar_ingot>, <item:thermal:signalum_ingot>, <item:thermal:enderium_ingot>, <item:tconstruct:seared_brick>] as IItemStack[];
 
-var furnaceInputs = [<item:tconstruct:grout>, <item:contenttweaker:common_cluster>,<item:contenttweaker:natura_dust>] as IItemStack[];
-var furnaceOutputs = [<item:tconstruct:scorched_brick>, <item:contenttweaker:common_cluster_1_1> * 2, <item:contenttweaker:natura_ingot>] as IItemStack[];
+var furnaceInputs = [<item:contenttweaker:core_ore>, <item:contenttweaker:verdentium_grit>, <item:tconstruct:grout>, <item:contenttweaker:common_cluster>,<item:contenttweaker:natura_dust>] as IItemStack[];
+var furnaceOutputs = [<item:contenttweaker:core_ingot>, <item:contenttweaker:verdentium_ingot>, <item:tconstruct:scorched_brick>, <item:contenttweaker:common_cluster_1_1> * 2, <item:contenttweaker:natura_ingot>] as IItemStack[];
 var furnaceTagInputs = [<tag:items:forge:dusts/emerald>] as MCTag<MCItemDefinition>[];
 var furnaceTagOutputs = [<item:minecraft:emerald>] as IItemStack[];
 
-var blastFurnaceRemove = [<item:tconstruct:seared_brick>] as IItemStack[];
+var blastFurnaceRemove = [<item:thermal:invar_ingot>, <item:thermal:signalum_ingot>, <item:thermal:enderium_ingot>, <item:tconstruct:seared_brick>] as IItemStack[];
 
-var blastFurnaceInputsOld = [<item:tconstruct:grout>, <item:contenttweaker:raw_infernal_rubber>] as IItemStack[];
-var blastFurnaceOutputsOld = [<item:tconstruct:scorched_brick>, <item:contenttweaker:infernal_rubber>] as IItemStack[];
+var blastFurnaceInputsOld = [<item:tconstruct:grout>, <item:contenttweaker:raw_infernal_rubber>, <item:contenttweaker:common_cluster>] as IItemStack[];
+var blastFurnaceOutputsOld = [<item:tconstruct:scorched_brick>, <item:contenttweaker:infernal_rubber>, <item:contenttweaker:common_cluster_1_1>] as IItemStack[];
 
 var list1 = blastFurnaceInputsOld as stdlib.List<IItemStack>;
 var list2 = blastFurnaceOutputsOld as stdlib.List<IItemStack>;
