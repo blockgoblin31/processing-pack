@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model" : "contenttweaker:block/terrestrial_cluster"
+    }
+  }
+}
