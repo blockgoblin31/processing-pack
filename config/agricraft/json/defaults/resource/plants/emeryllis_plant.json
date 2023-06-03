@@ -1,0 +1,119 @@
+{
+  "path": "resource/plants/emeryllis_plant.json",
+  "version": "1.16.4",
+  "json_documentation": "https://agridocs.readthedocs.io/en/master/agri_plant/",
+  "enabled": true,
+  "mods": [
+    "agricraft",
+    "minecraft"
+  ],
+  "id": "contenttweaker:verdentium_plant",
+  "plant_lang_key": "Verdentium",
+  "seed_lang_key": "Verdentium Seeds",
+  "desc_lang_key": "A magical mixture of metal and plant, this produces a metal that seems to have some interesting properties when in tube shapes. Maybe this could be used for resource transportation?",
+  "seed_items": [],
+  "stages": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16
+  ],
+  "harvestStage": 4,
+  "growth_chance": 0.5,
+  "growth_bonus": 0.035,
+  "tier": 5,
+  "cloneable": false,
+  "spread_chance": 0.1,
+  "grass_drop_chance": 0.0,
+  "seed_drop_chance": 1.0,
+  "seed_drop_bonus": 0.0,
+  "products": {
+    "products": [
+      {
+        "min": 1,
+        "max": 1,
+        "chance": 0.8,
+        "required": true,
+        "type": "item",
+        "object": "contenttweaker:verdent_fruit",
+        "useTag": false,
+        "data": "",
+        "ignoredData": []
+      }
+    ]
+  },
+  "clip_products": {
+    "products": []
+  },
+  "requirement": {
+    "soil_humidity": {
+      "condition": "wet",
+      "type": "equal",
+      "tolerance_factor": 0.3
+    },
+    "soil_acidity": {
+      "condition": "slightly_acidic",
+      "type": "equal",
+      "tolerance_factor": 0.25
+    },
+    "soil_nutrients": {
+      "condition": "high",
+      "type": "equal",
+      "tolerance_factor": 0.15
+    },
+    "min_light": 8,
+    "max_light": 16,
+    "light_tolerance_factor": 0.5,
+    "seasons": [
+      "spring"
+    ],
+    "conditions": [],
+    "fluid": {
+      "type": "fluid",
+      "object": "minecraft:empty",
+      "useTag": false,
+      "data": "",
+      "ignoredData": []
+    }
+  },
+  "callbacks": [
+    "agricraft:bushy"
+  ],
+  "texture": {
+    "render_type": "hash",
+    "plant_models": [],
+    "plant_textures": [
+      [
+        "agricraft:plant/emeryllis1"
+      ],
+      [
+        "agricraft:plant/emeryllis1"
+      ],
+      [
+        "agricraft:plant/emeryllis1"
+      ],
+      [
+        "agricraft:plant/emeryllis2"
+      ],
+      [
+        "agricraft:plant/emeryllis2"
+      ],
+      [
+        "agricraft:plant/emeryllis3"
+      ],
+      [
+        "agricraft:plant/emeryllis3"
+      ],
+      [
+        "agricraft:plant/emeryllis4"
+      ]
+    ]
+  },
+  "seed_texture": "agricraft:seed/emeryllis",
+  "seed_model": "agricraft:seed/emeryllis",
+  "particle_effects": []
+}
