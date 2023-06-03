@@ -38,7 +38,7 @@ val bronze_block = <tag:items:forge:storage_blocks/bronze>;
 //brass
 val brass = <tag:items:forge:ingots/brass>;
 val brass_plate = <tag:items:forge:plates/brass>;
-//val brass_gear = <tag:items:forge:gears/brass>;
+val brass_gear = <tag:items:forge:gears/brass>;
 val brass_nugget = <tag:items:forge:nuggets/brass>;
 val brass_block = <tag:items:forge:storage_blocks/brass>;
 
@@ -70,13 +70,34 @@ val verdentium = <tag:items:forge:ingots/verdentium>;
 val verdentium_nugget = <tag:items:forge:nuggets/verdentium>;
 val verdentium_block = <tag:items:forge:storage_blocks/verdentium>;
 
-
 //invar
 val invar = <tag:items:forge:ingots/invar>;
 val invar_plate = <tag:items:forge:plates/invar>;
 val invar_gear = <tag:items:forge:gears/invar>;
 val invar_nugget = <tag:items:forge:nuggets/invar>;
 val invar_block = <tag:items:forge:storage_blocks/invar>;
+
+//lumium
+val lumium = <tag:items:forge:ingots/lumium>;
+val lumium_plate = <tag:items:forge:plates/lumium>;
+val lumium_gear = <tag:items:forge:gears/lumium>;
+val lumium_nugget = <tag:items:forge:nuggets/lumium>;
+val lumium_block = <tag:items:forge:storage_blocks/lumium>;
+
+//signalum
+val signalum = <tag:items:forge:ingots/signalum>;
+val signalum_plate = <tag:items:forge:plates/signalum>;
+val signalum_gear = <tag:items:forge:gears/signalum>;
+val signalum_nugget = <tag:items:forge:nuggets/signalum>;
+val signalum_block = <tag:items:forge:storage_blocks/signalum>;
+
+//nickel
+val nickel = <tag:items:forge:ingots/nickel>;
+val nickel_plate = <tag:items:forge:plates/nickel>;
+val nickel_gear = <tag:items:forge:gears/nickel>;
+val nickel_nugget = <tag:items:forge:nuggets/nickel>;
+val nickel_block = <tag:items:forge:storage_blocks/nickel>;
+
 import crafttweaker.api.item.IItemStack;
 
 val scorched = <item:tconstruct:scorched_brick>;
@@ -86,7 +107,6 @@ val alloy = <item:create:andesite_alloy>;
 val redstone = <item:minecraft:redstone>;
 val modules = ["low_priority", "high_priority", "extraction", "retrieval", "filter", "speed"] as string[];
 val metals = ["copper", "aluminum", "tin", "silver", "bronze", "brass", "iron", "gold", "lead", "verdentium", "invar"] as string[];
-
 
 craftingTable.removeRecipe(<item:tconstruct:seared_melter>);
 craftingTable.removeRecipe(<item:tconstruct:seared_heater>);
@@ -113,9 +133,9 @@ craftingTable.removeRecipe(<item:immersiveengineering:wire_electrum>);
 craftingTable.removeRecipe(<item:immersiveengineering:connector_mv>);
 craftingTable.removeRecipe(<item:immersiveengineering:connector_mv_relay>);
 craftingTable.removeRecipe(<item:botania:fertilizer>);
+craftingTable.removeRecipe(<tag:items:custom:machines>);
 
-var removeArray = [<item:thermal:invar_dust>, <item:thermal:signalum_dust>, <item:thermal:enderium_dust>, <item:thermal:upgrade_augment_1>, <item:thermal:machine_frame>, <item:thermal:redstone_servo>] as IItemStack[];
-
+var removeArray = [<item:thermal:enderium_dust>, <item:thermal:upgrade_augment_1>, <item:thermal:machine_frame>, <item:thermal:redstone_servo>] as IItemStack[];
 
 for remove in removeArray {
     craftingTable.removeRecipe(remove);
@@ -241,15 +261,6 @@ craftingTable.addShaped("enriched", <item:contenttweaker:enriched_common>, [
     [nul, redstone, nul],
     [redstone, <item:contenttweaker:common_cluster_1_1>, redstone],
     [nul, redstone, nul]
-]);
-
-craftingTable.addShaped("saw_saw", <item:contenttweaker:saw>, [
-    [<item:minecraft:stick>, <item:minecraft:stick>, <item:minecraft:stick>],
-    [<item:minecraft:stick>, copper, copper]
-]);
-
-craftingTable.addShapeless("sawdust", <item:contenttweaker:infernal_sawdust> * 8, [
-    <item:contenttweaker:saw>.anyDamage().transformDamage(), <tag:items:custom:infernal_wood>
 ]);
 
 craftingTable.addShaped("rod_bronze", <item:contenttweaker:bronze_rod> * 4, [
@@ -548,20 +559,115 @@ craftingTable.addShaped("hardened_components", <item:thermal:upgrade_augment_1>,
 ]);
 
 craftingTable.addShaped("strong_resonator", <item:contenttweaker:strong_resonator>, [
-    [nul, silver_plate, nul],
+    [nul, brass_gear, nul],
     [silver_plate, <item:create:rose_quartz>, silver_plate],
     [nul, silver_plate, nul]
 ]);
 
 craftingTable.addShaped("middling_resonator", <item:contenttweaker:middling_resonator>, [
-    [nul, brass_plate, nul],
+    [nul, brass_gear, nul],
     [brass_plate, <item:create:rose_quartz>, brass_plate],
     [nul, brass_plate, nul]
 ]);
 
 craftingTable.addShaped("weak_resonator", <item:contenttweaker:weak_resonator>, [
-    [nul, iron_plate, nul],
+    [nul, brass_gear, nul],
     [iron_plate, <item:create:rose_quartz>, iron_plate],
     [nul, iron_plate, nul]
+]);
 
+var metal = <item:thermal:lumium_ingot>;
+
+craftingTable.addShaped("redstone_furnace", <item:thermal:machine_furnace>, [
+    [nul, redstone, nul],
+    [metal, <item:thermal:machine_frame>, metal],
+    [bronze_gear, <item:thermal:rf_coil>, bronze_gear]
+]);
+
+craftingTable.addShaped("centrifugal_seperator", <item:thermal:machine_centrifuge>, [
+    [nul, tin_plate, nul],
+    [metal, <item:thermal:machine_frame>, metal],
+    [<tag:items:forge:gears/constantan>, <item:thermal:rf_coil>, <tag:items:forge:gears/constantan>]
+]);
+
+craftingTable.addShaped("alchemical_imbuer", <item:thermal:machine_brewer>, [
+    [nul, <item:minecraft:brewing_stand>, nul],
+    [glass, <item:thermal:machine_frame>, glass],
+    [lumium_gear, <item:thermal:rf_coil>, lumium_gear]
+]);
+
+craftingTable.addShaped("fluid_encapsulator", <item:thermal:machine_bottler>, [
+    [nul, redstone, nul],
+    [metal, <item:thermal:machine_frame>, metal],
+    [<tag:items:forge:gears/emerald>, <item:thermal:rf_coil>, <tag:items:forge:gears/emerald>]
+]);
+
+metal = <item:thermal:invar_ingot>;
+
+craftingTable.addShaped("blast_chiller", <item:thermal:machine_chiller>, [
+    [nul, <item:minecraft:blue_ice>, nul],
+    [<item:minecraft:blue_ice>, <item:thermal:machine_frame>, <item:minecraft:blue_ice>],
+    [invar_gear, <item:thermal:rf_coil>, invar_gear]
+]);
+
+craftingTable.addShaped("fractionating_still", <item:thermal:machine_refinery>, [
+    [nul, <item:minecraft:bucket>, nul],
+    [metal, <item:thermal:machine_frame>, metal],
+    [copper_gear, <item:thermal:rf_coil>, copper_gear]
+]);
+
+craftingTable.addShaped("sawmill", <item:thermal:machine_sawmill>, [
+    [nul, <item:thermal:saw_blade>, nul],
+    [metal, <item:thermal:machine_frame>, metal],
+    [bronze_gear, <item:thermal:rf_coil>, bronze_gear]
+]);
+
+metal = <item:thermal:signalum_ingot>;
+
+craftingTable.addShaped("induction_smelter", <item:thermal:machine_smelter>, [
+    [nul, <item:minecraft:blast_furnace>, nul],
+    [metal, <item:thermal:machine_frame>, metal],
+    [brass_gear, <item:thermal:rf_coil>, brass_gear]
+]);
+
+craftingTable.addShaped("pulverizer", <item:thermal:machine_pulverizer>, [
+    [nul, <item:create:crushing_wheel>, nul],
+    [<item:minecraft:flint>, <item:thermal:machine_frame>, <item:minecraft:flint>],
+    [signalum_gear, <item:thermal:rf_coil>, signalum_gear]
+]);
+
+craftingTable.addShaped("magma_crucible", <item:thermal:machine_crucible>, [
+    [nul, <item:minecraft:magma_block>, nul],
+    [metal, <item:thermal:machine_frame>, metal],
+    [lumium_gear, <item:thermal:rf_coil>, lumium_gear]
+]);
+
+metal = <item:thermal:enderium_ingot>;
+
+craftingTable.addShaped("sequential_fabricator", <item:thermal:machine_crafter>, [
+    [nul, <item:create:mechanical_crafter>, nul],
+    [metal, <item:thermal:machine_frame>, metal],
+    [signalum_gear, <item:thermal:rf_coil>, signalum_gear]
+]);
+
+metal = <item:thermal:enderium_plate>;
+
+craftingTable.addShaped("phytogenic_insolator", <item:thermal:machine_insolator>, [
+    [nul, <item:thermal:phytogro>, nul],
+    [metal, <item:thermal:machine_frame>, metal],
+    [lumium_gear, <item:thermal:rf_coil>, lumium_gear]
+]);
+
+craftingTable.addShaped("pyrolyzer", <item:thermal:machine_pyrolyzer>, [
+    [nul, <item:minecraft:blaze_rod>, nul],
+    [metal, <item:thermal:machine_frame>, metal],
+    [gold_gear, <item:thermal:rf_coil>, gold_gear]
+]);
+
+metal = <item:thermal:enderium_ingot>;
+
+craftingTable.addShaped("multiservo_press", <item:thermal:machine_press>, [
+    [nul, <item:create:mechanical_press>, nul],
+    [metal, <item:thermal:machine_frame>, metal],
+    [nickel_gear, <item:thermal:rf_coil>, nickel_gear]
 ]);

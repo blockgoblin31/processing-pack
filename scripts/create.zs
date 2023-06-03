@@ -1,5 +1,6 @@
 val air = <item:minecraft:air>;
 import crafttweaker.api.item.IItemStack;
+import mods.create.MixingManager;
 
 /* default recipe
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("cluster")
@@ -131,3 +132,5 @@ for i, dust in dusts {
 }
 
 <recipetype:create:mixing>.addRecipe("epic_base", "heated", <item:contenttweaker:epic_base>, [<item:minecraft:redstone> * 10, <item:thermal:tin_ingot>, <item:create:copper_ingot> * 2, <item:create:brass_ingot>, <item:botania:light_gray_petal>], [<fluid:contenttweaker:liquid_cobble> * 1000]);
+<recipetype:create:mixing>.addRecipe("saturate_water", "none", <fluid:contenttweaker:saturated_water> * 500, [<item:contenttweaker:lighter_epic>], [<fluid:minecraft:water> * 500]);
+<recipetype:create:mixing>.addRecipe("saturate_core_water", "none", <fluid:contenttweaker:saturated_core_water> * 500, [<item:contenttweaker:heavier_epic>], [<fluid:contenttweaker:core_water> * 500]);

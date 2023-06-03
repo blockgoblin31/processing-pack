@@ -7,7 +7,7 @@ import crafttweaker.api.item.IItemStack;
 <recipetype:tconstruct:casting_basin>.addItemCastingRecipe("item_casting_basin_andesite", <item:minecraft:air>, <fluid:contenttweaker:molten_andesite> * 1000, <item:minecraft:andesite>, 900, false, true);
 
 <recipetype:tconstruct:alloying>.removeRecipe(<fluid:tconstruct:molten_signalum>);
-<recipetype:tconstruct:alloying>.addRecipe("signalum", [<fluid:thermal:redstone>*4, <fluid:tconstruct:molten_silver>*9, <fluid:tconstruct:molten_copper>*27], <fluid:tconstruct:molten_signalum>*36, 50);
+<recipetype:tconstruct:alloying>.addRecipe("signalum_alloy", [<fluid:thermal:redstone>*4, <fluid:tconstruct:molten_silver>*9, <fluid:tconstruct:molten_copper>*27], <fluid:tconstruct:molten_signalum>*36, 50);
 
 <recipetype:tconstruct:casting_basin>.removeRecipe(<item:tconstruct:smeltery_controller>);
 
@@ -53,3 +53,13 @@ for item in remove {
 <recipetype:tconstruct:casting_table>.addItemCastingRecipe("item_casting_table_nickel_wire_sand", <tag:items:tconstruct:casts/single_use/wire>, <fluid:tconstruct:molten_nickel> * 72, <item:contenttweaker:nickel_wire>, 100, true, false);
 
 <recipetype:tconstruct:alloying>.addRecipe("rare_base", [<fluid:contenttweaker:liquid_stone> * 125, <fluid:tconstruct:molten_tin> * 6, <fluid:thermal:redstone> * 10, <fluid:tconstruct:molten_iron> * 2, <fluid:tconstruct:molten_aluminum> * 4], <fluid:contenttweaker:molten_base_cluster> * 18, 50);
+
+<recipetype:tconstruct:melting>.removeByName("tconstruct:smeltery/melting/metal/invar/dust");
+<recipetype:tconstruct:alloying>.removeByName("tconstruct:smeltery/alloys/molten_enderium");
+<recipetype:tconstruct:casting_table>.removeRecipe(<item:thermal:signalum_ingot>);
+<recipetype:tconstruct:casting_table>.removeRecipe(<item:thermal:signalum_gear>);
+<recipetype:tconstruct:casting_table>.removeRecipe(<item:thermal:signalum_nugget>);
+<recipetype:tconstruct:casting_table>.removeRecipe(<item:thermal:signalum_plate>);
+<recipetype:tconstruct:casting_table>.removeRecipe(<item:thermal:signalum_coin>);
+<recipetype:tconstruct:casting_basin>.removeRecipe(<item:thermal:signalum_block>);
+<recipetype:tconstruct:alloying>.removeByName("tconstruct:smeltery/alloys/molten_invar");
