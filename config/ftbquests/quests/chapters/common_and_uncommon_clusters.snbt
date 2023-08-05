@@ -1,7 +1,7 @@
 {
 	id: "133390F75152DCFF"
 	group: ""
-	order_index: 1
+	order_index: 0
 	filename: "common_and_uncommon_clusters"
 	title: "Common and Uncommon Clusters"
 	default_quest_shape: ""
@@ -106,7 +106,7 @@
 			]
 		}
 		{
-			x: -2.5d
+			x: 0.5d
 			y: 4.5d
 			description: ["By mixing the ore cluster with redstone before melting the stone away, it seems that I get more metals, at a loss of the redstone"]
 			dependencies: ["06B8D0343EB53799"]
@@ -169,6 +169,7 @@
 			y: 7.5d
 			description: ["The wood from this dimension allows a greater absorption of magic into the ore cluster, if mixed in thouroughly."]
 			dependencies: ["1C227DA01A068260"]
+			min_required_tasks: 2
 			id: "1D8DDBF14AED3C09"
 			tasks: [
 				{
@@ -177,9 +178,19 @@
 					dimension: "minecraft:the_nether"
 				}
 				{
-					id: "410E9CE2C4C43CAD"
+					id: "74C22286BB93D95D"
 					type: "item"
 					item: "minecraft:crimson_stem"
+				}
+				{
+					id: "220226A87072C6B5"
+					type: "item"
+					item: "minecraft:warped_stem"
+				}
+				{
+					id: "0062962B8875335D"
+					type: "item"
+					item: "tconstruct:bloodshroom_log"
 				}
 			]
 		}
@@ -197,9 +208,9 @@
 		}
 		{
 			x: -1.0d
-			y: 7.5d
-			description: ["I'll need sonething stronger than my own hands to mix in sawdust, this setup will be perfect"]
-			dependencies: ["166086AFFA0C29AF"]
+			y: 9.0d
+			description: ["Next, I'll need sonething stronger than my own hands to mix in sawdust, this setup will be perfect"]
+			dependencies: ["577FB06CC7C0D03D"]
 			id: "68CC9FDA190B6505"
 			tasks: [
 				{
@@ -220,6 +231,7 @@
 			y: 6.0d
 			description: ["I'll need some sort of rotation to power my future factory, and my current mixer"]
 			dependencies: ["1D9E31D61BC4F2F9"]
+			min_required_tasks: 1
 			id: "166086AFFA0C29AF"
 			tasks: [
 				{
@@ -237,7 +249,7 @@
 		{
 			title: "\"Improving\" the ore cluster"
 			x: -1.0d
-			y: 9.0d
+			y: 10.5d
 			description: ["While you can no longer turn this into raw materials, you'll soon be able to turn it into better metals"]
 			dependencies: [
 				"68CC9FDA190B6505"
@@ -264,9 +276,9 @@
 		}
 		{
 			x: -1.0d
-			y: 10.5d
-			description: ["Next, I'll need something more powerful than a common furnace to melt it. The fan will require more setup, but uses copper instead of iron, which seems to be needed for almost everything else"]
-			dependencies: ["408DF11420904722"]
+			y: 7.5d
+			description: ["I'll need something more powerful than a common furnace to melt the cluster. The fan will require more setup, but uses copper instead of iron, which seems to be needed for almost everything else"]
+			dependencies: ["166086AFFA0C29AF"]
 			id: "577FB06CC7C0D03D"
 			tasks: [
 				{
@@ -285,20 +297,19 @@
 			x: -1.0d
 			y: 12.0d
 			description: ["Finally, I'll re-freeze the stone, with the sawdust thouroughly mixed in now."]
-			dependencies: ["577FB06CC7C0D03D"]
+			dependencies: ["408DF11420904722"]
 			id: "566D75DB14B25F72"
-			tasks: [
-				{
-					id: "24D52042A8A0DF0E"
-					type: "item"
-					item: "pneumaticcraft:heat_frame"
+			tasks: [{
+				id: "210ED97EC6838D56"
+				type: "item"
+				item: {
+					id: "custommachinery:custom_machine_item"
+					Count: 1b
+					tag: {
+						machine: "machinery:freezer"
+					}
 				}
-				{
-					id: "7AB0D462E79A3CA4"
-					type: "item"
-					item: "minecraft:packed_ice"
-				}
-			]
+			}]
 		}
 		{
 			x: 0.5d
@@ -361,8 +372,8 @@
 			]
 		}
 		{
-			x: -3.5d
-			y: 14.5d
+			x: -4.0d
+			y: 15.0d
 			dependencies: ["44D14B1F45DBFB2D"]
 			id: "5A57AB464173AB51"
 			tasks: [
@@ -396,8 +407,8 @@
 			]
 		}
 		{
-			x: -2.0d
-			y: 14.5d
+			x: -2.5d
+			y: 15.0d
 			description: ["An alloy of aluminum and copper can make a reasonable cast for extracting materials from my foundry."]
 			dependencies: [
 				"57E8E2D8E5C1EC10"
@@ -412,7 +423,7 @@
 		}
 		{
 			x: -1.0d
-			y: 16.0d
+			y: 15.0d
 			dependencies: ["13AD6EBD0220CEC9"]
 			id: "2328A435DA3638A8"
 			tasks: [
@@ -430,8 +441,8 @@
 		}
 		{
 			title: "Improved Machinery"
-			x: 1.0d
-			y: 16.0d
+			x: 0.5d
+			y: 15.0d
 			description: ["With this, I can start automating processes I've had to do manually up until now"]
 			dependencies: ["2328A435DA3638A8"]
 			id: "0E8012C2CAB77CA1"
@@ -452,11 +463,6 @@
 					item: "create:spout"
 				}
 				{
-					id: "018BBF8052449D6F"
-					type: "item"
-					item: "create:item_drain"
-				}
-				{
 					id: "79CA176FD318CF14"
 					type: "item"
 					item: "create:belt_connector"
@@ -465,7 +471,7 @@
 		}
 		{
 			x: -1.0d
-			y: 17.5d
+			y: 16.5d
 			dependencies: ["2328A435DA3638A8"]
 			id: "65E49694234A2312"
 			tasks: [{
@@ -476,7 +482,7 @@
 		}
 		{
 			x: -2.5d
-			y: 17.5d
+			y: 16.5d
 			id: "5253781DB07DCBFA"
 			tasks: [{
 				id: "214ECCDFA01B6D64"
@@ -486,7 +492,7 @@
 		}
 		{
 			x: -1.0d
-			y: 19.0d
+			y: 18.0d
 			description: ["Now I finally have access to tin, which has very unique properties when put under extreme pressure. Maybe the blast chamber I've set up for quartz can work for this as well."]
 			dependencies: [
 				"5253781DB07DCBFA"
@@ -515,6 +521,18 @@
 					item: "immersiveengineering:dust_aluminum"
 				}
 			]
+		}
+		{
+			x: 0.5d
+			y: 18.0d
+			description: ["Now I can fully automate all the steps leading up to this point, with the ability to place trees and coalmeal automatically"]
+			dependencies: ["3792A381F9EF17B4"]
+			id: "59B9C6904729266D"
+			tasks: [{
+				id: "7177963D7B812811"
+				type: "item"
+				item: "create:deployer"
+			}]
 		}
 	]
 }
