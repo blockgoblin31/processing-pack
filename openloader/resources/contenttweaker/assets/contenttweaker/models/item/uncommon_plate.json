@@ -1,0 +1,8 @@
+{
+	"parent" : "item/generated",
+	"textures" :
+	{
+		"layer0" : "contenttweaker:item/uncommon_plate",
+		"layer1" : "contenttweaker:item/uncommon_plate_plastic"
+	}
+}

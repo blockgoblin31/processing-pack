@@ -1,0 +1,34 @@
+{
+  "parent" : "item/generated",
+  "textures" :
+  {
+    "layer0" : "contenttweaker:item/uncommon_ingot",
+    "layer1" : "contenttweaker:item/uncommon_plastic"
+  },
+  "display": {
+		"thirdperson_righthand": {
+			"scale": [1.125, 1.125, 1.125]
+		},
+		"thirdperson_lefthand": {
+			"scale": [1.125, 1.125, 1.125]
+		},
+		"firstperson_righthand": {
+			"scale": [1.125, 1.125, 1.125]
+		},
+		"firstperson_lefthand": {
+			"scale": [1.125, 1.125, 1.125]
+		},
+		"ground": {
+			"scale": [0.623, 0.625, 0.625]
+		},
+		"gui": {
+			"scale": [1.125, 1.125, 1.125]
+		},
+		"head": {
+			"scale": [1.125, 1.125, 1.125]
+		},
+		"fixed": {
+			"scale": [1.125, 1.125, 1.125]
+		}
+	}
+}

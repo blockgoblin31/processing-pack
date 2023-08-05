@@ -1,0 +1,6 @@
+{
+  "parent": "contenttweaker:block/epic_cluster",
+  "textures": {
+    "all": "contenttweaker:block/mythic_cluster"
+  }
+}

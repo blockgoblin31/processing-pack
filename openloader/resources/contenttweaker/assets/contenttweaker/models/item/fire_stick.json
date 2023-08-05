@@ -1,0 +1,8 @@
+{
+  "parent" : "item/generated",
+  "textures" :
+  {
+    "layer0" : "contenttweaker:item/bronze_rod",
+    "layer1" : "contenttweaker:item/fire_stick"
+  }
+}

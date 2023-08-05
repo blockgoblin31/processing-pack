@@ -1,0 +1,6 @@
+{
+  "parent": "contenttweaker:block/omega_cluster",
+  "textures": {
+    "all": "contenttweaker:block/ultimate_cluster"
+  }
+}

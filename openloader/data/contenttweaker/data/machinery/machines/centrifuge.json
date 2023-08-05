@@ -1,0 +1,116 @@
+{
+    "name": "Small Centrifuge",
+    "appearance": {
+        "idle": {
+            "block": "contenttweaker:centrifuge",
+            "item": "contenttweaker:centrifuge"
+        }
+    },
+    "components":[
+        {
+            "type": "custommachinery:item",
+            "id": "input",
+            "mode": "input"
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "output",
+            "mode": "output"
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "secondary",
+            "mode": "output"
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "tertiary",
+            "mode": "output"
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "quatrinary",
+            "mode": "output"
+        },
+        {
+            "type":"custommachinery:item",
+            "id": "second_input",
+            "mode": "input"
+        },
+        {
+            "type": "custommachinery:energy",
+            "capacity": 100000
+        }
+    ],
+    "gui": [
+        {
+            "type": "custommachinery:energy",
+            "x": 50,
+            "y": 32,
+            "width": 20,
+            "height": 38
+        },
+        {
+            "type": "custommachinery:player_inventory",
+            "x": 50,
+            "y": 80
+        },
+        {
+            "type": "custommachinery:progress",
+            "x": 120,
+            "y": 42
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 94,
+            "y": 42,
+            "id": "input"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 154,
+            "y": 31,
+            "id": "output"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 174,
+            "y": 31,
+            "id": "secondary"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 154,
+            "y": 52,
+            "id": "tertiary"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 174,
+            "y": 52,
+            "id": "quatrinary"
+        },
+        {
+            "type": "custommachinery:status",
+            "x": 192,
+            "y": 61,
+            "width": 10,
+            "height": 10
+        },
+        {
+            "type": "custommachinery:text",
+            "x": 110,
+            "y": 15,
+            "text": "Centrifuge"
+        },
+        {
+            "type": "custommachinery:texture",
+            "x": 40,
+            "y": 10,
+            "width": 182,
+            "texture": "custommachinery:textures/gui/base_background.png",
+            "height": 162,
+            "priority": 1
+        }
+    ]
+}
