@@ -1,0 +1,12 @@
+{
+    "name": "Rare Cluster",
+    "icon": "contenttweaker:rare_cluster",
+    "category": "patchouli:growing_clusters",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "   This cluster's base can be made by alloying liquid stone with six nuggets of tin, 10 redstone dust, two nuggets of iron, and four nuggets of aluminum. You will then cast the resulting fluid as an ingot, pressurize it with plastic, press it into a plate using the metal press, and finally cast liquid cobblestone over the top."
+        }
+    ]
+}

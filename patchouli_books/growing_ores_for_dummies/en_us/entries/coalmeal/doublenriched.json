@@ -1,0 +1,15 @@
+{
+    "name": "Double Enriched Coal Meal",
+    "icon": "contenttweaker:coalmeal3",
+    "category": "patchouli:coalmeal",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "The third type of coal meal can be made by mixing in niter(which you can get from squeezing and crushing cacti) and graphite pellets(made by deploying coal dust on a bronze rod, and then crushing the output). Using it on an improved uncommon cluster will turn it into a rare cluster."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "crafttweaker:t3"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Uncommon Cluster",
+    "icon": "contenttweaker:uncommon_cluster",
+    "category": "patchouli:growing_clusters",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "   The uncommon cluster is significantly more complicated to produce than the common one, requiring you to make a base material of richer stone than is found in nature. You can do this by mixing molten cobblestone with an iron nugget, a copper nugget, and five redstone dust." 
+        },
+        {
+            "type": "patchouli:text",
+            "text": "   To process this into a completed cluster that can have coalmeal applied to it, you must first heat it at blast furnace temperatures, hotter than a normal furnace. You must then mix in sawdust from any tree in the nether dimension, and finally cool it in a freezer or blast chiller. The uncommon cluster yeilds aluminum, tin, and quartz in addition to the yeilds of the common cluster."
+        }
+    ]
+}

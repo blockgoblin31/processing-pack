@@ -1,0 +1,6 @@
+{
+    "name": "Growing Clusters",
+    "description": "The steps to grow each cluster and turn it into the next one",
+    "icon": "contenttweaker:common_cluster",
+    "sortnum": 1
+}

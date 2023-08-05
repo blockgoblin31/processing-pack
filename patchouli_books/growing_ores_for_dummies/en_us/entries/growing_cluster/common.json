@@ -1,0 +1,11 @@
+{
+    "name": "Common Cluster",
+    "icon": "contenttweaker:common_cluster",
+    "category": "patchouli:growing_clusters",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "   The common cluster is the first type of ore cluster you'll make in your farm. It is made by simply applying coalmeal to stone, upon which it will sprout out of the top of the block. It contains iron, copper, and redstone." 
+        }
+    ]
+}

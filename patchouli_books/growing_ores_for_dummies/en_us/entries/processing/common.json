@@ -1,0 +1,11 @@
+{
+    "name": "Common Cluster",
+    "icon": "contenttweaker:common_cluster",
+    "category": "patchouli:processing",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "To process the common ore cluster, you must remove the stone. This is accomplished by heating it at furnace temperatures, and then dropping it in water. $(br) If the cluster is coated with redstone before being immersed in water, then the redstone will bind to more of the metals, giving a higher yeild, at the cost of losing some or all of the redstone."
+        }
+    ]
+}

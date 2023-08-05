@@ -1,0 +1,17 @@
+{
+    "name": "Ore Clusters",
+    "icon": "contenttweaker:common_cluster",
+    "category": "patchouli:basics",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Ore clusters are the only way to get metal, growing out of stone and coalmeal. They can be processed into the various metals. See the after-growth processing chapter for instructions on how to process the epic cluster and beyond."
+        },
+        {
+            "type": "patchouli:image",
+            "images": [
+                "patchouli:textures/item/cluster.png"
+            ]
+        }
+    ]
+}

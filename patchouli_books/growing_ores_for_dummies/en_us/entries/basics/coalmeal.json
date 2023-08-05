@@ -1,0 +1,11 @@
+{
+    "name": "Coal Meal",
+    "icon": "contenttweaker:coalmeal1",
+    "category": "patchouli:basics",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Coal Meal is the only material known to make stone sprout ore clusters. It is made by mixing coal dust with bone meal. Nobody truly knows how it works, though it's theorized to do with the trace amounts of magic found in the atmosphere."
+        }
+    ]
+}

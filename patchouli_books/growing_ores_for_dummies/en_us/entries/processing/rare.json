@@ -1,0 +1,16 @@
+{
+    "name": "Rare Cluster",
+    "icon": "contenttweaker:rare_cluster",
+    "category": "patchouli:processing",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "  You can process this cluster by combining it with an earth charge to make silver dust, or by heating it with a blaze burner, seperating the stone out in a centrifuge, and then quenching it in water, salt water, or plant oil, depending on what you want out.$(br) Quenching in water results in one to two of each of the materials produced by the uncommon cluster, in crushed form, and two to five redstone."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "   Quenching in sea water yeilds zero to two crushed iron and tin, one crushed silver, and between one and two crushed nickel.$(br)   Finally quenching in plant oil will give zero to two crushed copper and aluminum and one crushed zinc.$(br)$(br)   You can also crush this cluster to get out a powdered form that, when planted mixed into bonemeal and planted, causes special flowers to grow."
+        }
+    ]
+}
