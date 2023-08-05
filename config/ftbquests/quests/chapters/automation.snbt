@@ -1,0 +1,361 @@
+{
+	id: "0B5BBF87361FC7BC"
+	group: ""
+	order_index: 2
+	filename: "automation"
+	title: "Automation"
+	icon: "create:large_cogwheel"
+	subtitle: ["All that doesn't fit in the main quest pages, at least"]
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Coal Automation"
+			icon: "minecraft:coal"
+			x: 1.5d
+			y: -2.0d
+			subtitle: "No quary for me"
+			description: ["Coal is complex to automate, and probably requires way too much pressing"]
+			id: "03F71266836EF75E"
+			tasks: [{
+				id: "7469B1D3458A7D30"
+				type: "checkmark"
+			}]
+		}
+		{
+			x: 1.5d
+			y: -0.5d
+			subtitle: "Mechanical time acceleration"
+			description: [
+				""
+				"By exerting extreme pressure on a log, you can petrify it, which leaves it in a state where it can be converted to coal"
+			]
+			dependencies: [
+				"03F71266836EF75E"
+				"06C54C032ED05DFF"
+			]
+			id: "44703979EE2C4BD4"
+			tasks: [{
+				id: "4AD1BFA90F752C67"
+				type: "item"
+				item: "contenttweaker:petrified_log"
+			}]
+		}
+		{
+			title: "Liquid Cobblestone"
+			x: 3.0d
+			y: -0.5d
+			subtitle: "This again?"
+			description: ["You'll need to melt down cobblestone to make coal ore"]
+			id: "324645583D2CC520"
+			tasks: [{
+				id: "0AD35B2A0D9F225A"
+				type: "item"
+				item: "contenttweaker:liquid_cobblestone_bucket"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 1.0d
+			subtitle: "Coal! But it's stuck in stone, hmmm"
+			description: ["By mixing the petrified log with a bucket of liquid cobblestone, you recieve a coal ore."]
+			dependencies: [
+				"44703979EE2C4BD4"
+				"324645583D2CC520"
+			]
+			id: "649C8F27EE846539"
+			tasks: [{
+				id: "3C82F04D1C54CBAE"
+				type: "item"
+				item: "minecraft:coal_ore"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 2.5d
+			subtitle: "Of course! I just needed to melt the coal..."
+			description: ["And finally melt the coal down to get your cobblestone back and two gems worth of coal"]
+			dependencies: ["649C8F27EE846539"]
+			id: "361CFE0661AAF814"
+			tasks: [{
+				id: "17C549532B4B65A6"
+				type: "item"
+				item: "minecraft:coal"
+			}]
+		}
+		{
+			title: "Logs"
+			x: 3.0d
+			y: -2.0d
+			subtitle: "No, but a logging facility!"
+			description: ["You'll need to automate tree farming before you can fully automate coal"]
+			id: "06C54C032ED05DFF"
+			tasks: [{
+				id: "4B2E9B17DD450F59"
+				type: "item"
+				title: "Any #minecraft:logs_that_burn"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "minecraft:logs_that_burn"
+					}
+				}
+			}]
+		}
+		{
+			x: 0.0d
+			y: -2.0d
+			subtitle: "NVM"
+			description: ["First, you'll need automatic cobblestone"]
+			dependencies: ["70C901FC743C494F"]
+			id: "4F868A523133413D"
+			tasks: [{
+				id: "157E5EE96F9EA9CC"
+				type: "item"
+				item: "minecraft:cobblestone"
+			}]
+		}
+		{
+			x: 0.0d
+			y: -0.5d
+			subtitle: "Liquified"
+			description: ["Then melt it down"]
+			dependencies: ["4F868A523133413D"]
+			id: "3A9F6A899AB7A811"
+			tasks: [{
+				id: "344A75F9B84163B4"
+				type: "item"
+				item: "contenttweaker:liquid_cobblestone_bucket"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 1.0d
+			subtitle: "More Bone Meal, man!"
+			description: ["And then put it in the thermopneumatic processing plant with bonemeal"]
+			dependencies: ["3A9F6A899AB7A811"]
+			id: "7A0EECCF06B52C79"
+			tasks: [{
+				id: "16EE5B65501A9D2C"
+				type: "item"
+				item: "contenttweaker:molten_andesite_bucket"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 2.5d
+			subtitle: "Just andesite..."
+			description: ["Or just put it in the basin"]
+			dependencies: ["7A0EECCF06B52C79"]
+			id: "4935780A65FBE275"
+			tasks: [{
+				id: "78ACF271B181D2A2"
+				type: "item"
+				item: "minecraft:andesite"
+			}]
+		}
+		{
+			x: -1.5d
+			y: 2.5d
+			subtitle: "A creation of many ways..."
+			description: ["And then you can put it in the casting table over a tin nugget"]
+			dependencies: ["7A0EECCF06B52C79"]
+			id: "429318326680EB68"
+			tasks: [{
+				id: "382A7518DD1DC312"
+				type: "item"
+				item: "create:andesite_alloy"
+			}]
+		}
+		{
+			title: "Andesite Automation"
+			icon: "minecraft:andesite"
+			x: -1.5d
+			y: -2.0d
+			subtitle: "Cobblestone generator++"
+			description: ["Andesite is rather complex to automate. The vanilla create way is still in, but I think this is simpler"]
+			id: "70C901FC743C494F"
+			tasks: [{
+				id: "6CA64772F3657917"
+				type: "checkmark"
+			}]
+		}
+		{
+			title: "Gunpowder Automation"
+			x: 4.5d
+			y: -2.0d
+			subtitle: "Gota keep those cannons roarin"
+			description: ["Gunpowder is relatively simple to automate, needing only milling and washing. You should probably set this up early on."]
+			id: "4A3E955AC3A088E6"
+			tasks: [{
+				id: "74E6038CE4E6D877"
+				type: "item"
+				item: "minecraft:gunpowder"
+			}]
+		}
+		{
+			x: 4.5d
+			y: -0.5d
+			subtitle: "Humble bigginings"
+			description: ["Milling cobblestone yields gravel, containing trace amounts of flint"]
+			dependencies: ["4A3E955AC3A088E6"]
+			id: "638D83FC48088FBD"
+			tasks: [{
+				id: "1EA2EE9943012C4F"
+				type: "item"
+				item: "minecraft:gravel"
+			}]
+		}
+		{
+			x: 4.5d
+			y: 1.0d
+			subtitle: "Not any old rock..."
+			description: ["You can wash the gravel to get the flint from it. Keep or discard the iron as you will"]
+			dependencies: ["638D83FC48088FBD"]
+			id: "060D27E112EF9128"
+			tasks: [{
+				id: "117300285342384E"
+				type: "item"
+				item: "minecraft:flint"
+			}]
+		}
+		{
+			x: 4.5d
+			y: 2.5d
+			subtitle: "KeBlooE"
+			description: ["And finally you can mill the flint again to get gunpowder"]
+			dependencies: ["060D27E112EF9128"]
+			id: "4B9CAE91B58C0CD2"
+			tasks: [{
+				id: "4F19373209562735"
+				type: "item"
+				item: "minecraft:gunpowder"
+			}]
+		}
+		{
+			x: 3.0d
+			y: 2.5d
+			subtitle: "Under Presure"
+			description: ["If you want to, you can automate basalz powder as well. It's as simple as hooking up your gunpowder supply to your pressure chamber"]
+			dependencies: ["4B9CAE91B58C0CD2"]
+			id: "17CC8C580C84CB31"
+			tasks: [{
+				id: "30252F575C6A0BE8"
+				type: "item"
+				item: "thermal:basalz_powder"
+			}]
+		}
+		{
+			title: "Dye Automation"
+			icon: "minecraft:poppy"
+			x: -4.5d
+			y: -2.0d
+			subtitle: "NOT death automation..."
+			description: ["In this pack, you can automate any dye from bonemeal, if you already have any mystical flower and one dye of the type you want to make"]
+			id: "5CA50382EBB0D78A"
+			tasks: [
+				{
+					id: "0D99F1EB2AFA0538"
+					type: "item"
+					title: "Any #forge:dyes"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "forge:dyes"
+						}
+					}
+				}
+				{
+					id: "31114E8E55E092E8"
+					type: "item"
+					title: "Any #botania:mystical_flowers"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "botania:mystical_flowers"
+						}
+					}
+				}
+			]
+		}
+		{
+			x: -3.0d
+			y: -2.0d
+			subtitle: "Aw, poor flower..."
+			description: ["By draining the flower, you get chromatic mixture, which contains trace amounts of every color."]
+			dependencies: ["5CA50382EBB0D78A"]
+			id: "01219C3508E97FED"
+			tasks: [{
+				id: "33AF95A475D8BC11"
+				type: "item"
+				item: "contenttweaker:blank_flower"
+			}]
+		}
+		{
+			x: -4.5d
+			y: -0.5d
+			subtitle: "Re-in-chromaticated!"
+			description: ["and then you can mix the dye with your blank flower to make a colored flower you can then drain again"]
+			dependencies: [
+				"4351042CD748E9A4"
+				"01219C3508E97FED"
+			]
+			id: "045B8B1B2FF3D26F"
+			tasks: [{
+				id: "6E9D75974353ECE0"
+				type: "item"
+				item: "botania:white_mystical_flower"
+			}]
+		}
+		{
+			x: -3.0d
+			y: 1.0d
+			subtitle: "Bone dust"
+			description: ["With a mechanical crafter, you can turn the bone meal into dye."]
+			dependencies: ["185AFBA010005A0E"]
+			id: "4351042CD748E9A4"
+			tasks: [{
+				id: "6339BCE73FA9C185"
+				type: "item"
+				item: "minecraft:white_dye"
+			}]
+		}
+		{
+			x: -3.0d
+			y: 2.5d
+			subtitle: "More bone meal, hope you have a lot"
+			description: ["You'll need an automated supply of bonemeal, to recolor the flower"]
+			id: "185AFBA010005A0E"
+			tasks: [{
+				id: "17F692C312D7D285"
+				type: "item"
+				item: "minecraft:bone_meal"
+			}]
+		}
+		{
+			title: "Some Dye"
+			icon: "minecraft:red_dye"
+			x: -3.0d
+			y: -0.5d
+			subtitle: "Time for some dying!"
+			description: ["and then you can mix the chromatic mixture with a dye of the color you want. You'll also need a system so one of the output loops back to the input."]
+			dependencies: ["01219C3508E97FED"]
+			id: "4FEDE563EF7FE5C4"
+			tasks: [{
+				id: "2A736D3A2B4EC77C"
+				type: "item"
+				title: "Any #forge:dyes"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "forge:dyes"
+					}
+				}
+			}]
+		}
+	]
+}
