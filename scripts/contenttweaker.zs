@@ -131,7 +131,9 @@ val itemname = [
     "earth_catalyst",
     "fire_catalyst",
     "water_catalyst",
-    "core_ingot"
+    "core_ingot",
+    "stone_gear",
+    "graphite_bar"
 ] as string[];
 //the clusters with an _x_x are the processing items, like the common_cluster_1_1.
 //is the first number is process method, in this case "1", the scrond number is the step.
@@ -162,10 +164,10 @@ for block in blockname {
         .build(block);
 }
 
-val defaultFluidName = ["liquid_cobblestone", "molten_coal", "molten_andesite", "molten_uncommon_cluster", "chromatic_mixture", "core_water", "saturated_water", "saturated_core_water", "liquid_stone", "liquid_cobble", "molten_base_cluster"] as string[];
-val defaultFluidColor = [0xcccccc, 0x111111, 0xbbbbbb, 0xaa7777, 0x0f1b00, 0x333333, 0x3F76E4, 0x333333, 0xcccccc, 0xbbbbbb, 0x666666] as int[];
-val defaultFluidMolten = [true, true, true, true, false, false, false, false, false, true, true] as bool[];
-val defaultFluidLuminosity = [0, 5, 0, 5, 0, 10, 0, 5, 0, 0, 4] as int[];
+val defaultFluidName = ["verdentium", "liquid_cobblestone", "molten_coal", "molten_andesite", "molten_uncommon_cluster", "chromatic_mixture", "core_water", "saturated_water", "saturated_core_water", "liquid_stone", "liquid_cobble", "molten_base_cluster"] as string[];
+val defaultFluidColor = [0x078c14, 0xcccccc, 0x111111, 0xbbbbbb, 0xaa7777, 0x0f1b00, 0x333333, 0x3F76E4, 0x333333, 0xcccccc, 0xbbbbbb, 0x666666] as int[];
+val defaultFluidMolten = [true, true, true, true, true, false, false, false, false, false, true, true] as bool[];
+val defaultFluidLuminosity = [0, 0, 5, 0, 5, 0, 10, 0, 5, 0, 0, 4] as int[];
 
 for i, name in defaultFluidName{
     new FluidBuilder(defaultFluidMolten[i], defaultFluidColor[i]).luminosity(defaultFluidLuminosity[i]).build(name);

@@ -20,11 +20,8 @@ CTEventManager.register<crafttweaker.api.event.entity.player.interact.MCRightCli
             blockState = world.getBlockState(pos);
             if world.isAir(pos) {
                 world.setBlockState(pos, <blockstate:contenttweaker:common_cluster>);
-                if !(player.isCreative()) == false {
-                    println(player.isCreative() as string);
-                    var heldItem = player.getHeldItem(hand);
-                    heldItem.mutable().shrink(1);
-                }
+                var heldItem = player.getHeldItem(hand);
+                heldItem.mutable().shrink(1);
             }
         }
     }
@@ -72,12 +69,9 @@ CTEventManager.register<crafttweaker.api.event.tick.MCWorldTickEvent>((event) =>
     for name in transform {  
     var items = (world as MCServerWorld).getEntities((entity as MCEntity) => entity is MCItemEntity && <item:${name[0]}>.matches((entity as MCItemEntity).getItem()), <entitytype:minecraft:item>) as MCEntity[];
     for item in items {
-        println(item as string);
         var pos = item.getPosition();
-        println(pos as string);
         var block = world.getBlockState(pos);
-        println(block as string);
-        if (<block:minecraft:water> == block.block || block.getPropertyValue("waterlogged") == "true") {
+        if (<block:minecraft:water> == block.block || ("waterlogged" in block.getPropertyNames() && block.getPropertyValue("waterlogged") == "true")) {
             (world as MCServerWorld).server.executeCommand("loot spawn " + pos.x as string + " " + pos.y as string + " " + pos.z as string + " loot "+name[1], true);
             (item as MCItemEntity).item.mutable().shrink(1);
         }
@@ -95,11 +89,8 @@ CTEventManager.register<crafttweaker.api.event.tick.MCWorldTickEvent>((event) =>
     if world is MCServerWorld{
     var items = (world as MCServerWorld).getEntities((entity as MCEntity) => entity is MCItemEntity && <item:contenttweaker:pure_cluster>.matches((entity as MCItemEntity).getItem()), <entitytype:minecraft:item>) as MCEntity[];
     for item in items {
-        println(item as string);
         var pos = item.getPosition();
-        println(pos as string);
         var block = world.getBlockState(pos);
-        println(block as string);
         if <block:exnihilosequentia:sea_water> == block.block {
             (world as MCServerWorld).server.executeCommand("loot spawn " + pos.x as string + " " + pos.y as string + " " + pos.z as string + " loot mayhem:quench_seawater", true);
             (item as MCItemEntity).item.mutable().shrink(1);
@@ -118,11 +109,8 @@ CTEventManager.register<crafttweaker.api.event.tick.MCWorldTickEvent>((event) =>
     if world is MCServerWorld{
     var items = (world as MCServerWorld).getEntities((entity as MCEntity) => entity is MCItemEntity && <item:contenttweaker:pure_cluster>.matches((entity as MCItemEntity).getItem()), <entitytype:minecraft:item>) as MCEntity[];
     for item in items {
-        println(item as string);
         var pos = item.getPosition();
-        println(pos as string);
         var block = world.getBlockState(pos);
-        println(block as string);
         if <block:immersiveengineering:plantoil_fluid_block> == block.block {
             (world as MCServerWorld).server.executeCommand("loot spawn " + pos.x as string + " " + pos.y as string + " " + pos.z as string + " loot mayhem:quench_oil", true);
             (item as MCItemEntity).item.mutable().shrink(1);
@@ -156,6 +144,8 @@ CTEventManager.register<crafttweaker.api.event.entity.player.interact.MCEntityIn
     }
 });
 
+import crafttweaker.api.entity.AttributeModifier;
+import crafttweaker.api.entity.AttributeOperation;
 import crafttweaker.api.event.entity.living.MCLivingEntityUseItemFinishEvent;
 import crafttweaker.api.player.MCPlayerEntity;
 
@@ -167,7 +157,8 @@ CTEventManager.register<crafttweaker.api.event.entity.living.MCLivingEntityUseIt
         if <item:contenttweaker:wandering_trader_bucket>.matches(item) {
             var player = entity as MCPlayerEntity;
             (world as MCServerWorld).server.executeCommand("/playsound minecraft:entity.wandering_trader.death neutral "+player.getName() as string+" "+player.position.x as string+" "+player.position.y as string+" "+player.position.z as string+" 30", true);
-            player.getAttribute(<attribute:minecraft:generic.max_health>).applyPersistentModifier(constants.addtribute);
+            var addtribute = AttributeModifier.create("Add 1", 1, AttributeOperation.ADDITION);
+            player.getAttribute(<attribute:minecraft:generic.max_health>).applyPersistentModifier(addtribute);
             player.inventory.addIItemStackToInventory(<item:minecraft:bucket>);
         }
     }
@@ -180,7 +171,7 @@ CTEventManager.register<crafttweaker.api.event.tick.MCPlayerTickEvent>((event) =
     var player = event.player;
     var world = player.world;
     var time = world.gameTime % 40;
-    if world is MCServerWorld {
+    if world is MCServerWorld && event.start{
         var held_main_hand = false;
         if <item:contenttweaker:wandering_trader_bucket>.withTag({Time: time as string}).matches(player.inventory.currentItem) {
             if world.random.nextInt(0, 2) == 1 {

@@ -43,7 +43,7 @@
 		{
 			x: 0.0d
 			y: -3.0d
-			subtitle: "100% pure carbon! (may contine trace abouts of charcoal)"
+			subtitle: "100% pure carbon! (may contain trace abouts of charcoal)"
 			description: ["Some amount of coal will be needed to give the bone meal the properties of rock"]
 			dependencies: ["44242FD031EDD486"]
 			id: "4DC8AC36071C5027"
@@ -69,7 +69,7 @@
 		{
 			x: -1.0d
 			y: -1.5d
-			subtitle: "All the bone mealing of the grass made the stone jealous; so, one day, the stone all worked to gether... and in the end, COAL MEAL... the solution to all meneral problims, you, yes you, owe any metals you have to the rocks."
+			subtitle: "Why does bones plus coal make metal? Nobody knows!"
 			description: ["The product of my research, when used on stone this should cause an ore bud to sprout above it."]
 			dependencies: [
 				"349187DAC45A847E"
@@ -112,7 +112,7 @@
 			icon: "thermal:copper_nugget"
 			x: -1.0d
 			y: 3.0d
-			subtitle: "1.2.3...7.8.9 INGOT!"
+			subtitle: "1,2,3...7,8,9 INGOT!"
 			description: ["Metals! I have created the first complex materials in this world, and with these I should be able to create more complex metals, by processing the ore bud and applying stronger coal meal. I will need lots of copper and iron, though"]
 			dependencies: ["06B8D0343EB53799"]
 			id: "1D9E31D61BC4F2F9"
@@ -137,7 +137,7 @@
 		{
 			x: 0.5d
 			y: 3.0d
-			subtitle: "Enrichment... with out an enrichment chamber? how is that possable?"
+			subtitle: "Enrichment... without an enrichment chamber? How is that possible?"
 			description: ["By mixing the ore cluster with redstone before melting the stone away, it seems that I get more metals, at a loss of the redstone"]
 			dependencies: ["06B8D0343EB53799"]
 			id: "144B39EDAE56E992"
@@ -150,7 +150,7 @@
 		{
 			x: -4.0d
 			y: 6.0d
-			subtitle: "I'm not grout, im Tcathebluecreper!"
+			subtitle: "I'm not grout, I'm Tcathebluecreper!"
 			description: ["This blend of sand, gravel, and clay can be made into bricks with useful heat-resistant properties"]
 			id: "0F5CA791EA7CEADD"
 			tasks: [{
@@ -201,7 +201,7 @@
 			icon: "minecraft:obsidian"
 			x: -2.5d
 			y: 7.5d
-			subtitle: "\"The pigs arn't so bad\""
+			subtitle: "\"The pigs aren't so bad\""
 			description: ["The wood from this dimension allows a greater absorption of magic into the ore cluster, if mixed in thouroughly."]
 			dependencies: ["1C227DA01A068260"]
 			min_required_tasks: 2
@@ -320,9 +320,10 @@
 			icon: "minecraft:blast_furnace"
 			x: -1.0d
 			y: 9.0d
-			subtitle: "A fan and a furnace, hmmm..."
+			subtitle: "A fan or a furnace, hmmm..."
 			description: ["I'll need something more powerful than a common furnace to melt the cluster. The fan will require more setup, but uses copper instead of iron, which seems to be needed for almost everything else"]
 			dependencies: ["3EDA17FE1719AE4B"]
+			min_required_tasks: 1
 			id: "577FB06CC7C0D03D"
 			tasks: [
 				{
@@ -340,7 +341,7 @@
 		{
 			x: -1.0d
 			y: 12.0d
-			subtitle: "If the poor get their ice in the winter, and the rich in the summer, you be Rich!"
+			subtitle: "What a cool block!"
 			description: ["Finally, I'll re-freeze the stone, with the sawdust thouroughly mixed in now."]
 			dependencies: ["408DF11420904722"]
 			id: "566D75DB14B25F72"
@@ -359,7 +360,7 @@
 		{
 			x: 0.5d
 			y: 10.5d
-			subtitle: "Saive that phosphate from a dirty fate..."
+			subtitle: "Save the phosphate from a dirty fate..."
 			description: ["there is a trace compound, phosphate, found in dirt, but it can only be extracted with a fine mesh. This string one will do, but only gives a fraction of the full potential."]
 			id: "368F9BEB78335A41"
 			tasks: [{
@@ -371,7 +372,7 @@
 		{
 			x: 0.5d
 			y: 12.0d
-			subtitle: "More blimen enrichment, wtf?"
+			subtitle: "I think the pack devs need to look up \"enrich\" in a thesaurus"
 			description: ["this should be a better coalmeal, able to grow the ore cluster more and hopefully produce new metals."]
 			dependencies: ["368F9BEB78335A41"]
 			id: "38C61C4B760420E0"
@@ -384,7 +385,7 @@
 		{
 			x: -1.0d
 			y: 13.5d
-			subtitle: "Ooo, look, dis an't common stuff!"
+			subtitle: "Ooo, look, this isn't just the common stuff!"
 			description: [
 				"I should be able to get some new metals from this by melting it down, but this is an imperfect solution, with the tin and copper alloying during the melting process."
 				"Some way to get all the materials seperately would let me get the raw tin."
@@ -462,7 +463,7 @@
 			x: -2.5d
 			y: 15.0d
 			subtitle: "NOT for use on chickens!"
-			description: ["An alloy of aluminum and copper can make a reasonable cast for extracting materials from my foundry."]
+			description: ["It seems that aluminum can make a reasonable cast for extracting materials from my foundry."]
 			dependencies: [
 				"57E8E2D8E5C1EC10"
 				"5A57AB464173AB51"
@@ -478,7 +479,8 @@
 			icon: "thermal:bronze_nugget"
 			x: -1.0d
 			y: 15.0d
-			description: ["The copper and tin alloy to make bronze, so for now i cannot get pure tin"]
+			subtitle: "Brass 0.5"
+			description: ["The copper and tin alloy to make bronze, so for now i cannot get pure tin. But this material is still useful in it's own right."]
 			dependencies: ["13AD6EBD0220CEC9"]
 			id: "2328A435DA3638A8"
 			tasks: [
@@ -529,7 +531,7 @@
 		{
 			x: -1.0d
 			y: 16.5d
-			subtitle: "It'd look nice with a wind mill"
+			subtitle: "It'd look nice with a windmill"
 			description: ["With some method of extracting dusts from the ore, I might be able to obtain pure tin"]
 			dependencies: ["2328A435DA3638A8"]
 			id: "65E49694234A2312"

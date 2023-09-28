@@ -1,0 +1,37 @@
+
+[General]
+	#If entities from (structure block) schematic files should be spawned when found. These are entities not created with signs.
+	spawnNonSignEntitiesFromSupportedSchematics = true
+	#The new X coordinate of the spawn when shouldSetSpawnPoint is enabled.
+	#Range: -10000000 ~ 10000000
+	spawnXCoordinate = 0
+	#Whether entities spawned inside the generated structure should be protected from damage.
+	protectSpawnedEntities = true
+	#The new Z coordinate of the spawn when shouldSetSpawnPoint is enabled.
+	#Range: -10000000 ~ 10000000
+	spawnZCoordinate = 0
+	#Whether the blocks from the generated structure should be protected from breaking/griefing.
+	protectStructureBlocks = true
+	#Whether the initial world spawn point should be set to specific coordinates.
+	shouldSetSpawnPoint = false
+	#The y offset for the generated structure. Can for example be set to -1 if you notice a building always spawns one block too high.
+	#Range: -100 ~ 100
+	generatedStructureYOffset = 0
+	#Whether a schematic that's located in './config/starterstructure/schematics/...' should be generated.
+	shouldGenerateStructure = true
+	#Prevents structures from being placed on top of trees. Any leaf and log blocks will be ignored during placement.
+	ignoreTreesDuringStructurePlacement = true
+	#If enabled, players that are in creative mode will be able to damage protected entities which spawned in structures.
+	playersInCreativeModeIgnoreEntityProtection = false
+	#The new Y coordinate of the spawn when shouldSetSpawnPoint is enabled. A value of -1 means on the surface.
+	#Range: -1 ~ 10000
+	spawnYCoordinate = -1
+	#If spawned entities inside the generated structure should not be allowed to move away from the block they spawned on. Disabled by default.
+	preventSpawnedEntityMovement = false
+	#If enabled, players that are in creative mode will be able to break and place the structure blocks.
+	playersInCreativeModeIgnoreProtection = true
+	#Some schematic files might contain jigsaw or structure blocks. These are by default ignored during structure generation.
+	generationIgnoreJigsawAndStructureBlocks = true
+	#Usually player spawn points are in a randomized area. With this enabled, players will always spawn in the middle of the structure (at the nearest air pocket).
+	forceExactSpawnMiddleStructure = true
+

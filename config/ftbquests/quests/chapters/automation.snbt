@@ -45,7 +45,7 @@
 			title: "Liquid Cobblestone"
 			x: 3.0d
 			y: -0.5d
-			subtitle: "This agine?"
+			subtitle: "This again?"
 			description: ["You'll need to melt down cobblestone to make coal ore"]
 			id: "324645583D2CC520"
 			tasks: [{
@@ -73,7 +73,7 @@
 		{
 			x: 1.5d
 			y: 2.5d
-			subtitle: "Of couce! I just need to melt the coal, du"
+			subtitle: "Of course! I just needed to melt the coal..."
 			description: ["And finally melt the coal down to get your cobblestone back and two gems worth of coal"]
 			dependencies: ["649C8F27EE846539"]
 			id: "361CFE0661AAF814"
@@ -340,7 +340,7 @@
 			icon: "minecraft:red_dye"
 			x: -3.0d
 			y: -0.5d
-			subtitle: "Time for some dieing!"
+			subtitle: "Time for some dying!"
 			description: ["and then you can mix the chromatic mixture with a dye of the color you want. You'll also need a system so one of the output loops back to the input."]
 			dependencies: ["01219C3508E97FED"]
 			id: "4FEDE563EF7FE5C4"

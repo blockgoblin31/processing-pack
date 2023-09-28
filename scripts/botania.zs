@@ -25,7 +25,7 @@ function reseed(type as string) as void {
 var elements = ["water", "earth", "fire", "air"] as string[];
 for element in elements {
     reseed(element);
-    <recipetype:botania:terra_plate>.addRecipe(element+"_plant", constants.seed_type, 10000, seed, <item:naturesaura:tainted_gold>, <item:naturesaura:tainted_gold>, <item:botania:rune_${element}>);
+    <recipetype:botania:runic_altar>.addRecipe(element+"_plant", constants.seed_type, 10000, [seed, <item:naturesaura:tainted_gold>, <item:naturesaura:tainted_gold>, <item:botania:rune_${element}>]);
 }
 var inputs = [<item:contenttweaker:light_terrestrial>, <item:contenttweaker:light_infernal>, <item:contenttweaker:light_voidic>, <item:contenttweaker:heavy_terrestrial>, <item:contenttweaker:heavy_infernal>, <item:contenttweaker:heavy_voidic>] as IItemStack[];
 var outputs = [<item:contenttweaker:natura_dust> * 3, <item:thermal:nickel_dust> * 3, <item:immersiveengineering:dust_aluminum> * 3, <item:thermal:tin_dust> * 3, <item:thermal:gold_dust> * 3, <item:contenttweaker:zinc_dust> * 3] as IItemStack[];

@@ -11,21 +11,21 @@
 		{
 			x: 0.5d
 			y: -3.0d
-			subtitle: "This one agine?"
-			description: ["The first step to making the rare ore cluster will, of course, to make the uncommon cluster"]
+			subtitle: "Seems a bit basic..."
+			description: ["The first step to making the rare ore cluster will be, of course, to make it's base form"]
 			dependencies: ["3792A381F9EF17B4"]
 			id: "0EFF7E807CCC711B"
 			tasks: [{
-				id: "762816AB7E77F463"
+				id: "19DC7EC1E57F9D23"
 				type: "item"
-				item: "contenttweaker:uncommon_cluster"
+				item: "contenttweaker:rare_base"
 			}]
 		}
 		{
 			x: 0.5d
 			y: -1.5d
 			subtitle: "Copper Can (of liquid ore)"
-			description: ["If I melt down the uncommon cluster, I can then cast it back out in a less stabe form. My existing foundry will do the job."]
+			description: ["If I melt down the base cluster, I can then cast it back out in a less stabe form. My existing foundry will do the job."]
 			dependencies: ["0EFF7E807CCC711B"]
 			id: "7539BEDC461A6376"
 			tasks: [{
@@ -43,8 +43,8 @@
 		{
 			x: 0.5d
 			y: 0.0d
-			subtitle: "An uncommon ingot"
-			description: ["Now I have my uncommon clister compressed into a bar, a much less stable form. It should now be possible to add plastic."]
+			subtitle: "A rare ingot"
+			description: ["Now I have my base cluster compressed into a bar, a much less stable form. It should now be possible to add plastic."]
 			dependencies: ["7539BEDC461A6376"]
 			id: "73EA7120C826DED7"
 			tasks: [{
@@ -82,8 +82,8 @@
 		{
 			x: 0.5d
 			y: 4.5d
-			subtitle: "Dats a mouth full!"
-			description: ["Now by filling my slab with a block's worth of liquid cobblestone, I can get the final form of the uncommon cluster, ready to be coalmealed."]
+			subtitle: "That's a mouthful!"
+			description: ["Now by filling my slab with a block's worth of liquid cobblestone, I can get the base cluster to a coal mealable state"]
 			dependencies: ["27726C4074E45C19"]
 			id: "3CC3118E954DF8CC"
 			tasks: [{
@@ -95,7 +95,7 @@
 		{
 			x: 0.5d
 			y: 6.0d
-			subtitle: "All this, and all i get is some nickles?"
+			subtitle: "All this, and all I get are some nickels?"
 			description: ["I now have access to the next tier of ore cluster, which contains silver, nickel, and zinc. Now I just need to purify it."]
 			dependencies: [
 				"3CC3118E954DF8CC"
@@ -140,7 +140,7 @@
 		{
 			x: 3.5d
 			y: 1.5d
-			subtitle: "its a lollipop! (not recommened for consumpson)"
+			subtitle: "its a lollipop! (not recommened for consumption)"
 			description: ["Now I've got my graphite pellet, but it's firmly attached to my rod. The best way to get the rod out seems to be by crushing it."]
 			dependencies: [
 				"1477E01EC4C4FB97"
@@ -169,7 +169,7 @@
 		{
 			x: 2.0d
 			y: 1.5d
-			subtitle: "Concore the Cactus! mash it up!"
+			subtitle: "Conquer the cactus! Mash it up!"
 			description: ["By squeezing cactus, I get a pulp with a much higher niter content than the original. It should now be possible to extract the niter. Also makes great compost!"]
 			dependencies: ["56BEC21B2FB4773E"]
 			id: "5D286F18614B8D18"
@@ -317,7 +317,7 @@
 		{
 			x: -1.0d
 			y: 10.5d
-			subtitle: "Ah, nickel, not a nickel, i feel better now!"
+			subtitle: "Oh, *nickel*, not *a* nickel. That makes me feel better."
 			description: ["*Nickel doesn't really have a use in the current version of the pack, it will be needed for making the t4 cluster, but nothing I can do with it rn*"]
 			dependencies: [
 				"712D4990EF7DD070"
@@ -333,7 +333,7 @@
 		{
 			x: 2.0d
 			y: 10.5d
-			subtitle: "Bronze, with 100% less copper! (may contain trace amouts of cluster, furnace not includid)"
+			subtitle: "Brass, with 100% less copper! (may contain trace amouts of cluster, furnace not includid)"
 			description: ["With this zinc, I can make the much needed alloy of brass, giving me access to much more advanced machines"]
 			dependencies: [
 				"712D4990EF7DD070"
@@ -349,7 +349,7 @@
 		{
 			x: 0.5d
 			y: 10.5d
-			subtitle: "Da sha vu!"
+			subtitle: "De ja vu!"
 			description: ["The best way to get the old resources, and the only way to get redstone from this cluster, is to quench in water"]
 			dependencies: ["712D4990EF7DD070"]
 			id: "5EBC26BA74E0187E"
@@ -387,7 +387,7 @@
 			title: "Chilled fire stick"
 			x: 5.0d
 			y: 0.0d
-			subtitle: "Fire Stick and Ice Rod"
+			subtitle: "Fire stick and ice rod"
 			description: [
 				"I can cover the stick with lava to ignite it, letting it stick to the coal perfectly, though having a chance to burn the coal off."
 				"I can then extinguish the ignited rod by soaking it for a long period of time. This retains the stickiness properties, while loosing the chance to burn off all the coal"

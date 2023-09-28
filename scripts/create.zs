@@ -1,6 +1,10 @@
+#debug
+
 val air = <item:minecraft:air>;
 import crafttweaker.api.item.IItemStack;
 import mods.create.MixingManager;
+import crafttweaker.api.item.IIngredient;
+import crafttweaker.api.item.IIngredientWithAmount;
 
 /* default recipe
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("cluster")
@@ -58,7 +62,7 @@ for log in <tag:items:minecraft:logs>.elements {
     .transitionTo(<item:contenttweaker:useless_uncommon>)
     .require(<item:contenttweaker:rare_base>)
     .loops(1)
-    .addOutput(<item:contenttweaker:rare_cluster>, 1)
+    .addOutput(<item:contenttweaker:improved_uncommon>, 1)
     .addStep(<recipetype:create:deploying>.factory(), (rb) => rb.require(<item:contenttweaker:fake_melting>))
     .addStep(<recipetype:create:deploying>.factory(), (rb) => rb.require(<item:contenttweaker:fake_ingot_cast>))
     .addStep(<recipetype:create:deploying>.factory(), (rb) => rb.require(<item:contenttweaker:fake_pressure_chamber_with_plastic>))
@@ -70,7 +74,7 @@ for log in <tag:items:minecraft:logs>.elements {
     .transitionTo(<item:contenttweaker:useless_rare>)
     .require(<item:contenttweaker:epic_base>)
     .loops(1)
-    .addOutput(<item:contenttweaker:epic_cluster>, 1)
+    .addOutput(<item:contenttweaker:improved_rare>, 1)
     .addStep(<recipetype:create:deploying>.factory(), (rb) => rb.require(<item:contenttweaker:fake_mechanical_crafting_with_core_shards>))
     .addStep(<recipetype:create:deploying>.factory(), (rb) => rb.require(<item:contenttweaker:fake_crushing>))
     .addStep(<recipetype:create:deploying>.factory(), (rb) => rb.require(<item:contenttweaker:fake_deploying_on_stone>))
@@ -134,3 +138,28 @@ for i, dust in dusts {
 <recipetype:create:mixing>.addRecipe("epic_base", "heated", <item:contenttweaker:epic_base>, [<item:minecraft:redstone> * 10, <item:thermal:tin_ingot>, <item:create:copper_ingot> * 2, <item:create:brass_ingot>, <item:botania:light_gray_petal>], [<fluid:contenttweaker:liquid_cobble> * 1000]);
 <recipetype:create:mixing>.addRecipe("saturate_water", "none", <fluid:contenttweaker:saturated_water> * 500, [<item:contenttweaker:lighter_epic>], [<fluid:minecraft:water> * 500]);
 <recipetype:create:mixing>.addRecipe("saturate_core_water", "none", <fluid:contenttweaker:saturated_core_water> * 500, [<item:contenttweaker:heavier_epic>], [<fluid:contenttweaker:core_water> * 500]);
+
+var baseInputs = [[], [<tag:items:forge:dusts/coal>.asIIngredient()], [<item:contenttweaker:phosphate>, <item:minecraft:redstone>], [<item:contenttweaker:graphite_pellet>, <tag:items:forge:dusts/niter>.asIIngredient()], [<tag:items:forge:dusts/mana>.asIIngredient(), <item:contenttweaker:core_dust>]] as IIngredient[][];
+var baseClusters = [<item:minecraft:bone_meal>, <item:contenttweaker:coalmeal1>, <item:contenttweaker:coalmeal2>, <item:contenttweaker:coalmeal3>, <item:contenttweaker:coalmeal4>] as IItemStack[];
+var usedClusters = new stdlib.List<IItemStack>;
+
+for k in 0 .. baseClusters.length {
+    if !baseClusters[k].matches(<item:minecraft:bone_meal>) {
+        for i in 0 .. usedClusters.length {
+            var input = new stdlib.List<IIngredientWithAmount>;
+            for item in baseInputs[k as usize] {
+                input.add(item);
+            }
+            input.add(usedClusters[i].asIIngredientWithAmount().ingredient);
+            for j in (i+1) .. usedClusters.length {
+                var add = baseInputs[baseClusters.indexOf(usedClusters[j]) as usize] as IIngredient[];
+                for item in add {
+                    input.add(item);
+                }
+            }
+            <recipetype:create:mixing>.addRecipe(baseClusters[k].registryName.path+i, "none", baseClusters[k], input as IIngredientWithAmount[], [], 100);
+        }
+    }
+    usedClusters.add(baseClusters[k]);
+}
+<recipetype:create:mixing>.addRecipe("new_ender_eye", "heated", <item:minecraft:ender_eye>, [<item:minecraft:blaze_powder>, <item:thermal:basalz_powder>, <item:botania:mana_pearl>]);

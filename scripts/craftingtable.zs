@@ -102,6 +102,7 @@ import crafttweaker.api.item.IItemStack;
 
 val scorched = <item:tconstruct:scorched_brick>;
 val nul = <item:minecraft:air>;
+val air = nul;
 val glass = <tag:items:forge:glass>;
 val alloy = <item:create:andesite_alloy>;
 val redstone = <item:minecraft:redstone>;
@@ -134,14 +135,15 @@ craftingTable.removeRecipe(<item:immersiveengineering:connector_mv>);
 craftingTable.removeRecipe(<item:immersiveengineering:connector_mv_relay>);
 craftingTable.removeRecipe(<item:botania:fertilizer>);
 craftingTable.removeRecipe(<tag:items:custom:machines>);
+recipes.removeRecipe(<item:appliedenergistics2:silicon>);
 
-var removeArray = [<item:thermal:enderium_dust>, <item:thermal:upgrade_augment_1>, <item:thermal:machine_frame>, <item:thermal:redstone_servo>] as IItemStack[];
+var removeArray = [<item:minecraft:ender_eye>, <item:botania:terra_plate>, <item:thermal:enderium_dust>, <item:thermal:upgrade_augment_1>, <item:thermal:machine_frame>, <item:thermal:redstone_servo>] as IItemStack[];
 
 for remove in removeArray {
     craftingTable.removeRecipe(remove);
 }
 
-craftingTable.addShapeless("first_coalmeal", <item:contenttweaker:coalmeal1>, [<item:minecraft:bone_meal>, <item:minecraft:coal>]);
+craftingTable.addShapeless("first_coalmeal", <item:contenttweaker:coalmeal1>, [<item:minecraft:bone_meal>, <tag:items:forge:dusts/coal>]);
 craftingTable.addShapeless("second_coalmeal", <item:contenttweaker:coalmeal2>, [<item:contenttweaker:coalmeal1>, <item:contenttweaker:phosphate>, <item:minecraft:redstone>]);
 
 craftingTable.addShaped("seared1", <item:tconstruct:seared_fuel_tank>, [
@@ -269,9 +271,9 @@ craftingTable.addShaped("rod_bronze", <item:contenttweaker:bronze_rod> * 4, [
 ]);
 
 craftingTable.addShaped("freezer", <item:custommachinery:custom_machine_item>.withTag({machine: "machinery:freezer" as string}), [
-    [<item:minecraft:ice>, <item:minecraft:ice>, <item:minecraft:ice>],
-    [<item:minecraft:ice>, <item:minecraft:barrel>, <item:minecraft:ice>],
-    [<item:minecraft:ice>, <item:minecraft:ice>, <item:minecraft:ice>]
+    [<item:minecraft:snow>, <item:minecraft:snow>, <item:minecraft:snow>],
+    [<item:minecraft:snow>, <item:minecraft:barrel>, <item:minecraft:snow>],
+    [<item:minecraft:snow>, <item:minecraft:snow>, <item:minecraft:snow>]
 ]);
 
 craftingTable.addShapeless("silver1", <item:thermal:silver_dust> * 2, [
@@ -670,4 +672,28 @@ craftingTable.addShaped("multiservo_press", <item:thermal:machine_press>, [
     [nul, <item:create:mechanical_press>, nul],
     [metal, <item:thermal:machine_frame>, metal],
     [nickel_gear, <item:thermal:rf_coil>, nickel_gear]
+]);
+
+craftingTable.addShapeless("verdentium_from_block", <item:contenttweaker:verdentium_ingot>*9, [verdentium_block]);
+
+craftingTable.addShapeless("verdentium_from_ingot", <item:contenttweaker:verdentium_nugget>*9, [verdentium]);
+
+craftingTable.addShaped("stone_gear", <item:contenttweaker:stone_gear>, [
+    [air, <item:minecraft:cobblestone>, air],
+    [<item:minecraft:cobblestone>, <item:minecraft:stick>, <item:minecraft:cobblestone>],
+    [air, <item:minecraft:cobblestone>, air]
+]);
+
+craftingTable.removeRecipe(<item:appliedenergistics2:grindstone>);
+
+craftingTable.addShaped("grindstone", <item:appliedenergistics2:grindstone>, [
+    [<item:minecraft:stone>, <item:minecraft:stone>, <item:minecraft:stone>],
+    [<item:contenttweaker:stone_gear>, <item:minecraft:furnace>, <item:contenttweaker:stone_gear>],
+    [<item:minecraft:cobblestone>, <item:minecraft:cobblestone>, <item:minecraft:cobblestone>]
+]);
+
+craftingTable.addShaped("terra_plate", <item:botania:terra_plate>, [
+    [<tag:items:forge:storage_blocks/steel>, <tag:items:forge:storage_blocks/steel>, <tag:items:forge:storage_blocks/steel>],
+    [<item:botania:rune_water>, <tag:items:forge:storage_blocks/manasteel>, <item:botania:rune_fire>],
+    [<item:botania:rune_earth>, <item:botania:rune_mana>, <item:botania:rune_air>]
 ]);
