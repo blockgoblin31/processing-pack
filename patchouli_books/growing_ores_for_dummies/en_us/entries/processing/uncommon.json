@@ -1,0 +1,15 @@
+{
+    "name": "Uncommon Cluster",
+    "icon": "contenttweaker:uncommon_cluster",
+    "category": "patchouli:processing",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "   There are two main ways to process the uncommon cluster. The first is to melt it in a foundry, which will give you iron, aluminum, bronze, and redstone. The second way to process it is to spray it with water and then crush it, which will give you copper and tin instead of bronze."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "   There is a third way to process the uncommon cluster, which is to explode it with tnt. This yeilds quartz, which is an essential material of the foundry, and is important for digital storage."
+        }
+    ]
+}

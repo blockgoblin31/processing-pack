@@ -114,7 +114,7 @@
               }
             }
           ],
-          "name": "thermal:brass_ingot"
+          "name": "create:brass_ingot"
         },
         {
           "type": "minecraft:item",

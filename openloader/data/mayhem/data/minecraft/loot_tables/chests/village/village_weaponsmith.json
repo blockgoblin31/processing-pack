@@ -21,7 +21,7 @@
               }
             }
           ],
-          "name": "minecraft:diamond"
+          "name": "mekanism:ingot_steel"
         },
         {
           "type": "minecraft:item",
@@ -46,12 +46,12 @@
               "function": "minecraft:set_count",
               "count": {
                 "min": 1.0,
-                "max": 3.0,
+                "max": 5.0,
                 "type": "minecraft:uniform"
               }
             }
           ],
-          "name": "minecraft:gold_ingot"
+          "name": "create:copper_ingot"
         },
         {
           "type": "minecraft:item",
@@ -151,14 +151,6 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_horse_armor"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:golden_horse_armor"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:diamond_horse_armor"
         }
       ]
     }

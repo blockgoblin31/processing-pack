@@ -1,0 +1,41 @@
+{
+
+  "_comment": "Tinkers Aluminum Casts",
+
+  "item.tconstruct.blank_cast": "Blank Aluminum Cast",
+  "item.tconstruct.ingot_cast": "Ingot Aluminum Cast",
+  "item.tconstruct.nugget_cast": "Nugget Aluminum Cast",
+  "item.tconstruct.gem_cast": "Gem Aluminum Cast",
+  "item.tconstruct.rod_cast": "Rod Aluminum Cast",
+
+  "item.tconstruct.gear_cast": "Gear Aluminum Cast",
+  "item.tconstruct.plate_cast": "Small Plate Aluminum Cast",
+  "item.tconstruct.coin_cast": "Coin Aluminum Cast",
+  "item.tconstruct.wire_cast": "Wire Aluminum Cast",
+
+  "item.tconstruct.repair_kit_cast": "Repair Kit Aluminum Cast",
+
+  "_comment": "Small Head Aluminum Casts",
+
+  "item.tconstruct.pickaxe_head_cast": "Pickaxe Head Aluminum Cast",
+  "item.tconstruct.small_axe_head_cast": "Small Axe Head Aluminum Cast",
+  "item.tconstruct.small_blade_cast": "Small Blade Aluminum Cast",
+  "item.tconstruct.sign_head_cast": "Sign Head Aluminum Cast",
+  "item.tconstruct.bow_limb_cast": "Bow Limb Aluminum Cast",
+
+  "_comment": "Large Head Aluminum Casts",
+
+  "item.tconstruct.hammer_head_cast": "Hammer Head Aluminum Cast",
+  "item.tconstruct.broad_axe_head_cast": "Broad Axe Head Aluminum Cast",
+  "item.tconstruct.broad_blade_cast": "Broad Blade Aluminum Cast",
+
+  "_comment": "Binding Aluminum Casts",
+
+  "item.tconstruct.tool_binding_cast": "Tool Binding Aluminum Cast",
+  "item.tconstruct.large_plate_cast": "Large Plate Aluminum Cast",
+
+  "_comment": "Tool Handle Aluminum Casts",
+
+  "item.tconstruct.tool_handle_cast": "Tool Handle Aluminum Cast",
+  "item.tconstruct.tough_handle_cast": "Tough Handle Aluminum Cast"
+}

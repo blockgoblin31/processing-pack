@@ -4,25 +4,28 @@
 	order_index: 1
 	filename: "rare_cluster"
 	title: "Rare Cluster"
+	icon: "contenttweaker:uncommon_cluster"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	quests: [
 		{
 			x: 0.5d
 			y: -3.0d
-			description: ["The first step to making the rare ore cluster will, of course, to make the uncommon cluster"]
+			subtitle: "Seems a bit basic..."
+			description: ["The first step to making the rare ore cluster will be, of course, to make it's base form"]
 			dependencies: ["3792A381F9EF17B4"]
 			id: "0EFF7E807CCC711B"
 			tasks: [{
-				id: "762816AB7E77F463"
+				id: "19DC7EC1E57F9D23"
 				type: "item"
-				item: "contenttweaker:uncommon_cluster"
+				item: "contenttweaker:rare_base"
 			}]
 		}
 		{
 			x: 0.5d
 			y: -1.5d
-			description: ["If I melt down the uncommon cluster, I can then cast it back out in a less stabe form. My existing foundry will do the job."]
+			subtitle: "Copper Can (of liquid ore)"
+			description: ["If I melt down the base cluster, I can then cast it back out in a less stabe form. My existing foundry will do the job."]
 			dependencies: ["0EFF7E807CCC711B"]
 			id: "7539BEDC461A6376"
 			tasks: [{
@@ -40,7 +43,8 @@
 		{
 			x: 0.5d
 			y: 0.0d
-			description: ["Now I have my uncommon clister compressed into a bar, a much less stable form. It should now be possible to add plastic."]
+			subtitle: "A rare ingot"
+			description: ["Now I have my base cluster compressed into a bar, a much less stable form. It should now be possible to add plastic."]
 			dependencies: ["7539BEDC461A6376"]
 			id: "73EA7120C826DED7"
 			tasks: [{
@@ -52,6 +56,7 @@
 		{
 			x: 0.5d
 			y: 1.5d
+			subtitle: "Like chocolate coved nuts, but plastic, and ore ingots"
 			description: ["Now that it's mixed with plastic, I should be able to add the cobblestone to make this into a full ore cluster. I'll need to make it into a slab-like form first, though"]
 			dependencies: ["73EA7120C826DED7"]
 			id: "162517A5FA958279"
@@ -64,6 +69,7 @@
 		{
 			x: 0.5d
 			y: 3.0d
+			subtitle: "R.I.P. Ingot. 2022-2023"
 			description: ["Now that my mixture is in plate form, I can fill it with cobblestone in the casting basin"]
 			dependencies: ["162517A5FA958279"]
 			id: "27726C4074E45C19"
@@ -76,7 +82,8 @@
 		{
 			x: 0.5d
 			y: 4.5d
-			description: ["Now by filling my slab with a block's worth of liquid cobblestone, I can get the final form of the uncommon cluster, ready to be coalmealed."]
+			subtitle: "That's a mouthful!"
+			description: ["Now by filling my slab with a block's worth of liquid cobblestone, I can get the base cluster to a coal mealable state"]
 			dependencies: ["27726C4074E45C19"]
 			id: "3CC3118E954DF8CC"
 			tasks: [{
@@ -88,6 +95,7 @@
 		{
 			x: 0.5d
 			y: 6.0d
+			subtitle: "All this, and all I get are some nickels?"
 			description: ["I now have access to the next tier of ore cluster, which contains silver, nickel, and zinc. Now I just need to purify it."]
 			dependencies: [
 				"3CC3118E954DF8CC"
@@ -103,6 +111,7 @@
 		{
 			x: 2.0d
 			y: 4.5d
+			subtitle: "Any richer and it'l be solid gold!"
 			description: ["By mixing my niter and graphite pellet into the previous coalmeal, I get an even more enriched version, able to be used to make rare clusters"]
 			dependencies: [
 				"5CA5F3550E5F81E2"
@@ -118,6 +127,7 @@
 		{
 			x: 3.5d
 			y: 3.0d
+			subtitle: "Lollicrumbs"
 			description: ["This pellet is the most pure form of carbon imaginable, perfect to add to coalmeal!"]
 			dependencies: ["362660F2FA48ECB8"]
 			id: "5CA5F3550E5F81E2"
@@ -130,6 +140,7 @@
 		{
 			x: 3.5d
 			y: 1.5d
+			subtitle: "its a lollipop! (not recommened for consumption)"
 			description: ["Now I've got my graphite pellet, but it's firmly attached to my rod. The best way to get the rod out seems to be by crushing it."]
 			dependencies: [
 				"1477E01EC4C4FB97"
@@ -145,7 +156,8 @@
 		{
 			x: 2.0d
 			y: 3.0d
-			description: ["Now by crushing the cactus pulp, I get cactus shreds and niter. The cactus shreda, a pure waste product, can be composted, but at a rather bad value."]
+			subtitle: "AKA: Cactus Needle Dust"
+			description: ["Now by crushing the cactus pulp, I get cactus shreds and niter. The cactus shreds, a pure waste product, can be composted, but at a rather bad value."]
 			dependencies: ["5D286F18614B8D18"]
 			id: "6CC89815DCB13034"
 			tasks: [{
@@ -157,6 +169,7 @@
 		{
 			x: 2.0d
 			y: 1.5d
+			subtitle: "Conquer the cactus! Mash it up!"
 			description: ["By squeezing cactus, I get a pulp with a much higher niter content than the original. It should now be possible to extract the niter. Also makes great compost!"]
 			dependencies: ["56BEC21B2FB4773E"]
 			id: "5D286F18614B8D18"
@@ -169,6 +182,7 @@
 		{
 			x: 2.0d
 			y: 0.0d
+			subtitle: "Pokey, Pointy, spiky, things..."
 			description: ["I need a more powerful fertilizer, which it seems I can get through niter. The only way I know of to obtain niter is from cactus, which means I'll need to find some."]
 			id: "56BEC21B2FB4773E"
 			tasks: [{
@@ -180,6 +194,7 @@
 		{
 			x: 3.5d
 			y: 0.0d
+			subtitle: "Like coal, but in dust form"
 			description: ["By crushing down coal, I get a light powder, which seems easy to compact into something very concentrated"]
 			id: "1477E01EC4C4FB97"
 			tasks: [{
@@ -191,6 +206,7 @@
 		{
 			x: 6.5d
 			y: 0.0d
+			subtitle: "Just a rod... made of bronze..."
 			description: ["Bronze contains many useful bonding properties, and by making it into a rod, I shoud be able to use it as a medium for making my compact coal, though I'll need to ignite and extinguish it first"]
 			id: "62240D1C1E1A60BD"
 			tasks: [{
@@ -202,6 +218,7 @@
 		{
 			x: -1.0d
 			y: 6.0d
+			subtitle: "Sorta like fireless Fire Charge"
 			description: ["This should let me easily convert the rare cluster into a small amount of silver"]
 			dependencies: ["495CC276557E7F7A"]
 			id: "7EBB50A7C6747E83"
@@ -214,6 +231,7 @@
 		{
 			x: -1.0d
 			y: 4.5d
+			subtitle: "Kinda like fireless blaze"
 			description: ["I can get a powder infused with the earth element, in the same way blaze powder is infused with fire, by putting gunpowder under extreme pressure"]
 			id: "495CC276557E7F7A"
 			tasks: [{
@@ -225,6 +243,7 @@
 		{
 			x: -1.0d
 			y: 7.5d
+			subtitle: "I'm rich!"
 			description: ["Silver! The fist truly complex metal in my grasp! Now I should be able to make a device to entrap a blaze to heat my mixing recipes."]
 			dependencies: [
 				"7EBB50A7C6747E83"
@@ -239,8 +258,10 @@
 		}
 		{
 			title: "New machines"
+			icon: "create:blaze_burner"
 			x: -2.5d
 			y: 7.5d
+			subtitle: "Now this is a real blaze"
 			description: ["You should probably make these, they'll all be very helpful with automation coming foreward. Only the blaze burner is required, however."]
 			dependencies: ["79310902FBC5BC61"]
 			id: "659ECD2C94961796"
@@ -270,6 +291,7 @@
 		{
 			x: 0.5d
 			y: 7.5d
+			subtitle: "Don't leave it in your pocket!"
 			description: ["By using the heat of the blaze to melt the cluster slightly, I should be able to seperate the stone from the metals inside."]
 			dependencies: ["0170A240908FB58C"]
 			id: "61D94D5474F28E5D"
@@ -282,6 +304,7 @@
 		{
 			x: 0.5d
 			y: 9.0d
+			subtitle: "Pure ore, this better pay off!"
 			description: ["With this purified cluster, I should be able to quench it in a liquid to get the metals inside. The only problem is I have yet to find a liquid that gives me all the metals at once."]
 			dependencies: ["61D94D5474F28E5D"]
 			id: "712D4990EF7DD070"
@@ -294,6 +317,7 @@
 		{
 			x: -1.0d
 			y: 10.5d
+			subtitle: "Oh, *nickel*, not *a* nickel. That makes me feel better."
 			description: ["*Nickel doesn't really have a use in the current version of the pack, it will be needed for making the t4 cluster, but nothing I can do with it rn*"]
 			dependencies: [
 				"712D4990EF7DD070"
@@ -309,6 +333,7 @@
 		{
 			x: 2.0d
 			y: 10.5d
+			subtitle: "Brass, with 100% less copper! (may contain trace amouts of cluster, furnace not includid)"
 			description: ["With this zinc, I can make the much needed alloy of brass, giving me access to much more advanced machines"]
 			dependencies: [
 				"712D4990EF7DD070"
@@ -324,6 +349,7 @@
 		{
 			x: 0.5d
 			y: 10.5d
+			subtitle: "De ja vu!"
 			description: ["The best way to get the old resources, and the only way to get redstone from this cluster, is to quench in water"]
 			dependencies: ["712D4990EF7DD070"]
 			id: "5EBC26BA74E0187E"
@@ -336,6 +362,7 @@
 		{
 			x: -1.0d
 			y: 9.0d
+			subtitle: "Maybe just vist the ocen?"
 			description: ["A simple mixture of salt and water will give me a softer quench than just water, leaving more rare metals behind at the cost of common ones."]
 			id: "3A583911F794BD2C"
 			tasks: [{
@@ -347,6 +374,7 @@
 		{
 			x: 2.0d
 			y: 9.0d
+			subtitle: "Soft as a cat!"
 			description: ["Oil gives the softest quench of all, allowing me to get the delicate zinc instead of silver and nickel"]
 			id: "41868DF58DA99542"
 			tasks: [{
@@ -356,8 +384,10 @@
 			}]
 		}
 		{
+			title: "Chilled fire stick"
 			x: 5.0d
 			y: 0.0d
+			subtitle: "Fire stick and ice rod"
 			description: [
 				"I can cover the stick with lava to ignite it, letting it stick to the coal perfectly, though having a chance to burn the coal off."
 				"I can then extinguish the ignited rod by soaking it for a long period of time. This retains the stickiness properties, while loosing the chance to burn off all the coal"
@@ -376,6 +406,19 @@
 					item: "contenttweaker:fire_stick"
 				}
 			]
+		}
+		{
+			x: 0.5d
+			y: 12.0d
+			subtitle: "The one powder to rule them all!"
+			description: ["This powder seems to condense the magical properties from the coalmeal into a powder that can be mixed with bonemeal to grow magical flowers"]
+			dependencies: ["712D4990EF7DD070"]
+			id: "2AD915465C3F31C3"
+			tasks: [{
+				id: "3010E3416E125CA4"
+				type: "item"
+				item: "contenttweaker:pure_powder"
+			}]
 		}
 	]
 }

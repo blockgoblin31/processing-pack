@@ -36,7 +36,7 @@
               }
             }
           ],
-          "name": "mcreate:copper_ingot"
+          "name": "create:copper_ingot"
         },
         {
           "type": "minecraft:item",
@@ -56,7 +56,7 @@
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "immersiveengineerin:ingot_aluminum"
+          "name": "immersiveengineering:ingot_aluminum"
         },
         {
           "type": "minecraft:item",

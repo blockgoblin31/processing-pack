@@ -17,7 +17,7 @@ import crafttweaker.api.item.IItemStack;
 <recipetype:tconstruct:casting_basin>.addItemCastingRecipe("item_casting_basin_coal", <item:minecraft:air>, <fluid:contenttweaker:molten_coal> * 1296, <item:minecraft:coal_block>, 900, false, false);
 
 <recipetype:tconstruct:melting>.addOreMeltingRecipe("stone", <item:minecraft:stone>, <fluid:minecraft:lava>*500, 1, 10);
-<recipetype:tconstruct:melting>.addOreMeltingRecipe("cobblestone", <item:minecraft:cobblestone>, <fluid:contenttweaker:liquid_cobblestone>*1000, 1, 10);
+<recipetype:tconstruct:melting>.addOreMeltingRecipe("cobblestone", <item:minecraft:cobblestone>, <fluid:contenttweaker:liquid_cobblestone>*500, 1, 10);
 
 <recipetype:tconstruct:melting>.removeByName("tconstruct:smeltery/melting/metal/gold/gilded_blackstone");
 
@@ -49,10 +49,10 @@ for item in remove {
 <recipetype:tconstruct:melting>.addMeltingRecipe("fuel_gauge", <item:tconstruct:seared_fuel_gauge>, <fluid:tconstruct:scorched_stone> * 576, 600, 100, [<fluid:tconstruct:molten_glass> * 5000]);
 <recipetype:tconstruct:melting>.addMeltingRecipe("ingot_gauge", <item:tconstruct:seared_ingot_gauge>, <fluid:tconstruct:scorched_stone> * 576, 600, 100, [<fluid:tconstruct:molten_glass> * 5000]);
 
-<recipetype:tconstruct:casting_table>.addItemCastingRecipe("item_casting_table_nickel_wire", <item:tconstruct:wire_cast>, <fluid:tconstruct:molten_nickel> * 72, <item:contenttweaker:nickel_wire>, 100, false, false);
-<recipetype:tconstruct:casting_table>.addItemCastingRecipe("item_casting_table_nickel_wire_sand", <tag:items:tconstruct:casts/single_use/wire>, <fluid:tconstruct:molten_nickel> * 72, <item:contenttweaker:nickel_wire>, 100, true, false);
+<recipetype:tconstruct:casting_table>.addItemCastingRecipe("item_casting_table_nickel_wire", <item:tconstruct:wire_cast>, <fluid:tconstruct:molten_nickel> * 72, <item:contenttweaker:nickel_wire>, 20, false, false);
+<recipetype:tconstruct:casting_table>.addItemCastingRecipe("item_casting_table_nickel_wire_sand", <tag:items:tconstruct:casts/single_use/wire>, <fluid:tconstruct:molten_nickel> * 72, <item:contenttweaker:nickel_wire>, 20, true, false);
 
-<recipetype:tconstruct:alloying>.addRecipe("rare_base", [<fluid:contenttweaker:liquid_stone> * 125, <fluid:tconstruct:molten_tin> * 6, <fluid:thermal:redstone> * 10, <fluid:tconstruct:molten_iron> * 2, <fluid:tconstruct:molten_aluminum> * 4], <fluid:contenttweaker:molten_base_cluster> * 18, 50);
+<recipetype:tconstruct:alloying>.addRecipe("rare_base", [<fluid:contenttweaker:liquid_stone> * 500, <fluid:tconstruct:molten_tin> * 96, <fluid:thermal:redstone> * 160, <fluid:tconstruct:molten_iron> * 32, <fluid:tconstruct:molten_aluminum> * 64], <fluid:contenttweaker:molten_base_cluster> * 18, 50);
 
 <recipetype:tconstruct:melting>.removeByName("tconstruct:smeltery/melting/metal/invar/dust");
 <recipetype:tconstruct:alloying>.removeByName("tconstruct:smeltery/alloys/molten_enderium");
@@ -63,3 +63,24 @@ for item in remove {
 <recipetype:tconstruct:casting_table>.removeRecipe(<item:thermal:signalum_coin>);
 <recipetype:tconstruct:casting_basin>.removeRecipe(<item:thermal:signalum_block>);
 <recipetype:tconstruct:alloying>.removeByName("tconstruct:smeltery/alloys/molten_invar");
+<recipetype:tconstruct:melting>.removeByName("tconstruct:smeltery/melting/seared/grout");
+<recipetype:tconstruct:melting>.addMeltingRecipe("scorched_grout", <item:tconstruct:grout>, <fluid:tconstruct:scorched_stone> * 144, 600, 100);
+
+for item in <tag:items:tconstruct:casts/gold>.elements {
+    var recipe = <recipetype:tconstruct:casting_table>.getRecipesByOutput(item.defaultInstance)[0];
+    var text = recipe.commandString.findbtwn(": [", ">]");
+    <recipetype:tconstruct:casting_table>.removeRecipe(item.defaultInstance);    
+    if text[1] == 't' {
+        <recipetype:tconstruct:casting_table>.addItemCastingRecipe(item.registryName.path, <tagmanager:items>.getTag(text[11 .. text.length]), <fluid:tconstruct:molten_aluminum> * 144, item.defaultInstance, 40, true, false);
+    } else {
+        <recipetype:tconstruct:casting_table>.addItemCastingRecipe(item.registryName.path, <item:${text[6 .. text.length]}>, <fluid:tconstruct:molten_aluminum> * 144, item.defaultInstance, 40, true, false);
+    }
+}
+
+<recipetype:tconstruct:melting>.addMeltingRecipe("molten_verdentium_from_ingot", <tag:items:forge:ingots/verdentium>, <fluid:contenttweaker:verdentium> * 144, 600, 100);
+<recipetype:tconstruct:melting>.addMeltingRecipe("molten_verdentium_from_block", <tag:items:forge:storage_blocks/verdentium>, <fluid:contenttweaker:verdentium> * 1296, 600, 100);
+<recipetype:tconstruct:melting>.addMeltingRecipe("molten_verdentium_from_nugget", <tag:items:forge:nuggets/verdentium>, <fluid:contenttweaker:verdentium> * 16, 600, 100);
+<recipetype:tconstruct:casting_table>.addItemCastingRecipe("verdentium_to_ingot", <item:tconstruct:ingot_cast>, <fluid:contenttweaker:verdentium> * 144, <item:contenttweaker:verdentium_ingot>, 20, false, false);
+<recipetype:tconstruct:casting_table>.addItemCastingRecipe("verdentium_to_nugget", <item:tconstruct:nugget_cast>, <fluid:contenttweaker:verdentium> * 16, <item:contenttweaker:verdentium_nugget>, 20, false, false);
+<recipetype:tconstruct:casting_basin>.addItemCastingRecipe("verdentium_to_block", <item:minecraft:air>, <fluid:contenttweaker:verdentium> * 1296, <item:contenttweaker:verdentium_block>, 60, false, false);
+<recipetype:tconstruct:casting_table>.addItemCastingRecipe("emerald_casting", <item:contenttweaker:core_gem>, <fluid:contenttweaker:verdentium> * 144, <item:minecraft:emerald>, 20, true, false);

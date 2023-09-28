@@ -1,6 +1,3 @@
 {
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "contenttweaker:block/improved_legendary"
-  }
+  "parent": "contenttweaker:legendary_cluster"
 }

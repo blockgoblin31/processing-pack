@@ -1,6 +1,9 @@
 {
   "parent" : "item/generated",
   "textures" :
-  {"layer0" : "contenttweaker:item/uncommon_cluster"
+  {
+    "layer0" : "contenttweaker:item/ore_cluster_base",
+    "layer1" : "contenttweaker:item/common_cluster",
+    "layer2" : "contenttweaker:item/uncommon_cluster"
   }
 }

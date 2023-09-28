@@ -5,15 +5,12 @@ import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.tag.MCTag;
 import crafttweaker.api.item.MCItemDefinition;
 import crafttweaker.api.item.IIngredient;
-import crafttweaker.api.entity.AttributeModifier;
-import crafttweaker.api.entity.AttributeOperation;
 import crafttweaker.api.recipes.WrapperRecipe;
 import crafttweaker.api.util.BlockPos;
 import crafttweaker.api.blocks.MCBlock;
 
 public class constants {
     public static var colors = ["white", "brown", "gray", "light_gray", "red", "orange", "yellow", "lime", "green", "blue", "light_blue", "cyan", "purple", "magenta", "pink", "black"] as string[];
-    public static var addtribute = AttributeModifier.create("Add 1", 1, AttributeOperation.ADDITION);
     public static var seed_type as IItemStack;
     public static var coords = [new BlockPos(96, 75, 0), new BlockPos(91, 75, 29), new BlockPos(77, 75, 56), new BlockPos(56, 75, 77), new BlockPos(29, 75, 91), new BlockPos(-1, 75, 96), new BlockPos(-30, 75, 91), new BlockPos(-57, 75, 77), new BlockPos(-78, 75, 56), new BlockPos(-92, 75, 29), new BlockPos(-96, 75, -1), new BlockPos(-92, 75, -30), new BlockPos(-78, 75, -57), new BlockPos(-57, 75, -78), new BlockPos(-30, 75, -92), new BlockPos(0, 75, -96), new BlockPos(29, 75, -92), new BlockPos(56, 75, -78), new BlockPos(77, 75, -57), new BlockPos(91, 75, -30)] as BlockPos[];
     public static var transform = {<item:mekanism:sawdust> : [<block:contenttweaker:blank_cluster>, <block:contenttweaker:terrestrial_cluster>], <item:contenttweaker:infernal_sawdust> : [<block:contenttweaker:blank_cluster>, <block:contenttweaker:infernal_cluster>], <item:contenttweaker:voidic_sawdust> : [<block:contenttweaker:blank_cluster>, <block:contenttweaker:voidic_cluster>], <item:contenttweaker:coalmeal7> : [<block:contenttweaker:improved_omega>, <block:contenttweaker:ultimate_cluster>], <item:contenttweaker:coalmeal6> : [<block:contenttweaker:improved_legendary>, <block:contenttweaker:omega_cluster>], <item:contenttweaker:coalmeal5> : [<block:contenttweaker:improved_epic>, <block:contenttweaker:legendary_cluster>], <item:contenttweaker:coalmeal4> : [<block:contenttweaker:improved_rare>, <block:contenttweaker:epic_cluster>], <item:contenttweaker:coalmeal3> : [<block:contenttweaker:improved_uncommon>, <block:contenttweaker:rare_cluster>], <item:contenttweaker:coalmeal2> : [<block:contenttweaker:improved_common>, <block:contenttweaker:uncommon_cluster>]} as MCBlock[][IItemStack];
@@ -57,6 +54,23 @@ public expand string {
     return this;
   }
 }
+public expand IItemStack[] {
+    public indexOf(element as IItemStack) as usize {
+        for i, e in this {
+            if e.matches(element) {return i;}
+        }
+        return this.length;
+    }
+}
+public expand <T> stdlib.List<T> {
+    public clone() as stdlib.List<T> {
+        var output = new stdlib.List<T>();
+        for element in this {
+            output.add(element);
+        }
+        return output;
+    }
+}
 val end_woods = [<tag:items:betterendforge:mossy_glowshroom_logs>, <tag:items:betterendforge:lacugrove_logs>, <tag:items:betterendforge:end_lotus_logs>, <tag:items:betterendforge:pythdendron_logs>, <tag:items:betterendforge:dragon_tree_logs>, <tag:items:betterendforge:tenanea_logs>, <tag:items:betterendforge:helix_tree_logs>, <tag:items:betterendforge:umbrella_tree_logs>, <tag:items:betterendforge:jellyshroom_logs>, <tag:items:betterendforge:lucernia_logs>] as MCTag<MCItemDefinition>[];
 <tag:items:custom:dynamos>.add(<item:thermal:dynamo_stirling>, <item:thermal:dynamo_compression>, <item:thermal:dynamo_magmatic>, <item:thermal:dynamo_numismatic>, <item:thermal:dynamo_lapidary>, <item:thermal:dynamo_disenchantment>, <item:thermal:dynamo_gourmand>);
 for wood_type in end_woods {
@@ -92,8 +106,13 @@ mods.jei.JEI.addInfo(<item:contenttweaker:pure_cluster>, ["Drop this in water to
 Replacer.forOutput(<tag:items:custom:dynamos>).replace(<item:thermal:rf_coil>, <item:contenttweaker:silver_coil>).execute();
 Replacer.forMods("naturesaura").excluding(<recipetype:naturesaura:animal_spawner>, <recipetype:naturesaura:offering>, <recipetype:naturesaura:altar>, <recipetype:naturesaura:tree_ritual>).replace(<item:minecraft:iron_ingot>, <item:contenttweaker:natura_ingot>).execute();
 Replacer.forMods("storagenetwork").replace(<item:minecraft:iron_nugget>, <item:naturesaura:infused_iron>).replace(<item:minecraft:gold_ingot>, <item:thermal:signalum_ingot>).replace(<item:minecraft:gold_block>, <item:thermal:enderium_ingot>).replace(<item:minecraft:iron_ingot>, <item:thermal:invar_ingot>).execute();
+//Replacer.forOutput(<tag:items:tconstruct:casts/gold>, <recipetype:tconstruct:casting_table>).replace(<fluid:tconstruct:molten_gold>, <fluid:tconstruct:molten_aluminum>).execute();
 //Replacer.forTypes(villagerTrades).replace(<item:minecraft:diamond_axe>, <item:mekanismtools:steel_axe>).execute();
 <tag:blocks:minecraft:mushroom_grow_block>.add(<block:contenttweaker:blank_cluster>);
 <block:minecraft:obsidian>.setHarvestLevel(2);
 <tag:items:naturesaura:ancient_logs>.add(<item:naturesaura:ancient_log>);
 <tag:items:naturesaura:ancient_logs>.add(<item:naturesaura:ancient_bark>);
+<tag:items:forge:gears>.add(<item:contenttweaker:stone_gear>);
+<tag:items:forge:gears/stone>.add(<item:contenttweaker:stone_gear>);
+<tag:blocks:forge:storage_blocks/lapis>.add(<tag:blocks:forge:storage_blocks/steel>);
+<tag:blocks:forge:storage_blocks/lapis>.remove(<block:minecraft:lapis_block>);

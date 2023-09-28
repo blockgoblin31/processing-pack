@@ -4,24 +4,47 @@
 	order_index: 0
 	filename: "common_and_uncommon_clusters"
 	title: "Common and Uncommon Clusters"
+	icon: "contenttweaker:common_cluster"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	quests: [
 		{
+			icon: {
+				id: "patchouli:guide_book"
+				Count: 1b
+				tag: {
+					"patchouli:book": "patchouli:growing_ores_for_dummies"
+				}
+			}
 			x: -1.0d
-			y: -3.0d
+			y: -4.5d
+			subtitle: "A book of words is a book of knolage..."
 			description: ["The world is resource poor, with no metals to be found, but I have identified trace amounts of magic in the atmosphere; the magic of life. A simple powder of bone can be used to grow plants, my research indicates that, when mixed with coal, it can also be used to grow stone."]
 			id: "44242FD031EDD486"
-			tasks: [{
-				id: "1BB156C7CFE42B02"
-				type: "checkmark"
-				title: "Genesis"
-			}]
+			tasks: [
+				{
+					id: "1BB156C7CFE42B02"
+					type: "checkmark"
+					title: "Genesis"
+				}
+				{
+					id: "697292F9D8D3114E"
+					type: "item"
+					item: {
+						id: "patchouli:guide_book"
+						Count: 1b
+						tag: {
+							"patchouli:book": "patchouli:growing_ores_for_dummies"
+						}
+					}
+				}
+			]
 		}
 		{
 			x: 0.0d
-			y: -1.5d
-			description: ["Some amount of coal will be needed to gove the bone meal the properties of rock"]
+			y: -3.0d
+			subtitle: "100% pure carbon! (may contain trace abouts of charcoal)"
+			description: ["Some amount of coal will be needed to give the bone meal the properties of rock"]
 			dependencies: ["44242FD031EDD486"]
 			id: "4DC8AC36071C5027"
 			tasks: [{
@@ -32,7 +55,8 @@
 		}
 		{
 			x: -2.0d
-			y: -1.5d
+			y: -3.0d
+			subtitle: "The essence of Growth! ok... not really"
 			description: ["Bone meal, the essence of life, able to make plants grow almost magically, can be mixed with various substances to make metals grow from bare rock"]
 			dependencies: ["44242FD031EDD486"]
 			id: "349187DAC45A847E"
@@ -44,7 +68,8 @@
 		}
 		{
 			x: -1.0d
-			y: 0.0d
+			y: -1.5d
+			subtitle: "Why does bones plus coal make metal? Nobody knows!"
 			description: ["The product of my research, when used on stone this should cause an ore bud to sprout above it."]
 			dependencies: [
 				"349187DAC45A847E"
@@ -59,7 +84,8 @@
 		}
 		{
 			x: -1.0d
-			y: 1.5d
+			y: 0.0d
+			subtitle: "Cluster 'o Ores"
 			description: ["This contains trace amounts of simple metals, but they are heavily bonded to the stone. Perhaps heating will allow me to extract them?"]
 			dependencies: ["487D6DA8E6949DAA"]
 			id: "4A7BAF470EFE304D"
@@ -71,7 +97,8 @@
 		}
 		{
 			x: -1.0d
-			y: 3.0d
+			y: 1.5d
+			subtitle: "Roasty Toasty!"
 			description: ["Now to dissolve the stone I should wet it somehow. just tossing it in a pool of water seems to work"]
 			dependencies: ["4A7BAF470EFE304D"]
 			id: "06B8D0343EB53799"
@@ -82,8 +109,10 @@
 			}]
 		}
 		{
+			icon: "thermal:copper_nugget"
 			x: -1.0d
-			y: 4.5d
+			y: 3.0d
+			subtitle: "1,2,3...7,8,9 INGOT!"
 			description: ["Metals! I have created the first complex materials in this world, and with these I should be able to create more complex metals, by processing the ore bud and applying stronger coal meal. I will need lots of copper and iron, though"]
 			dependencies: ["06B8D0343EB53799"]
 			id: "1D9E31D61BC4F2F9"
@@ -107,7 +136,8 @@
 		}
 		{
 			x: 0.5d
-			y: 4.5d
+			y: 3.0d
+			subtitle: "Enrichment... without an enrichment chamber? How is that possible?"
 			description: ["By mixing the ore cluster with redstone before melting the stone away, it seems that I get more metals, at a loss of the redstone"]
 			dependencies: ["06B8D0343EB53799"]
 			id: "144B39EDAE56E992"
@@ -120,6 +150,7 @@
 		{
 			x: -4.0d
 			y: 6.0d
+			subtitle: "I'm not grout, I'm Tcathebluecreper!"
 			description: ["This blend of sand, gravel, and clay can be made into bricks with useful heat-resistant properties"]
 			id: "0F5CA791EA7CEADD"
 			tasks: [{
@@ -129,8 +160,10 @@
 			}]
 		}
 		{
+			icon: "tconstruct:smeltery_controller"
 			x: -2.5d
 			y: 6.0d
+			subtitle: "Two? What a scam..."
 			description: ["With these items, it should be possible to mix water and lava to make obsidian blocks. These blocks have heavy magic, and it seems they can be used to break into another dimension."]
 			dependencies: ["0F5CA791EA7CEADD"]
 			id: "1C227DA01A068260"
@@ -165,8 +198,10 @@
 		}
 		{
 			title: "The Nether"
+			icon: "minecraft:obsidian"
 			x: -2.5d
 			y: 7.5d
+			subtitle: "\"The pigs aren't so bad\""
 			description: ["The wood from this dimension allows a greater absorption of magic into the ore cluster, if mixed in thouroughly."]
 			dependencies: ["1C227DA01A068260"]
 			min_required_tasks: 2
@@ -197,6 +232,7 @@
 		{
 			x: -4.0d
 			y: 7.5d
+			subtitle: "Lava Bucket, not Bucket of Lava..."
 			description: ["Using this melter, it seems to be possible to turn stone into lava. Sadly, the stone does need to be smelted first. If cobblestone is melted, I only get a waste liquid. Maybe I'll find a use for it someday."]
 			dependencies: ["1C227DA01A068260"]
 			id: "21B096CDF7715CFF"
@@ -207,10 +243,12 @@
 			}]
 		}
 		{
+			icon: "create:mechanical_mixer"
 			x: -1.0d
-			y: 9.0d
+			y: 6.0d
+			subtitle: "Mixa, mixa, mixa, mixa!"
 			description: ["Next, I'll need sonething stronger than my own hands to mix in sawdust, this setup will be perfect"]
-			dependencies: ["577FB06CC7C0D03D"]
+			dependencies: ["166086AFFA0C29AF"]
 			id: "68CC9FDA190B6505"
 			tasks: [
 				{
@@ -227,8 +265,10 @@
 		}
 		{
 			title: "Rotational Source"
+			icon: "immersiveengineering:watermill"
 			x: -1.0d
-			y: 6.0d
+			y: 4.5d
+			subtitle: "No immersive here..."
 			description: ["I'll need some sort of rotation to power my future factory, and my current mixer"]
 			dependencies: ["1D9E31D61BC4F2F9"]
 			min_required_tasks: 1
@@ -250,10 +290,11 @@
 			title: "\"Improving\" the ore cluster"
 			x: -1.0d
 			y: 10.5d
+			subtitle: "When iron is insuffecent..."
 			description: ["While you can no longer turn this into raw materials, you'll soon be able to turn it into better metals"]
 			dependencies: [
-				"68CC9FDA190B6505"
 				"0098DFFC86408A25"
+				"577FB06CC7C0D03D"
 			]
 			id: "408DF11420904722"
 			tasks: [{
@@ -265,6 +306,7 @@
 		{
 			x: -2.5d
 			y: 9.0d
+			subtitle: "Blast that Infernal Sawdust!"
 			description: ["The best way to mix in wood from the nether is to reduce it to dust, mix it in, melt the stone slightly, and re-freeze it."]
 			dependencies: ["1D8DDBF14AED3C09"]
 			id: "0098DFFC86408A25"
@@ -275,10 +317,13 @@
 			}]
 		}
 		{
+			icon: "minecraft:blast_furnace"
 			x: -1.0d
-			y: 7.5d
+			y: 9.0d
+			subtitle: "A fan or a furnace, hmmm..."
 			description: ["I'll need something more powerful than a common furnace to melt the cluster. The fan will require more setup, but uses copper instead of iron, which seems to be needed for almost everything else"]
-			dependencies: ["166086AFFA0C29AF"]
+			dependencies: ["3EDA17FE1719AE4B"]
+			min_required_tasks: 1
 			id: "577FB06CC7C0D03D"
 			tasks: [
 				{
@@ -296,6 +341,7 @@
 		{
 			x: -1.0d
 			y: 12.0d
+			subtitle: "What a cool block!"
 			description: ["Finally, I'll re-freeze the stone, with the sawdust thouroughly mixed in now."]
 			dependencies: ["408DF11420904722"]
 			id: "566D75DB14B25F72"
@@ -314,6 +360,7 @@
 		{
 			x: 0.5d
 			y: 10.5d
+			subtitle: "Save the phosphate from a dirty fate..."
 			description: ["there is a trace compound, phosphate, found in dirt, but it can only be extracted with a fine mesh. This string one will do, but only gives a fraction of the full potential."]
 			id: "368F9BEB78335A41"
 			tasks: [{
@@ -325,6 +372,7 @@
 		{
 			x: 0.5d
 			y: 12.0d
+			subtitle: "I think the pack devs need to look up \"enrich\" in a thesaurus"
 			description: ["this should be a better coalmeal, able to grow the ore cluster more and hopefully produce new metals."]
 			dependencies: ["368F9BEB78335A41"]
 			id: "38C61C4B760420E0"
@@ -337,6 +385,7 @@
 		{
 			x: -1.0d
 			y: 13.5d
+			subtitle: "Ooo, look, this isn't just the common stuff!"
 			description: [
 				"I should be able to get some new metals from this by melting it down, but this is an imperfect solution, with the tin and copper alloying during the melting process."
 				"Some way to get all the materials seperately would let me get the raw tin."
@@ -353,8 +402,10 @@
 			}]
 		}
 		{
+			icon: "minecraft:quartz"
 			x: -2.5d
 			y: 13.5d
+			subtitle: "BOOM! And the birth of the quartz..."
 			description: ["Exploding the cluster recreates high pressure conditions of the nether, giving a material that might be found there in a world with full materials."]
 			dependencies: ["57E8E2D8E5C1EC10"]
 			id: "44D14B1F45DBFB2D"
@@ -372,8 +423,10 @@
 			]
 		}
 		{
+			icon: "tconstruct:foundry_controller"
 			x: -4.0d
 			y: 15.0d
+			subtitle: "Time for some *real* meltin!"
 			dependencies: ["44D14B1F45DBFB2D"]
 			id: "5A57AB464173AB51"
 			tasks: [
@@ -409,7 +462,8 @@
 		{
 			x: -2.5d
 			y: 15.0d
-			description: ["An alloy of aluminum and copper can make a reasonable cast for extracting materials from my foundry."]
+			subtitle: "NOT for use on chickens!"
+			description: ["It seems that aluminum can make a reasonable cast for extracting materials from my foundry."]
 			dependencies: [
 				"57E8E2D8E5C1EC10"
 				"5A57AB464173AB51"
@@ -422,8 +476,11 @@
 			}]
 		}
 		{
+			icon: "thermal:bronze_nugget"
 			x: -1.0d
 			y: 15.0d
+			subtitle: "Brass 0.5"
+			description: ["The copper and tin alloy to make bronze, so for now i cannot get pure tin. But this material is still useful in it's own right."]
 			dependencies: ["13AD6EBD0220CEC9"]
 			id: "2328A435DA3638A8"
 			tasks: [
@@ -441,8 +498,10 @@
 		}
 		{
 			title: "Improved Machinery"
+			icon: "create:mechanical_drill"
 			x: 0.5d
 			y: 15.0d
+			subtitle: "Improved, indeed, now we can quary for coal!"
 			description: ["With this, I can start automating processes I've had to do manually up until now"]
 			dependencies: ["2328A435DA3638A8"]
 			id: "0E8012C2CAB77CA1"
@@ -472,6 +531,8 @@
 		{
 			x: -1.0d
 			y: 16.5d
+			subtitle: "It'd look nice with a windmill"
+			description: ["With some method of extracting dusts from the ore, I might be able to obtain pure tin"]
 			dependencies: ["2328A435DA3638A8"]
 			id: "65E49694234A2312"
 			tasks: [{
@@ -483,6 +544,8 @@
 		{
 			x: -2.5d
 			y: 16.5d
+			subtitle: "Scrub-a-dub-dub, 5 ores in a tub..."
+			description: ["Applying water to the soft rock of the cluster seems to melt it away, making it possible to obtain pure versions of the metals contained inside"]
 			id: "5253781DB07DCBFA"
 			tasks: [{
 				id: "214ECCDFA01B6D64"
@@ -491,8 +554,10 @@
 			}]
 		}
 		{
+			icon: "thermal:copper_dust"
 			x: -1.0d
 			y: 18.0d
+			subtitle: "It's tin not ten, but ten tin, would be better than tin tin, but...."
 			description: ["Now I finally have access to tin, which has very unique properties when put under extreme pressure. Maybe the blast chamber I've set up for quartz can work for this as well."]
 			dependencies: [
 				"5253781DB07DCBFA"
@@ -525,13 +590,28 @@
 		{
 			x: 0.5d
 			y: 18.0d
-			description: ["Now I can fully automate all the steps leading up to this point, with the ability to place trees and coalmeal automatically"]
+			subtitle: "Prod, Punch, Jab."
+			description: ["Now I can fully automate all the steps leading up to this point, with the ability to place trees and to coalmeal automatically"]
 			dependencies: ["3792A381F9EF17B4"]
 			id: "59B9C6904729266D"
 			tasks: [{
 				id: "7177963D7B812811"
 				type: "item"
 				item: "create:deployer"
+			}]
+		}
+		{
+			title: "Base Cluster"
+			x: -1.0d
+			y: 7.5d
+			subtitle: "The basis of all higher tiers..."
+			description: ["By combining the liquid form of cobblestone with some scraps of metal and redstone, I can create an unstable rock. If I mix the essence of hell in, then this rock should become fertile to more metals"]
+			dependencies: ["68CC9FDA190B6505"]
+			id: "3EDA17FE1719AE4B"
+			tasks: [{
+				id: "17C5F44470AD2E50"
+				type: "item"
+				item: "contenttweaker:uncommon_base"
 			}]
 		}
 	]

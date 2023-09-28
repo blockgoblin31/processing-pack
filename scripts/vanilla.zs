@@ -14,7 +14,7 @@ var furnaceTagOutputs = [<item:minecraft:emerald>] as IItemStack[];
 var blastFurnaceRemove = [<item:thermal:invar_ingot>, <item:thermal:signalum_ingot>, <item:thermal:enderium_ingot>, <item:tconstruct:seared_brick>] as IItemStack[];
 
 var blastFurnaceInputsOld = [<item:tconstruct:grout>, <item:contenttweaker:raw_infernal_rubber>, <item:contenttweaker:common_cluster>] as IItemStack[];
-var blastFurnaceOutputsOld = [<item:tconstruct:scorched_brick>, <item:contenttweaker:infernal_rubber>, <item:contenttweaker:common_cluster_1_1>] as IItemStack[];
+var blastFurnaceOutputsOld = [<item:tconstruct:scorched_brick>, <item:contenttweaker:infernal_rubber>, <item:contenttweaker:common_cluster_1_1>*2] as IItemStack[];
 
 var list1 = blastFurnaceInputsOld as stdlib.List<IItemStack>;
 var list2 = blastFurnaceOutputsOld as stdlib.List<IItemStack>;

@@ -30,6 +30,10 @@
     "thermal:silver_ore": "minecraft:coal_ore",
     "thermal:lead_ore": "minecraft:coal_ore",
     "thermal:nickel_ore": "minecraft:coal_ore",
-    "tconstruct:copper_ore": "minecraft:coal_ore"
+    "tconstruct:copper_ore": "minecraft:coal_ore",
+    "appliedenergistics2:charged_quartz_ore": "minecraft:coal_ore",
+    "appliedenergistics2:quartz_ore": "minecraft:coal_ore",
+    "minecraft:nether_quartz_ore": "minecraft:netherrack",
+    "minecraft:ancient_debris": "minecraft:netherrack"
   }
 }

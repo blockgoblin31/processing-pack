@@ -2,14 +2,11 @@
     "name": "Rare Cluster",
     "icon": "contenttweaker:rare_cluster",
     "category": "patchouli:growing_clusters",
+    "sortnum": 1,
     "pages": [
         {
             "type": "patchouli:text",
-            "text": "   This cluster can be made by first melting the uncommon cluster in a thermopneumatic processing plant, then casting it into an ingot cast, pressurizing it with plastic, pressing it into a slab with a metal press, and finally casting liquid cobblestone over it in a casting basin. Then you can coal meal it with Double Enriched Coal Meal."
-        },
-        {
-            "type": "patchouli:text",
-            "text": "$(br)  You can process it by combining it with an earth charge to make silver dust, or by heating it with a blaze burner, getting the stone off in the centrifuge, and then quenching it in water, salt water, or plant oil, depending on what you want out."
+            "text": "   This cluster's base can be made by alloying liquid stone with six nuggets of tin, 10 redstone dust, two nuggets of iron, and four nuggets of aluminum. You will then cast the resulting fluid as an ingot, pressurize it with plastic, press it into a plate using the metal press, and finally cast liquid cobblestone over the top."
         }
     ]
 }

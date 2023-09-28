@@ -1,0 +1,19 @@
+{
+	id: "226FA8591542DC1F"
+	group: ""
+	order_index: 3
+	filename: "epic_cluster"
+	title: "Epic Cluster"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [{
+		x: -0.5d
+		y: -1.0d
+		id: "5B341FCDE6C3DF90"
+		tasks: [{
+			id: "02413E8E8CB4FBE9"
+			type: "item"
+			item: "contenttweaker:epic_base"
+		}]
+	}]
+}
